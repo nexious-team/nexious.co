@@ -1,0 +1,17 @@
+.crop {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.crop img {
+    margin-top: 0px;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+}
+.crop:hover img{
+    margin-top: -397px;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+}
