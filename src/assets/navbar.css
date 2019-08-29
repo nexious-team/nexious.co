@@ -6,3 +6,7 @@
   position: absolute;
   will-change: transform, opacity;
 }
+
+.navnbar-reg-btn {
+  cursor: pointer;
+}

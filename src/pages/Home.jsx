@@ -5,7 +5,7 @@ import HomeHero from "components/HomeHero";
 const Home = () => {
   return (
     <div className="">
-      <div className="relative overflow-hidden">
+      <div className="overflow-hidden">
         <HomeHero />
       </div>
       <div className="h-screen w-64">Content</div>

@@ -57,12 +57,15 @@ const NavBar = () => {
       console.log("scrolling");
     });
   });
-  const nav_classes = "fixed top-0 w-full font-sans spring-nav ";
+  const nav_classes = "fixed top-0 w-full font-sans spring-nav";
   const handleLeftNavToggle = () => {
     this.setState({ leftNavClicked: !this.state.leftNavClicked });
   };
   const handleRightNavToggle = () => {
     this.setState({ rightNavClicked: !this.state.rightNavClicked });
+  };
+  const naveleclick = () => {
+    console.log("clicked");
   };
   return (
     <div>
@@ -78,7 +81,10 @@ const NavBar = () => {
             {/* Left Element */}
             <div className="hidden lg:flex md:flex justify-start font-sans">
               <div className="w-auto px-2 lg:mx-2">
-                <span className="text-sm text-gray-700 lg:text-xl font-semibold font-josefin">
+                <span
+                  onClick={() => naveleclick()}
+                  className="text-sm text-gray-700 lg:text-xl font-semibold font-josefin"
+                >
                   Clients
                 </span>
               </div>
@@ -121,7 +127,7 @@ const NavBar = () => {
           {/* Right Elements */}
           <div className="flex-1 h-auto">
             <div className=" flex md:flex justify-end pr-2 lg:mr-4">
-              <RegisterButton isTop={isTop} />
+              <RegisterButton className="navnbar-reg-btn" isTop={isTop} />
             </div>
             {/* <div className="lg:hidden md:hidden flex justify-end items-center">
           <div className="justify-center items-center align-center h-auto pt-3">
