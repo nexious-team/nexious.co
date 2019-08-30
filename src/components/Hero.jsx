@@ -36,7 +36,7 @@ const Hero = props => {
             {props.text}
           </a.h1>
         </div>
-        <a.div style={animatedImage} class="flex-grow">
+        <a.div style={animatedImage} className="flex-grow">
           <img src={ipad_pro_png} alt="" />
         </a.div>
       </div>

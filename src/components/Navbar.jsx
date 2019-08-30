@@ -75,12 +75,12 @@ const NavBar = () => {
       >
         <a.div
           style={fade_animation_height}
-          className="container mx-auto flex items-center justify-between"
+          className="container mx-auto md:px-10 lg:px-0 flex items-center justify-between"
         >
           <div className="flex-1 h-auto">
             {/* Left Element */}
-            <div className="hidden lg:flex md:flex justify-start font-sans">
-              <div className="w-auto px-2 lg:mx-2">
+            <div className="hidden lg:flex md:flex ml-5 justify-start font-sans">
+              <div className="w-auto px-2 md:mx-2 lg:mx-2">
                 <span
                   onClick={() => naveleclick()}
                   className="text-sm text-gray-700 lg:text-xl font-semibold font-josefin"
@@ -88,17 +88,17 @@ const NavBar = () => {
                   Clients
                 </span>
               </div>
-              <div className="w-auto px-2 lg:mx-2">
+              <div className="w-auto px-2 md:mx-2 lg:mx-2">
                 <span className="text-sm text-gray-700 lg:text-xl font-semibold font-josefin">
                   Services
                 </span>
               </div>
-              <div className="w-auto px-2 lg:mx-2">
+              <div className="w-auto px-2 md:mx-2 lg:mx-2">
                 <span className="text-sm text-gray-700 lg:text-xl font-semibold font-josefin">
                   Team
                 </span>
               </div>
-              <div className="w-auto px-2 lg:mx-2">
+              <div className="w-auto px-2 md:mx-2 lg:mx-2">
                 <span className="text-sm text-gray-700 lg:text-xl font-semibold font-josefin">
                   Contact
                 </span>

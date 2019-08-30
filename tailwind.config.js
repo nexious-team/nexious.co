@@ -6,10 +6,6 @@ module.exports = {
       display: ["Oswald"],
       body: ["Open Sans"],
       josefin: ["josefin sans"]
-    },
-    padding: {
-      "2px": "2px",
-      "3px": "3px"
     }
   }
 };
