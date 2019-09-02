@@ -85,9 +85,9 @@ const Carousel = ({ items }) => {
     // length height image to add aniamtion sroll image to botton
     const sroll_image_to_bottom = (index) => {
         setTimeout(() => {
-            let orginal_height_img = document.querySelector("#id" + index)
-            let length_height_img = orginal_height_img.naturalHeight;
-            let final_height_img = length_height_img - 300;
+            // let orginal_height_img = document.querySelector("#id" + index)
+            // let length_height_img = orginal_height_img.naturalHeight;
+            let final_height_img = 150;
             // console.log(orginal_height_img);
             var css = `.crop:hover img{ margin-top: -${final_height_img}px; }`;
             var style = document.createElement('style');
