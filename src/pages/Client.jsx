@@ -39,34 +39,34 @@ function Client() {
                 <p className="text-2xl font-bold text-center">OUR CLIENTS LOGOs</p>
                 <div className="flex flex-wrap justify-center">
                     <div className="w-1/6">
-                        <img className="w-32" src={logo_1} alt={logo_1} />
+                        <img className="w-24" src={logo_1} alt={logo_1} />
                     </div>
                     <div className="w-1/6">
-                        <img className="w-32" src={logo_2} alt={logo_2} />
+                        <img className="w-24" src={logo_2} alt={logo_2} />
                     </div>
                     <div className="w-1/6">
-                        <img className="w-32" src={logo_3} alt={logo_3} />
+                        <img className="w-24" src={logo_3} alt={logo_3} />
                     </div>
                     <div className="w-1/6">
-                        <img className="w-32" src={logo_4} alt={logo_4} />
+                        <img className="w-24" src={logo_4} alt={logo_4} />
                     </div>
                     <div className="w-1/6">
-                        <img className="w-32" src={logo_5} alt={logo_5} />
+                        <img className="w-24" src={logo_5} alt={logo_5} />
                     </div>
                     <div className="w-1/6">
-                        <img className="w-32" src={logo_6} alt={logo_6} />
+                        <img className="w-24" src={logo_6} alt={logo_6} />
                     </div>
                     <div className="w-1/6">
-                        <img className="w-32" src={logo_7} alt={logo_7} />
+                        <img className="w-24" src={logo_7} alt={logo_7} />
                     </div>
                     <div className="w-1/6">
-                        <img className="w-32" src={logo_8} alt={logo_8} />
+                        <img className="w-24" src={logo_8} alt={logo_8} />
                     </div>
                     <div className="w-1/6">
-                        <img className="w-32" src={logo_9} alt={logo_9} />
+                        <img className="w-24" src={logo_9} alt={logo_9} />
                     </div>
                     <div className="w-1/6">
-                        <img className="w-32" src={logo_10} alt={logo_10} />
+                        <img className="w-24" src={logo_10} alt={logo_10} />
                     </div>
                 </div>
             </div>

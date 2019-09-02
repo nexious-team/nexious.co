@@ -4,14 +4,20 @@
     overflow: hidden;
 }
 .crop img {
-    margin-top: 0px;
+    /* margin-top: 0px; */
     -webkit-transition: .5s all ease;
     -moz-transition: .5s all ease;
     transition: .5s all ease;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-select: none;
 }
 .crop:hover img{
-    margin-top: -397px;
+    /* margin-top: -397px; */
     -webkit-transition: .5s all ease;
     -moz-transition: .5s all ease;
     transition: .5s all ease;
+    user-select: none;
 }
