@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Button from '../elements/Button'
+import 'assets/css/about.css'
 
 const About = () => {
   const [text, setText] = useState('');
@@ -7,7 +7,7 @@ const About = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [typeSpeed, setTypeSpeed] = useState(500);
 
-  const words = ['designing', 'developing', 'creating'];
+  const words = ['designers', 'developers', 'creators'];
   const wait = 3000;
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const About = () => {
       } else if (isDeleting && text === '') {
         setTypeSpeed(500);
         setWordIndex(w => w + 1);
-        setIsDeleting(false)
+        setIsDeleting(false);
       }
     }
 
@@ -42,75 +42,48 @@ const About = () => {
   }, [text, wordIndex, isDeleting, typeSpeed, words])
 
   return (
-    <div className="">
-      <div className="relative">
-        <img className="object-cover w-full h-120" src="https://images.pexels.com/photos/1661004/pexels-photo-1661004.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="" />
-        <div className="absolute inset-x-0 top-0">
-          <div className="my-auto border-r">
+    <div>
+      <div className="top bg-blue-200 relative">
+        <img className="object-cover w-full h-144 opacity-75" src="https://images.pexels.com/photos/2310885/pexels-photo-2310885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+        <div className="absolute inset-0">
+          <div>
             <h1 className={`text-6xl text-center py-5`}>We are <span className={`border-black border-r-2`}>{text}</span></h1>
           </div>
-        </div>
-        <div className="lg:absolute inset-x-0 bottom-0 flex flex-wrap mb-6 items-center">
-          <div className="px-5 w-1/2 lg:flex-1">
-            <Image src="https://media.istockphoto.com/photos/heres-to-fun-and-friendship-picture-id928580246?k=6&m=928580246&s=612x612&w=0&h=4nlx-kl8XetSfP7E4O8qHip-BS5yuvc-K2KGmiYzm3c=" alt="" />
-          </div>
-          <div className="px-5 w-1/2 lg:flex-1">
-            <Image src="https://content.gallup.com/origin/gallupinc/GallupSpaces/Production/Cms/WORKPLACEV9CMS/30_bc1p3meybi5ttq2iy_w.jpg" alt="" />
-          </div>
-          <div className="px-5 w-1/2 lg:flex-1">
-            <Image src="https://www.cv-library.co.uk/career-advice/wp-content/uploads/2018/06/What-is-it-like-working-in-IT.jpg" alt="" />
-          </div>
-          <div className="px-5 w-1/2 lg:flex-1">
-            <Image src="https://thumbor.forbes.com/thumbor/1280x868/https%3A%2F%2Fblogs-images.forbes.com%2Fchuckcohn%2Ffiles%2F2017%2F05%2FInternal-business-meeting.jpg" alt="" />
-          </div>
+          <div className="text-center">
+            <button className="bounceInUp px-12 py-3 bg-blue-500 text-2xl rounded hover:shadow-lg">Join us</button>
+          </div> 
         </div>
       </div>
-      <div>
-        <Member
-          photo="https://images.pexels.com/photos/7111/couch-conference-startup-bro-concentration.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-          name="Monday Week"
-          position="Co-founder"
-          quote="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit vel expedita facere dolore totam nisi neque eos asperiores aut, explicabo exercitationem mollitia et aperiam ullam, nemo labore. Modi, nemo ducimus."
-        />
-        <Member
-          photo="https://www.bcjobs.ca/blog/wp-content/uploads/2019/04/12-ways-confident-professional-at-work.png"
-          name="January Month"
-          position="Co-founder"
-          quote="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit vel expedita facere dolore totam nisi neque eos asperiores aut, explicabo exercitationem mollitia et aperiam ullam, nemo labore. Modi, nemo ducimus."
-          reverse={true}
-        />
-        <Member
-          photo="https://previews.123rf.com/images/vadimgozhda/vadimgozhda1405/vadimgozhda140500310/28182974-young-successful-businessman-riding-in-the-car.jpg"
-          name="Apple Fruit"
-          position="Co-founder"
-          quote="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit vel expedita facere dolore totam nisi neque eos asperiores aut, explicabo exercitationem mollitia et aperiam ullam, nemo labore. Modi, nemo ducimus."
-        />
-        <Member
-          photo="https://cdn.luxe.digital/media/sites/7/2019/02/05102516/business-professional-attire-office-men-style-gabriel-macht-luxe-digital.jpg"
-          name="Cloud Sky"
-          position="Co-founder"
-          quote="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit vel expedita facere dolore totam nisi neque eos asperiores aut, explicabo exercitationem mollitia et aperiam ullam, nemo labore. Modi, nemo ducimus."
-          reverse={true}
-        />
-      </div>
-      <div className="message my-5">
-        <h2 className="text-4xl text-center">What we believe!</h2>
-      </div>
-      <div className="content">
-        <div className="flex justify-around flex-col lg:flex-row">
-          <Paragraph
-            title="People come first"
-            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque facere asperiores libero voluptatum dicta, eaque. Dignissimos cumque, esse voluptates, explicabo nam voluptatum itaque aliquid delectus suscipit doloribus hic sed. Fuga rem ad, nulla quos ratione veniam repudiandae sequi est in aperiam cum quam obcaecati sapiente nesciunt dicta, soluta molestias veritatis odit accusantium eligendi ipsum nam harum praesentium ab. Rem, veniam ea ipsam! Porro adipisci dolor suscipit, ipsa quasi voluptatum repellendus necessitatibus totam a, aspernatur distinctio minima deserunt cumque in sint ducimus eveniet molestiae alias temporibus maxime deleniti explicabo. Quibusdam placeat at, dolorem eligendi eum, obcaecati ipsa rem laboriosam explicabo eveniet."
-          />
-          <Paragraph
-            title="Less is better"
-            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque facere asperiores libero voluptatum dicta, eaque. Dignissimos cumque, esse voluptates, explicabo nam voluptatum itaque aliquid delectus suscipit doloribus hic sed. Fuga rem ad, nulla quos ratione veniam repudiandae sequi est in aperiam cum quam obcaecati sapiente nesciunt dicta, soluta molestias veritatis odit accusantium eligendi ipsum nam harum praesentium ab. Rem, veniam ea ipsam! Porro adipisci dolor suscipit, ipsa quasi voluptatum repellendus necessitatibus totam a, aspernatur distinctio minima deserunt cumque in sint ducimus eveniet molestiae alias temporibus maxime deleniti explicabo. Quibusdam placeat at, dolorem eligendi eum, obcaecati ipsa rem laboriosam explicabo eveniet."
-          />
+      <div className="member-container bg-gray-400 h-32"></div>
+      <div className="bg-gray-400">
+        <div className="text-center">
+          <h2 className="text-5xl">Meet our team</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, distinctio.</p>
+        </div>
+        <div className="flex flex-wrap mx-12 py-6">
+          <Developer photo="https://amp.businessinsider.com/images/5b4df27ac0229b1b008b4c15-750-563.jpg"/>
+          <Developer photo="https://www.straitstimes.com/sites/default/files/styles/article_pictrure_780x520_/public/articles/2019/07/03/nwy_tom_holland_030719_83_2x.jpg?itok=B3CM7ntD&timestamp=1562127658" />
+          <Developer photo="https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_700/https://cdn.wealthygorilla.com/wp-content/uploads/2018/07/Richest-Actors-Tom-Cruise.jpg"/>
+          <Developer photo="https://nyppagesix.files.wordpress.com/2019/01/gettyimages-873330180.jpg?quality=90&strip=all&w=618&h=410&crop=1"/>
         </div>
       </div>
-      <div className="conclude px-12 mt-5">
-        <h3 className="text-2xl">Create positive change</h3>
-        <p className="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div className="flex items-center">
+        <div className="w-2/5 text-center px-2">
+          <h1 className="text-4xl">Our vision</h1>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem pariatur necessitatibus numquam mollitia, sint ad ab corrupti iure quas ducimus excepturi delectus minus ullam voluptatibus.</p>
+        </div>
+        <div className="vision-image w-3/5">
+          <img className="w-full object-cover" src="https://image.freepik.com/free-photo/man-s-hand-holding-led-light-bulb-black-wall_43448-145.jpg" alt=""/>
+        </div>
+      </div>
+      <div className="flex items-center">
+        <div className="mission-image w-3/5">
+          <img className="object-cover" src="https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""/>
+        </div>
+        <div className="text-center w-2/5">
+          <h1 className="text-4xl">Our mission</h1>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem pariatur necessitatibus numquam mollitia, sint ad ab corrupti iure quas ducimus excepturi delectus minus ullam voluptatibus.</p>
+        </div>
       </div>
       <div className="tools my-5">
         <h2 className="text-4xl text-center">Our tools</h2>
@@ -131,35 +104,24 @@ const About = () => {
   );
 }
 
+const Developer = ({photo}) => (
+  <div className="w-1/2 lg:w-1/4 text-center hover:shadow-xl py-6">
+    <img className="rounded-full w-24 h-24 border border-black mx-auto object-cover" src={photo} alt=""/>
+    <h3 className="text-xl mt-2">Jonh Legend</h3>
+    <h4 className="text-md text-gray-800">Developer</h4>
+    <p className="text-xs my-1">
+      <span className="mx-1">Node.js</span>|
+      <span className="mx-1">React.js</span>|
+      <span className="mx-1">Express.js</span>
+    </p>
+    <p className="text-sm my-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, repellat eligendi laudantium nemo necessitatibus et iusto provident nesciunt animi quasi!</p>
+    <button className="bg-black text-white px-5 py-2 rounded-full text-sm">View Profile</button>
+  </div>
+)
+
 const Tool = ({ src, clacss, classImg }) => (
   <div className={`w-1/3 lg:w-1/5 px-5 self-center hover:shadow-lg py-auto ${clacss}`}>
     <img className={`${classImg ? classImg : ''}`} src={src} alt="" />
-  </div>
-)
-const Image = ({ src, alt, clacss }) => (
-  <img className={`hover:shadow-xl ${clacss}`} src={src} alt={alt} />
-)
-const Member = ({ name, position, quote, photo, reverse }) => {
-  const clacss = reverse ? "bg-gray-300 lg:flex-row-reverse" : "bg-gray-200 ";
-
-  return (
-    <div className={`flex flex-col-reverse lg:flex-row ${clacss}`}>
-      <div className={`lg:w-2/3 px-10 mt-6 sm:mb-6 ${reverse ? null : 'lg:text-right'}`}>
-        <h3 className="text-2xl">{name}</h3>
-        <h3 className="italic">@{position}</h3>
-        <p className="mt-10">{quote}</p>
-        <Button classes="mt-5" name="Learm more" color="blue" />
-      </div>
-      <div className="lg:w-1/3">
-        <Image src={photo} alt="" />
-      </div>
-    </div>
-  )
-}
-const Paragraph = ({ title, description }) => (
-  <div className="px-12 mt-6 lg:mt-0">
-    <h3 className="text-2xl">{title}</h3>
-    <p>{description}</p>
   </div>
 )
 export default About;

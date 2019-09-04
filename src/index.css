@@ -15,18 +15,5 @@ code {
 }
 
 @tailwind components;
-.image:hover {
-  animation-name: hoverImage;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-@keyframes hoverImage {
-  from {
-    margin-top: 0;
-  }
-  to {
-    margin-top: -20px;
-  }
-}
 
 @tailwind utilities;
