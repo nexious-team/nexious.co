@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useSpring, animated as a } from "react-spring";
+import { Link } from "react-router-dom";
 import lifecycle from "react-pure-lifecycle";
 import NavButton from "../commons/NavButton";
 import RegisterButton from "../elements/NavBarRegButton";
@@ -31,7 +32,7 @@ const componentDidMount = props => {
 const methods = {
   componentDidMount
 };
-const NavBar = () => {
+const NavBar = props => {
   const [state, setState] = useState({
     leftNavClicked: false,
     rightNavClicked: false
@@ -40,7 +41,7 @@ const NavBar = () => {
   const fade_animation = useSpring({
     background: isTop
       ? "radial-gradient(circle, rgba(1,0,0,0),  rgba(0,0,0,0))"
-      : "radial-gradient(circle, #FFFFF2, #FFFFF)",
+      : "radial-gradient(circle, #FFFFF3, #FFFFF)",
     height: isTop ? "6rem" : "5rem",
     config: { mass: 1 }
   });
@@ -48,27 +49,38 @@ const NavBar = () => {
     height: isTop ? "6rem" : "5rem",
     config: { tension: 200 }
   });
+  const handleNavbarSwitch = to_path => {
+    if (to_path !== "home") {
+      setTop(false);
+    } else {
+      setTop(true);
+    }
+  };
   useEffect(() => {
-    document.addEventListener("scroll", () => {
-      const Top = window.scrollY < 100;
-      if (Top !== isTop) {
-        setTop(Top);
-      }
-      console.log("scrolling");
-    });
+    if (window.location.pathname == "/") {
+      document.addEventListener("scroll", () => {
+        const Top = window.scrollY < 200;
+        if (Top !== isTop) {
+          setTop(Top);
+        }
+        //console.log(window.location.pathname);
+      });
+    } else {
+      setTop(false);
+    }
   });
-  const nav_classes = "fixed top-0 w-full font-sans spring-nav";
+  const nav_classes = "fixed top-0 w-full font-sans spring-nav z-10";
   const handleLeftNavToggle = () => {
-    this.setState({ leftNavClicked: !this.state.leftNavClicked });
-  };
-  const handleRightNavToggle = () => {
-    this.setState({ rightNavClicked: !this.state.rightNavClicked });
-  };
-  const naveleclick = () => {
-    console.log("clicked");
+    this.setState({ leftNavClicked: !this.state.leftNavClicked }, () => {
+      console.log(window.location.pathname);
+    });
+    if (window.location.pathname != "/") {
+      setTop(isTop => false);
+      console.log(window.location.pathname);
+    }
   };
   return (
-    <div>
+    <div className="mb-20">
       <a.nav
         className={isTop ? nav_classes + "bg-black" : nav_classes + " shadow"}
         style={fade_animation}
@@ -80,27 +92,36 @@ const NavBar = () => {
           <div className="flex-1 h-auto">
             {/* Left Element */}
             <div className="hidden lg:flex md:flex ml-5 justify-start font-sans">
-              <div className="w-auto px-2 md:mx-2 lg:mx-2">
+              <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
                 <span
-                  onClick={() => naveleclick()}
+                  onClick={() => handleNavbarSwitch("client")}
+                  className="text-sm text-gray-700 md:text-md lg:text-xl font-semibold font-josefin"
+                >
+                  <Link to="/service">Clients</Link>
+                </span>
+              </div>
+              <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
+                <span
+                  onClick={() => handleNavbarSwitch("client")}
                   className="text-sm text-gray-700 lg:text-xl font-semibold font-josefin"
                 >
-                  Clients
+                  <Link to="/service">Services</Link>
                 </span>
               </div>
-              <div className="w-auto px-2 md:mx-2 lg:mx-2">
-                <span className="text-sm text-gray-700 lg:text-xl font-semibold font-josefin">
-                  Services
+              <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
+                <span
+                  onClick={() => handleNavbarSwitch("client")}
+                  className="text-sm text-gray-700 lg:text-xl font-semibold font-josefin"
+                >
+                  <Link to="/about">Team</Link>
                 </span>
               </div>
-              <div className="w-auto px-2 md:mx-2 lg:mx-2">
-                <span className="text-sm text-gray-700 lg:text-xl font-semibold font-josefin">
-                  Team
-                </span>
-              </div>
-              <div className="w-auto px-2 md:mx-2 lg:mx-2">
-                <span className="text-sm text-gray-700 lg:text-xl font-semibold font-josefin">
-                  Contact
+              <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
+                <span
+                  onClick={() => handleNavbarSwitch("client")}
+                  className="text-sm text-gray-700 lg:text-xl font-semibold font-josefin"
+                >
+                  <Link to="/about">Contact</Link>
                 </span>
               </div>
             </div>
@@ -114,13 +135,14 @@ const NavBar = () => {
           {/* Middle Elements */}
           <div className="flex-1 h-auto text-center md:text-center lg:text-center px-5 ">
             <span
+              onClick={() => handleNavbarSwitch("home")}
               className={
                 isTop
                   ? "text-3xl text-gray-700 font-josefin"
                   : "text-3xl text-black font-josefin"
               }
             >
-              Nexious
+              <Link to="/">Nexious</Link>
             </span>
           </div>
 

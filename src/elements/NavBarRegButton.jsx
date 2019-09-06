@@ -6,14 +6,14 @@ const RegisterButton = ({ isTop }) => {
   const borderColorAnimation = useSpring({
     border: isTop ? "2px solid rgba(255,255,255,1)" : "0px solid rgb(0,0,0,0)",
     background: isTop
-      ? "linear-gradient(-360deg, rgba(255,0,0,0), rgba(255,0,0,0))"
+      ? "linear-gradient(-250deg, rgba(255,0,0,0), rgba(255,0,0,0))"
       : "linear-gradient(80deg, rgba(182, 244, 146,1), rgba(51, 139, 147,1))",
     padding: isTop ? "0px" : "2px",
     boxShadow: isTop
       ? "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
       : "0 0px 0px 0px rgba(0, 0, 0, 00), 0 0px 0px 0px rgba(0, 0, 0, 00)",
     transform: clicked ? "scale(0.99)" : "scale(1)",
-    config: { tension: 3000 }
+    config: { tension: 1000 }
   });
 
   const colorAnimation = useSpring({
@@ -36,7 +36,10 @@ const RegisterButton = ({ isTop }) => {
           style={colorAnimation}
           className="rounded w-full h-full flex items-center justify-center "
         >
-          <a.h1 style={textColorAnimation} className="text-xl cursor-pointer">
+          <a.h1
+            style={textColorAnimation}
+            className="text-xl cursor-pointer select-none"
+          >
             Get Started
           </a.h1>
         </a.div>

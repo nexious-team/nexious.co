@@ -7,25 +7,31 @@ const HomeHero = props => {
   const [hero, setHero] = useState([
     {
       text: "Show People Who You Are!",
+      image: "",
       color: "#ff8080"
     },
     {
       text: "Let Us Help You Grow",
+      image: "",
       color: "#ffba92"
     },
     {
       text: "You Dream It, We Make It",
+      image: "",
       color: "#d5a4cf"
     },
     {
       text: "Laked Matatataang!! Normalin Normalin",
+      image: "",
       color: "#eed7db"
     }
   ]);
-  useEffect(
-    () => void setInterval(() => set(state => (state + 1) % 4), 5000),
-    []
-  );
+  useEffect(() => {
+    const abortController = new AbortController();
+    const signal = abortController.signal;
+    const intervalId = setInterval(() => set(state => (state + 1) % 4), 5000);
+    return () => clearInterval(intervalId);
+  }, []);
   const transitions = useTransition(index, p => p, {
     from: { opacity: 1, transform: "translate3d(0,100%,0)" },
     enter: { opacity: 1, transform: "translate3d(0%,0,0)" },
