@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import routes from './routes';
-
+import AOS from 'aos';
 import { Navbar } from './components'
+import 'aos/dist/aos.css';
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  });
+
   return (
     <Router>
       <div>

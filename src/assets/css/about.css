@@ -16,7 +16,10 @@
   }
 
 .top {
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 19% 98%, 0 81%);
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+}
+.top-path {
+  clip-path: polygon(0 0, 50% 100%, 100% 0, 100% 100%, 0 100%);
 }
 .member-container {
   clip-path: polygon(0% 100%, 81% 2%, 100% 100%);
@@ -102,7 +105,25 @@
   -webkit-animation-name: bounceInUp;
   animation-name: bounceInUp;
   animation-duration: 500ms;
-  animation-iteration-count: 2;
+  animation-iteration-count: 1;
+}
+.bounceInUp:hover {
+  animation-name: scaleButton;
+  animation-duration: 200ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes scaleButton {
+  0% {
+    padding: 0.75rem 3rem;
+    font-size: 1.5rem;
+  }
+  100% {
+    padding: 1rem 4rem;
+    font-size: 1.75rem;
+  }
 }
 
 .vision-image {  
@@ -111,4 +132,31 @@
 
 .mission-image {
   clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+}
+
+.move-ease {
+  animation: move 10s ease infinite;
+}
+.move-ease-in {
+  animation: move 15s ease-in infinite;
+}
+.move-ease-in-out {
+  animation: move 20s ease-in-out infinite;
+}
+.move-ease-out {
+  animation: move 25s ease-out infinite;
+}
+.move-linear {
+  animation: move 30s ease infinite;
+}
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
