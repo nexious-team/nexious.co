@@ -97,7 +97,7 @@ const NavBar = props => {
                   onClick={() => handleNavbarSwitch("client")}
                   className="text-sm text-gray-700 md:text-md lg:text-xl font-semibold font-josefin"
                 >
-                  <Link to="/service">Clients</Link>
+                  <Link to="/client">Clients</Link>
                 </span>
               </div>
               <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
@@ -121,7 +121,7 @@ const NavBar = props => {
                   onClick={() => handleNavbarSwitch("client")}
                   className="text-sm text-gray-700 lg:text-xl font-semibold font-josefin"
                 >
-                  <Link to="/about">Contact</Link>
+                  <Link to="/contact">Contact</Link>
                 </span>
               </div>
             </div>
