@@ -6,6 +6,13 @@ module.exports = {
       display: ["Oswald"],
       body: ["Open Sans"],
       josefin: ["josefin sans"]
+    },
+    extend: {
+      fontSize: {
+        '7xl': '5rem'
+      }
     }
-  }
-};
+  },
+  variants: {},
+  plugins: []
+}

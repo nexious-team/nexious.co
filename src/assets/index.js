@@ -8,8 +8,8 @@ import logo_7 from './img/logo (7).jpg'
 import logo_8 from './img/logo (8).jpg'
 import logo_9 from './img/logo (9).jpg'
 import logo_10 from './img/logo (10).jpg'
-
+import img_1 from './img/img-1.jpg'
 
 export {
-    logo_1, logo_2, logo_3, logo_4, logo_5, logo_6, logo_7, logo_8, logo_9, logo_10
+    logo_1, logo_2, logo_3, logo_4, logo_5, logo_6, logo_7, logo_8, logo_9, logo_10, img_1
 }
