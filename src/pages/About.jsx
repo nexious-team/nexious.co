@@ -5,10 +5,95 @@ const About = () => {
   const [text, setText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [typeSpeed, setTypeSpeed] = useState(500);
-
+  const [typeSpeed, setTypeSpeed] = useState(200);
+  const [minitools] = useState([
+    {
+      id: 1,
+      imgSrc: "http://allcracksofts.info/wp-content/uploads/2019/04/V1_113244e0-0b02-4a41-9fb2-1f39e5c5e6a4_952dc796a8d745b2b7968c50b0bcee30.jpg",
+      clacss: "move-ease",
+      imgClass: "rounded-full"
+    },
+    {
+      id: 2,
+      imgSrc: "https://github.githubassets.com/images/modules/logos_page/Octocat.png",
+      clacss: "move-linear",
+      imgClass: "rounded-full"
+    },
+    {
+      id: 3,
+      imgSrc: "https://projecthydro.org/wp-content/uploads/2019/01/passportJS.png",
+      clacss: "move-ease-in",
+      imgClass: "rounded-full"
+    },
+    {
+      id: 4,
+      imgSrc: "https://miro.medium.com/max/3200/1*t9d16DIcJg_-dEg0X_qTWg.png",
+      clacss: "move-ease-out",
+      imgClass: "rounded-full"
+    },
+    {
+      id: 5,
+      imgSrc: "https://cdn.mos.cms.futurecdn.net/xJGh6cXvC69an86AdrLD98-320-80.jpg",
+      clacss: "move-linear",
+      imgClass: ""
+    },
+    {
+      id: 6,
+      imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png",
+      clacss: "move-ease-in-out",
+      imgClass: ""
+    },
+    {
+      id: 7,
+      imgSrc: "https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS.3.svg",
+      clacss: "move-ease-out",
+      imgClass: ""
+    },
+    {
+      id: 8,
+      imgSrc: "https://gitforwindows.org/img/gwindows_logo.png",
+      clacss: "move-linear",
+      imgClass: ""
+    },
+    {
+      id: 9,
+      imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Tux.png/220px-Tux.png",
+      clacss: "move-ease-in",
+      imgClass: ""
+    },
+    {
+      id: 10,
+      imgSrc: "https://blog.hubspot.com/hubfs/image8-2.jpg",
+      clacss: "move-ease-out",
+      imgClass: ""
+    },
+    {
+      id: 11,
+      imgSrc: "https://i.pinimg.com/originals/de/1c/91/de1c91788be0d791135736995109272a.png",
+      clacss: "move-ease-in-out",
+      imgClass: ""
+    },
+    {
+      id: 12,
+      imgSrc: "https://cdn.freebiesupply.com/logos/large/2x/stackoverflow-com-logo-png-transparent.png",
+      clacss: "move-ease-out",
+      imgClass: ""
+    },
+    {
+      id: 13,
+      imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/DigitalOcean_logo.svg/1200px-DigitalOcean_logo.svg.png",
+      clacss: "move-linear",
+      imgClass: ""
+    },
+    {
+      id: 14,
+      imgSrc: "https://cdn.worldvectorlogo.com/logos/gmail-icon.svg",
+      clacss: "move-ease",
+      imgClass: ""
+    }
+  ])
   const words = ['designers', 'developers', 'creators'];
-  const wait = 3000;
+  const wait = 2000;
 
   useEffect(() => {
     function type() {
@@ -21,6 +106,8 @@ const About = () => {
       } else {
         setText(fullTxt.substring(0, text.length + 1));
       }
+
+      setTypeSpeed(300);
       
       if(isDeleting) {
         setTypeSpeed(t => t / 2);
@@ -30,7 +117,7 @@ const About = () => {
         setTypeSpeed(wait);
         setIsDeleting(true);
       } else if (isDeleting && text === '') {
-        setTypeSpeed(500);
+        setTypeSpeed(200);
         setWordIndex(w => w + 1);
         setIsDeleting(false);
       }
@@ -93,7 +180,7 @@ const About = () => {
           <h2 className="text-4xl text-center">Our tools</h2>
         </div>
         <div data-aos="fade-right" className="relative">
-          <div className="flex flex-wrap justify-center items-center content-center px-32 h-120">
+          <div className="flex flex-wrap justify-center items-center content-center px-32 h-84">
             <Tool src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" />
             <Tool src="https://expressjs.com/images/express-facebook-share.png" />
             <Tool src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" />
@@ -104,53 +191,13 @@ const About = () => {
             <Tool src="https://d2k1ftgv7pobq7.cloudfront.net/meta/u/res/images/brand-assets/Logos/0099ec3754bf473d2bbf317204ab6fea/trello-logo-blue.png" />
           </div>
           <div className="absolute inset-0 flex flex-wrap justify-center items-center">
-            <div className="move-ease mx-16">
-              <img className="h-12 w-12 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS.3.svg" alt=""/>
-            </div>
-            <div className="move-linear mx-16">
-              <img className="h-12 w-12 object-contain" src="https://gitforwindows.org/img/gwindows_logo.png" alt=""/>
-            </div>
-            <div className="move-ease-in-out mx-16">
-              <img className="h-12 w-12 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Tux.png/220px-Tux.png" alt=""/>
-            </div>
-            <div className="move-ease-out mx-16">
-              <img className="h-12 w-12 object-cover" src="https://blog.hubspot.com/hubfs/image8-2.jpg" alt=""/>
-            </div>
-            <div className="move-ease-in mx-16">
-              <img className="h-12 w-12 object-contain" src="https://i.pinimg.com/originals/de/1c/91/de1c91788be0d791135736995109272a.png" alt=""/>
-            </div>
-            <div className="move-linear mx-16">
-              <img className="h-12 w-12 object-contain" src="https://cdn.freebiesupply.com/logos/large/2x/stackoverflow-com-logo-png-transparent.png" alt=""/>
-            </div>
-            <div className="move-ease-in-out mx-16">
-              <img className="h-12 w-12 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/DigitalOcean_logo.svg/1200px-DigitalOcean_logo.svg.png" alt=""/>
-            </div>
-            <div className="move-ease-out mx-16">
-              <img className="h-12 w-12 object-contain" src="https://cdn.worldvectorlogo.com/logos/gmail-icon.svg" alt=""/>
-            </div>
-            <div className="move-ease-in mx-16">
-              <img className="h-12 w-12 object-contain" src="http://allcracksofts.info/wp-content/uploads/2019/04/V1_113244e0-0b02-4a41-9fb2-1f39e5c5e6a4_952dc796a8d745b2b7968c50b0bcee30.jpg" alt=""/>
-            </div>
-            <div className="move-ease-in mx-16">
-              <img className="h-12 w-12 object-contain" src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" alt=""/>
-            </div>
-            <div className="move-linear mx-16">
-              <img className="h-12 w-12 object-contain" src="https://projecthydro.org/wp-content/uploads/2019/01/passportJS.png" alt=""/>
-            </div>
-            <div className="move-ease-in-out mx-16">
-              <img className="h-12 w-12 object-contain" src="https://miro.medium.com/max/3200/1*t9d16DIcJg_-dEg0X_qTWg.png" alt=""/>
-            </div>
-            <div className="move-ease-out mx-16">
-              <img className="h-12 w-12 object-contain" src="https://cdn.mos.cms.futurecdn.net/xJGh6cXvC69an86AdrLD98-320-80.jpg" alt=""/>
-            </div>
-            <div className="move-ease-in mx-16">
-              <img className="h-12 w-12 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" alt=""/>
-            </div>
-            
+            {
+              minitools.map(minitool => (
+                <MiniTool key={minitool.id} {...minitool} />
+              ))
+            }
           </div>
         </div>
-      </div>
-      <div className="help">
       </div>
     </div>
   );
@@ -173,7 +220,15 @@ const Developer = ({photo}) => (
 
 const Tool = ({ src, clacss, classImg }) => (
   <div className={`w-1/3 lg:w-1/5 px-5 self-center hover:shadow-lg py-auto ${clacss}`}>
-    <img className={`${classImg ? classImg : ''}`} src={src} alt="" />
+    <img className={`${classImg || ''}`} src={src} alt="" />
+  </div>
+)
+
+const MiniTool = ({imgSrc, clacss, imgClass}) => (
+  <div className={`mx-16 ${clacss || ''}`}>
+    <div className="h-12 w-12 rounded-full shadow-lg">
+      <img className={`h-12 w-12 object-contain p-2 ${imgClass || ''}`} src={imgSrc} alt=""/>
+    </div>
   </div>
 )
 export default About;
