@@ -21,9 +21,6 @@
 .top-path {
   clip-path: polygon(0 0, 50% 100%, 100% 0, 100% 100%, 0 100%);
 }
-.member-container {
-  clip-path: polygon(0% 100%, 81% 2%, 100% 100%);
-}
 
 @-webkit-keyframes bounceInUp {
   from,

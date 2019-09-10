@@ -1,0 +1,160 @@
+{
+  "developers": [
+    {
+      "id": 1,
+      "name": "Sathya",
+      "skills": "Developer",
+      "tools": "Node.js | React.js | Argular",
+      "imgSrc": "https://amp.businessinsider.com/images/5b4df27ac0229b1b008b4c15-750-563.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Harry",
+      "skills": "Developer",
+      "tools": "Node.js | React.js | Laravel",
+      "imgSrc": "https://www.straitstimes.com/sites/default/files/styles/article_pictrure_780x520_/public/articles/2019/07/03/nwy_tom_holland_030719_83_2x.jpg?itok=B3CM7ntD&timestamp=1562127658"
+    },
+    {
+      "id": 3,
+      "name": "Bunly",
+      "skills": "Developer / Designer",
+      "tools": "Node.js | React.js | Vue.js",
+      "imgSrc": "https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_700/https://cdn.wealthygorilla.com/wp-content/uploads/2018/07/Richest-Actors-Tom-Cruise.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Banly",
+      "skills": "Developer",
+      "tools": "Node.js | React.js | Vue.js",
+      "imgSrc": "https://nyppagesix.files.wordpress.com/2019/01/gettyimages-873330180.jpg?quality=90&strip=all&w=618&h=410&crop=1"
+    }
+  ],
+  "tools": [
+    {
+      "id": 1,
+      "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+      "imgClass": ""
+    },
+    {
+      "id": 2,
+      "imgSrc": "https://expressjs.com/images/express-facebook-share.png",
+      "imgClass": ""
+    },
+    {
+      "id": 3,
+      "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
+      "imgClass": ""
+    },
+    {
+      "id": 4,
+      "imgSrc": "https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png",
+      "imgClass": ""
+    },
+    {
+      "id":5,
+      "imgSrc": "https://vuejs.org/images/logo.png",
+      "imgClass": ""
+    },
+    {
+      "id": 6,
+      "imgSrc": "https://www.b2bnn.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-17-at-2.29.34-PM.png",
+      "imgClass": ""
+    },
+    {
+      "id": 7,
+      "imgSrc": "https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png",
+      "imgClass": ""
+    },
+    {
+      "id": 8,
+      "imgSrc": "https://d2k1ftgv7pobq7.cloudfront.net/meta/u/res/images/brand-assets/Logos/0099ec3754bf473d2bbf317204ab6fea/trello-logo-blue.png",
+      "imgClass": ""
+    }
+  ],
+  "minitools": [
+    {
+      "id": 1,
+      "imgSrc": "http://allcracksofts.info/wp-content/uploads/2019/04/V1_113244e0-0b02-4a41-9fb2-1f39e5c5e6a4_952dc796a8d745b2b7968c50b0bcee30.jpg",
+      "clacss": "move-ease",
+      "imgClass": "rounded-full"
+    },
+    {
+      "id": 2,
+      "imgSrc": "https://github.githubassets.com/images/modules/logos_page/Octocat.png",
+      "clacss": "move-linear",
+      "imgClass": "rounded-full"
+    },
+    {
+      "id": 3,
+      "imgSrc": "https://projecthydro.org/wp-content/uploads/2019/01/passportJS.png",
+      "clacss": "move-ease-in",
+      "imgClass": "rounded-full"
+    },
+    {
+      "id": 4,
+      "imgSrc": "https://miro.medium.com/max/3200/1*t9d16DIcJg_-dEg0X_qTWg.png",
+      "clacss": "move-ease-out",
+      "imgClass": "rounded-full"
+    },
+    {
+      "id": 5,
+      "imgSrc": "https://cdn.mos.cms.futurecdn.net/xJGh6cXvC69an86AdrLD98-320-80.jpg",
+      "clacss": "move-linear",
+      "imgClass": ""
+    },
+    {
+      "id": 6,
+      "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png",
+      "clacss": "move-ease-in-out",
+      "imgClass": ""
+    },
+    {
+      "id": 7,
+      "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS.3.svg",
+      "clacss": "move-ease-out",
+      "imgClass": ""
+    },
+    {
+      "id": 8,
+      "imgSrc": "https://gitforwindows.org/img/gwindows_logo.png",
+      "clacss": "move-linear",
+      "imgClass": ""
+    },
+    {
+      "id": 9,
+      "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Tux.png/220px-Tux.png",
+      "clacss": "move-ease-in",
+      "imgClass": ""
+    },
+    {
+      "id": 10,
+      "imgSrc": "https://blog.hubspot.com/hubfs/image8-2.jpg",
+      "clacss": "move-ease-out",
+      "imgClass": ""
+    },
+    {
+      "id": 11,
+      "imgSrc": "https://i.pinimg.com/originals/de/1c/91/de1c91788be0d791135736995109272a.png",
+      "clacss": "move-ease-in-out",
+      "imgClass": ""
+    },
+    {
+      "id": 12,
+      "imgSrc": "https://cdn.freebiesupply.com/logos/large/2x/stackoverflow-com-logo-png-transparent.png",
+      "clacss": "move-ease-out",
+      "imgClass": ""
+    },
+    {
+      "id": 13,
+      "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/DigitalOcean_logo.svg/1200px-DigitalOcean_logo.svg.png",
+      "clacss": "move-linear",
+      "imgClass": ""
+    },
+    {
+      "id": 14,
+      "imgSrc": "https://cdn.worldvectorlogo.com/logos/gmail-icon.svg",
+      "clacss": "move-ease",
+      "imgClass": ""
+    }
+  ]
+}
