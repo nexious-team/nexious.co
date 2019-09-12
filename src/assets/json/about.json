@@ -4,29 +4,29 @@
       "id": 1,
       "name": "Sathya",
       "skills": "Developer",
-      "tools": "Node.js | React.js | Argular",
-      "imgSrc": "https://amp.businessinsider.com/images/5b4df27ac0229b1b008b4c15-750-563.jpg"
+      "tools": "Node.js | React.js | Argular.js",
+      "imgSrc": "https://ca.slack-edge.com/TKFDUK2PQ-UKF3NSAB1-6f2576329b60-512"
     },
     {
       "id": 2,
       "name": "Harry",
       "skills": "Developer",
       "tools": "Node.js | React.js | Laravel",
-      "imgSrc": "https://www.straitstimes.com/sites/default/files/styles/article_pictrure_780x520_/public/articles/2019/07/03/nwy_tom_holland_030719_83_2x.jpg?itok=B3CM7ntD&timestamp=1562127658"
+      "imgSrc": "https://scontent.fpnh9-2.fna.fbcdn.net/v/t1.0-9/15492113_1796177640637456_9152718415221894831_n.jpg?_nc_cat=102&_nc_oc=AQn5TV_KRdVWbwZsoD6ZiagXhHNJ4BD3r9uekTymt9gtTge-_1IcipTrjZ5OopuKX9o&_nc_ht=scontent.fpnh9-2.fna&oh=ddf5a11b42030509f2a352cb122f2ced&oe=5DF9EAD3"
     },
     {
       "id": 3,
       "name": "Bunly",
       "skills": "Developer / Designer",
       "tools": "Node.js | React.js | Vue.js",
-      "imgSrc": "https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_700/https://cdn.wealthygorilla.com/wp-content/uploads/2018/07/Richest-Actors-Tom-Cruise.jpg"
+      "imgSrc": "https://avatars0.githubusercontent.com/u/39366164?s=400&v=4"
     },
     {
       "id": 4,
       "name": "Banly",
       "skills": "Developer",
       "tools": "Node.js | React.js | Vue.js",
-      "imgSrc": "https://nyppagesix.files.wordpress.com/2019/01/gettyimages-873330180.jpg?quality=90&strip=all&w=618&h=410&crop=1"
+      "imgSrc": "https://avatars0.githubusercontent.com/u/36428914?s=460&v=4"
     }
   ],
   "tools": [
@@ -38,7 +38,8 @@
     {
       "id": 2,
       "imgSrc": "https://expressjs.com/images/express-facebook-share.png",
-      "imgClass": ""
+      "imgClass": "",
+      "clacss": "lg:-mt-24"
     },
     {
       "id": 3,
@@ -48,7 +49,8 @@
     {
       "id": 4,
       "imgSrc": "https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png",
-      "imgClass": ""
+      "imgClass": "",
+      "clacss": "lg:-mt-24"
     },
     {
       "id":5,
@@ -58,7 +60,8 @@
     {
       "id": 6,
       "imgSrc": "https://www.b2bnn.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-17-at-2.29.34-PM.png",
-      "imgClass": ""
+      "imgClass": "",
+      "clacss": "lg:-mt-24"
     },
     {
       "id": 7,
@@ -68,7 +71,8 @@
     {
       "id": 8,
       "imgSrc": "https://d2k1ftgv7pobq7.cloudfront.net/meta/u/res/images/brand-assets/Logos/0099ec3754bf473d2bbf317204ab6fea/trello-logo-blue.png",
-      "imgClass": ""
+      "imgClass": "",
+      "clacss": "lg:-mt-24"
     }
   ],
   "minitools": [
