@@ -4,7 +4,7 @@ import { Carousel } from '../components'
 import { logo_1,logo_2,logo_3,logo_4,logo_5,logo_6,logo_7,logo_8,logo_9,logo_10 } from '../assets'
 import Data from './Client.json'
 
-function Client() {
+function PagesClient() {
     // Declare a new state variable
     const e_commerce = Data.e_commerce;
     const web_app = Data.web_app;
@@ -70,4 +70,4 @@ function Client() {
         </div>
     );
 }
-export default Client;
+export default PagesClient;
