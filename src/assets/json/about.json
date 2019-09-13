@@ -5,28 +5,32 @@
       "name": "Sathya",
       "skills": "Developer",
       "tools": "Node.js | React.js | Argular.js",
-      "imgSrc": "https://ca.slack-edge.com/TKFDUK2PQ-UKF3NSAB1-6f2576329b60-512"
+      "imgSrc": "https://ca.slack-edge.com/TKFDUK2PQ-UKF3NSAB1-6f2576329b60-512",
+      "aosDelay": "50"
     },
     {
       "id": 2,
       "name": "Harry",
       "skills": "Developer",
       "tools": "Node.js | React.js | Laravel",
-      "imgSrc": "https://scontent.fpnh9-2.fna.fbcdn.net/v/t1.0-9/15492113_1796177640637456_9152718415221894831_n.jpg?_nc_cat=102&_nc_oc=AQn5TV_KRdVWbwZsoD6ZiagXhHNJ4BD3r9uekTymt9gtTge-_1IcipTrjZ5OopuKX9o&_nc_ht=scontent.fpnh9-2.fna&oh=ddf5a11b42030509f2a352cb122f2ced&oe=5DF9EAD3"
+      "imgSrc": "https://scontent.fpnh9-2.fna.fbcdn.net/v/t1.0-9/15492113_1796177640637456_9152718415221894831_n.jpg?_nc_cat=102&_nc_oc=AQn5TV_KRdVWbwZsoD6ZiagXhHNJ4BD3r9uekTymt9gtTge-_1IcipTrjZ5OopuKX9o&_nc_ht=scontent.fpnh9-2.fna&oh=ddf5a11b42030509f2a352cb122f2ced&oe=5DF9EAD3",
+      "aosDelay": "100"
     },
     {
       "id": 3,
       "name": "Bunly",
       "skills": "Developer / Designer",
       "tools": "Node.js | React.js | Vue.js",
-      "imgSrc": "https://avatars0.githubusercontent.com/u/39366164?s=400&v=4"
+      "imgSrc": "https://avatars0.githubusercontent.com/u/39366164?s=400&v=4",
+      "aosDelay": "150"
     },
     {
       "id": 4,
       "name": "Banly",
       "skills": "Developer",
       "tools": "Node.js | React.js | Vue.js",
-      "imgSrc": "https://avatars0.githubusercontent.com/u/36428914?s=460&v=4"
+      "imgSrc": "https://avatars0.githubusercontent.com/u/36428914?s=460&v=4",
+      "aosDelay": "200"
     }
   ],
   "tools": [
@@ -55,7 +59,7 @@
     {
       "id":5,
       "imgSrc": "https://vuejs.org/images/logo.png",
-      "imgClass": ""
+      "imgClass": "p-3"
     },
     {
       "id": 6,
@@ -66,7 +70,7 @@
     {
       "id": 7,
       "imgSrc": "https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png",
-      "imgClass": ""
+      "imgClass": "p-3"
     },
     {
       "id": 8,

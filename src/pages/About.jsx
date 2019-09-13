@@ -13,6 +13,7 @@ const About = () => {
   const wait = 1000;
 
   useEffect(() => {
+
     function type() {
       const current = wordIndex % words.length;
       const fullTxt = words[current];
@@ -46,7 +47,7 @@ const About = () => {
 
   return (
     <div className="overflow-hidden">
-      <div className="top bg-blue-200 relative">
+      <div id="top" className="bg-blue-200 relative">
         <img className="object-cover w-full h-144 opacity-75" src="https://images.pexels.com/photos/2310885/pexels-photo-2310885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
         <div className="absolute inset-0 mt-24">
           <div className="">
@@ -130,12 +131,15 @@ const About = () => {
           </div>
         </div>
       </div>
+      <div className={`fixed right-0 bottom-0 mr-6 mb-6`}>
+        <a className="p-3 bg-gray-300 text-sm" href="#top">Top</a>
+      </div>
     </div>
   );
 }
 
-const Developer = ({imgSrc, name, skills, tools }) => (
-  <div data-aos="fade-up" className="sm:w-1/2 lg:w-1/4 text-center hover:shadow-xl py-6">
+const Developer = ({imgSrc, name, skills, tools, aosDelay }) => (
+  <div data-aos="fade-up" data-aos-delay={aosDelay} className="sm:w-1/2 lg:w-1/4 text-center hover:shadow-xl py-6">
     <img className="rounded-full w-24 h-24 border border-black mx-auto object-cover" src={imgSrc} alt=""/>
     <h3 className="text-xl mt-2">{name}</h3>
     <h4 className="text-md text-gray-800">{skills}</h4>
@@ -157,7 +161,7 @@ const Developer = ({imgSrc, name, skills, tools }) => (
 
 const Tool = ({ imgSrc, clacss, imgClass }) => (
   <div className={`mx-4 lg:mx-10 mb-12 ${clacss || ''}`}>
-    <img className={`${imgClass || ''} h-16 w-16 md:h-24 md:w-24 lg:h-32 lg:w-32 mx-auto object-contain rounded-full shadow-lg `} src={imgSrc} alt="" />
+    <img className={`${imgClass || ''} h-16 w-16 md:h-24 md:w-24 lg:h-32 lg:w-32 mx-auto object-contain shadow-lg `} src={imgSrc} alt="" />
   </div>
 )
 
