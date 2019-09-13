@@ -13,6 +13,7 @@
     -moz-user-drag: none;
     -o-user-drag: none;
     user-select: none;
+    align-self: flex-end;
 }
 .crop:hover img{
     /* margin-top: -397px; */
