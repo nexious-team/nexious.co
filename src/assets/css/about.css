@@ -1,3 +1,18 @@
+.move-scroll-arrow {
+  animation: moveScrollArrow 2s linear infinite;
+}
+
+@keyframes moveScrollArrow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .image {
     transform: rotate(-5deg);
 }
@@ -15,14 +30,8 @@
     }
   }
 
-.top {
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
-}
 .top-path {
   clip-path: polygon(0 0, 50% 100%, 100% 0, 100% 100%, 0 100%);
-}
-.member-container {
-  clip-path: polygon(0% 100%, 81% 2%, 100% 100%);
 }
 
 @-webkit-keyframes bounceInUp {
@@ -135,19 +144,19 @@
 }
 
 .move-ease {
-  animation: move 10s ease infinite;
+  animation: move 10s ease -5s infinite;
 }
 .move-ease-in {
-  animation: move 15s ease-in infinite;
+  animation: move 15s ease-in -7.5s infinite;
 }
 .move-ease-in-out {
-  animation: move 20s ease-in-out infinite;
+  animation: move 20s ease-in-out -10s infinite;
 }
 .move-ease-out {
-  animation: move 25s ease-out infinite;
+  animation: move 25s ease-out -12.5s infinite;
 }
 .move-linear {
-  animation: move 30s ease infinite;
+  animation: move 30s ease -15s infinite;
 }
 @keyframes move {
   0% {
