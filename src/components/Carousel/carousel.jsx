@@ -79,17 +79,13 @@ const Carousel = ({ items }) => {
         // console.log(index);
     })
 
-    // style on hover image
-
-
     // length height image to add aniamtion sroll image to botton
     const sroll_image_to_bottom = (index) => {
         setTimeout(() => {
             // let orginal_height_img = document.querySelector("#id" + index)
             // let length_height_img = orginal_height_img.naturalHeight;
             let final_height_img = 150;
-            // console.log(orginal_height_img);
-            var css = `.crop:hover img{ margin-top: -${final_height_img}px; }`;
+            var css = `.crop:hover img{ margin-top: -${final_height_img}px; }`
             var style = document.createElement('style');
             if (style.styleSheet) {
                 style.styleSheet.cssText = css;
@@ -97,8 +93,6 @@ const Carousel = ({ items }) => {
                 style.appendChild(document.createTextNode(css));
             }
             document.getElementById("style" + index).appendChild(style);
-            // console.log("style"+index , length_height_img   );
-
         }, 1000);
     }
     return (
@@ -106,7 +100,7 @@ const Carousel = ({ items }) => {
             <animated.div {...bind()} style={{ transform: xy.interpolate((x) => `translate3D(${x}px,0, 0)`), }}>
                 <div className="flex flex-wrap items-center">
                     {item.map((data, index) => (
-                        <div className="w-1/4 p-2" key={index}>
+                        <div className="w-1/4 p-2 flex" key={index}>
                             <div className="bg-gray-400 crop shadow" id={"style" + index}>
                                 <img className="w-full" src={data} alt={data} id={"id" + index} onLoad={sroll_image_to_bottom(index)} />
                             </div>
@@ -117,13 +111,13 @@ const Carousel = ({ items }) => {
             <div className="w-full">
                 <div className="flex flex-wrap">
                     <div className="w-1/2 text-right pr-2">
-                        <button onClick={change_side_pre} className="text-3xl text-green-500">
-                            <FontAwesomeIcon icon="arrow-circle-left" />
+                        <button onClick={change_side_pre} className="text-3xl text-gray-500">
+                            <FontAwesomeIcon icon="chevron-circle-left" />
                         </button>
                     </div>
                     <div className="w-1/2 pl-2">
-                        <button onClick={change_side_next} className="text-3xl text-green-500">
-                            <FontAwesomeIcon icon="arrow-circle-right" />
+                        <button onClick={change_side_next} className="text-3xl text-gray-500">
+                            <FontAwesomeIcon icon="chevron-circle-right" />
                         </button>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-import { Home, Service, About, Client } from './pages';
+import { Home, Service, About, PagesClient,GetStart } from './pages';
 
 export default [
   {
@@ -16,6 +16,10 @@ export default [
   }  ,
   {
     path: "/client",
-    component: Client
+    component: PagesClient
+  },
+  {
+    path: "/get-start",
+    component: GetStart
   }
 ]
