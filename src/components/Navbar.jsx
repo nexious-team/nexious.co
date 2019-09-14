@@ -32,7 +32,9 @@ const componentDidMount = props => {
 const methods = {
   componentDidMount
 };
+
 const NavBar = props => {
+  const [sidebar, setSidebar] = useState(false);
   const [state, setState] = useState({
     leftNavClicked: false,
     rightNavClicked: false
@@ -81,6 +83,16 @@ const NavBar = props => {
   };
   return (
     <div className="mb-20">
+      {sidebar ? (
+        <div className="">
+          <Sidebar
+            sidebarClick={() => setSidebar(state => false)}
+            linkClick={() => setSidebar(state => false)}
+          ></Sidebar>
+        </div>
+      ) : (
+        ""
+      )}
       <a.nav
         className={isTop ? nav_classes + "bg-black" : nav_classes + " shadow"}
         style={fade_animation}
@@ -95,7 +107,11 @@ const NavBar = props => {
               <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
                 <span
                   onClick={() => handleNavbarSwitch("client")}
-                  className="text-sm text-gray-700 md:text-md lg:text-xl font-semibold font-josefin"
+                  className={
+                    isTop
+                      ? "text-sm text-white md:text-md lg:text-xl font-semibold font-josefin"
+                      : "text-sm text-black md:text-md lg:text-xl font-semibold font-josefin"
+                  }
                 >
                   <Link to="/client">Clients</Link>
                 </span>
@@ -103,7 +119,11 @@ const NavBar = props => {
               <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
                 <span
                   onClick={() => handleNavbarSwitch("client")}
-                  className="text-sm text-gray-700 lg:text-xl font-semibold font-josefin"
+                  className={
+                    isTop
+                      ? "text-sm text-white md:text-md lg:text-xl font-semibold font-josefin"
+                      : "text-sm text-black md:text-md lg:text-xl font-semibold font-josefin"
+                  }
                 >
                   <Link to="/service">Services</Link>
                 </span>
@@ -111,7 +131,11 @@ const NavBar = props => {
               <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
                 <span
                   onClick={() => handleNavbarSwitch("client")}
-                  className="text-sm text-gray-700 lg:text-xl font-semibold font-josefin"
+                  className={
+                    isTop
+                      ? "text-sm text-white md:text-md lg:text-xl font-semibold font-josefin"
+                      : "text-sm text-black md:text-md lg:text-xl font-semibold font-josefin"
+                  }
                 >
                   <Link to="/about">Team</Link>
                 </span>
@@ -119,7 +143,11 @@ const NavBar = props => {
               <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
                 <span
                   onClick={() => handleNavbarSwitch("client")}
-                  className="text-sm text-gray-700 lg:text-xl font-semibold font-josefin"
+                  className={
+                    isTop
+                      ? "text-sm text-white md:text-md lg:text-xl font-semibold font-josefin"
+                      : "text-sm text-black md:text-md lg:text-xl font-semibold font-josefin"
+                  }
                 >
                   <Link to="/contact">Contact</Link>
                 </span>
@@ -127,7 +155,7 @@ const NavBar = props => {
             </div>
             <div className="lg:hidden md:hidden flex justify-start items-center ml-3">
               <div className="justify-center items-center align-center h-auto pt-3">
-                <NavButton navClick={() => handleLeftNavToggle} />
+                <NavButton isTop={isTop} navClick={() => setSidebar(true)} />
               </div>
             </div>
           </div>
@@ -138,7 +166,7 @@ const NavBar = props => {
               onClick={() => handleNavbarSwitch("home")}
               className={
                 isTop
-                  ? "text-3xl text-gray-700 font-josefin"
+                  ? "text-3xl text-white font-josefin"
                   : "text-3xl text-black font-josefin"
               }
             >
