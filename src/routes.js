@@ -1,4 +1,4 @@
-import { Home, Service, About, PagesClient,GetStart } from './pages';
+import { Home, Service, About, PagesClient,GetStart,Contact } from './pages';
 
 export default [
   {
@@ -21,5 +21,9 @@ export default [
   {
     path: "/get-start",
     component: GetStart
+  },
+  {
+    path: "/contact",
+    component: Contact
   }
 ]
