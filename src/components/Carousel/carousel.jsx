@@ -81,19 +81,19 @@ const Carousel = ({ items }) => {
 
     // length height image to add aniamtion sroll image to botton
     const sroll_image_to_bottom = (index) => {
-        setTimeout(() => {
-            // let orginal_height_img = document.querySelector("#id" + index)
-            // let length_height_img = orginal_height_img.naturalHeight;
-            let final_height_img = 150;
-            var css = `.crop:hover img{ margin-top: -${final_height_img}px; }`
-            var style = document.createElement('style');
-            if (style.styleSheet) {
-                style.styleSheet.cssText = css;
-            } else {
-                style.appendChild(document.createTextNode(css));
-            }
-            document.getElementById("style" + index).appendChild(style);
-        }, 1000);
+        // setTimeout(() => {
+        //     // let orginal_height_img = document.querySelector("#id" + index)
+        //     // let length_height_img = orginal_height_img.naturalHeight;
+        //     let final_height_img = 150;
+        //     var css = `.crop:hover img{ margin-top: -${final_height_img}px; }`
+        //     var style = document.createElement('style');
+        //     if (style.styleSheet) {
+        //         style.styleSheet.cssText = css;
+        //     } else {
+        //         style.appendChild(document.createTextNode(css));
+        //     }
+        //     document.getElementById("style" + index).appendChild(style);
+        // }, 1000);
     }
     return (
         <div className="relative">
@@ -101,7 +101,7 @@ const Carousel = ({ items }) => {
                 <div className="flex flex-wrap items-center">
                     {item.map((data, index) => (
                         <div className="w-1/4 p-2 flex" key={index}>
-                            <div className="bg-gray-400 crop shadow" id={"style" + index}>
+                            <div className="bg-gray-400 crop shadow md:h-64 sm:h-32 xs:h-24" id={"style" + index}>
                                 <img className="w-full" src={data} alt={data} id={"id" + index} onLoad={sroll_image_to_bottom(index)} />
                             </div>
                         </div>
