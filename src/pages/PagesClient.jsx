@@ -2,40 +2,37 @@ import React from 'react';
 // import { useState, useEffect } from 'react';
 import { Carousel } from '../components'
 import { logo_1,logo_2,logo_3,logo_4,logo_5,logo_6,logo_7,logo_8,logo_9,logo_10 } from '../assets'
+import Data from './Client.json'
 
-function Client() {
+function PagesClient() {
     // Declare a new state variable
-    const items = ["https://i.pinimg.com/236x/38/da/eb/38daeb0d486dbf3b861be0a48e643e3a.jpg",
-        "https://i.pinimg.com/236x/48/96/d0/4896d018b7a8a11247b615de84b060f6.jpg",
-        "https://i.pinimg.com/564x/f7/6e/f6/f76ef6a4b0bf828950813e7f169ae0bb.jpg",
-        "https://i.pinimg.com/236x/71/72/d1/7172d13d5c0718ca5c116f74c7ab70cd.jpg",
-        "https://i.pinimg.com/236x/ab/57/73/ab57734a782df6e7c2ca281035647cf4.jpg",
-        "https://i.pinimg.com/236x/09/2c/ae/092cae1d79b2dd9e919c413acba84a17.jpg",
-        "https://i.pinimg.com/564x/64/b9/01/64b901de4ece48e6a4ed877eee6cb972.jpg",
-        "https://i.pinimg.com/236x/48/96/d0/4896d018b7a8a11247b615de84b060f6.jpg"];
+    const e_commerce = Data.e_commerce;
+    const web_app = Data.web_app;
+    const branding_web = Data.branding_web;
+    const article_web = Data.article_web;
     return (
         <div className="container mx-auto">
             <div className="text-center">
-                <h1 className="text-5xl font-bold">109 websites create for our client :)</h1>
+                <h1 className="md:text-5xl text-4xl font-bold">109 websites create for our client :)</h1>
                 <p className="text-xl">here are what you want to create.</p>
             </div>
             <div className="mt-12">
                 <p className="text-2xl font-bold">E-Commerce Websites</p>
-                <Carousel items={items} />
+                <Carousel items={e_commerce} />
             </div>
             <div className="mt-12">
                 <p className="text-2xl font-bold">Web Applications</p>
-                <Carousel items={items} />
+                <Carousel items={web_app} />
             </div>
             <div className="mt-12">
                 <p className="text-2xl font-bold">Branding Websites</p>
-                <Carousel items={items} />
+                <Carousel items={branding_web} />
             </div>
             <div className="mt-12">
                 <p className="text-2xl font-bold">Article Websites</p>
-                <Carousel items={items} />
+                <Carousel items={article_web} />
             </div>
-            <div className="mt-12">
+            <div className="mt-12 max-w-xl mx-auto">
                 <p className="text-2xl font-bold text-center">OUR CLIENTS LOGOs</p>
                 <div className="flex flex-wrap justify-center">
                     <div className="w-1/6">
@@ -73,4 +70,4 @@ function Client() {
         </div>
     );
 }
-export default Client;
+export default PagesClient;

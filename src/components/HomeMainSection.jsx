@@ -18,8 +18,8 @@ const HomeMainSection = props => {
                 </p>
               </div>
             </div>
-            <div className="mt-5 lg:mt-10 w-auto ">
-              <div className="flex justify-end">
+            <div className="hidden md:block mt-5 lg:mt-10 w-auto ">
+              <div className="flex justify-center md:justify-end ">
                 <button className="ml-auto border border-1 border-black rounded-lg mr-10">
                   <span className="text-4xl p-3">Get Started</span>
                 </button>

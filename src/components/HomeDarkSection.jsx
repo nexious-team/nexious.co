@@ -33,7 +33,7 @@ const HomeDarkSection = props => {
               style={{ backgroundColor: props.color }}
               className="lg:w-56 w-36 rounded-full cursor-pointer px-6 py-2 shadow-lg flex justify-center items-center  select-none outline-none"
             >
-              <button className="text-sm md:text-sm lg:text-2xl font-semi-bold text-white">
+              <button className="text-sm md:text-sm lg:text-2xl font-semi-bold text-black">
                 Get Started
               </button>
             </div>
@@ -47,14 +47,11 @@ const HomeDarkSection = props => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center w-full md:w-1/2">
-        <div
-          style={{ height: "32rem" }}
-          className="p-3 lg:p-0 h-64 overflow-hidden"
-        >
+      <div className="flex justify-center w-full md:w-1/2 px-3">
+        <div className="px-3 lg:p-0 overflow-hidden rounded-lg">
           <a.img
-            style={slideUp}
-            className="shadow-lg w-full h-auto"
+            style={{}}
+            className="shadow-lg w-full h-auto top-0"
             src={props.image}
             alt=""
           />

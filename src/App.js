@@ -1,15 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
   withRouter,
   Route,
   Link
 } from "react-router-dom";
+import Footer from "components/Footer";
 import routes from "./routes";
 
 import { Navbar } from "./components";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
   useEffect(() => {
@@ -32,6 +33,9 @@ function App() {
             )}
           />
         ))}
+        <div>
+          <Footer></Footer>
+        </div>
       </div>
     </Router>
   );

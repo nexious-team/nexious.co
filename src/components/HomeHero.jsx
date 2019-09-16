@@ -2,28 +2,33 @@ import React, { useState, useEffect } from "react";
 import { useTransition, animated as a } from "react-spring";
 import Hero from "./Hero";
 
+import { ipad_pro_png } from "../assets/images/Shop website";
+import { portfolio_home } from "../assets/images/PersonalPortfolio";
+import { manage_business } from "../assets/images/ManageBusiness";
+import { blog_web } from "../assets/images/Blog";
+
 const HomeHero = props => {
   const [index, set] = useState(0);
   const [hero, setHero] = useState([
     {
-      text: "Show People Who You Are!",
-      image: "",
-      color: "#ff8080"
+      text: "Build Your Business Today.",
+      image: ipad_pro_png,
+      color: "#396afc"
     },
     {
-      text: "Let Us Help You Grow",
-      image: "",
-      color: "#ffba92"
+      text: "Express Yourself and Share Your Passions",
+      image: blog_web,
+      color: "#ff5e62"
     },
     {
-      text: "You Dream It, We Make It",
-      image: "",
-      color: "#d5a4cf"
+      text: "Manage Your Business.",
+      image: manage_business,
+      color: "#ec38bc"
     },
     {
-      text: "Laked Matatataang!! Normalin Normalin",
-      image: "",
-      color: "#eed7db"
+      text: "Be Seen. Be Heard.",
+      image: portfolio_home,
+      color: "#000000"
     }
   ]);
   useEffect(() => {
@@ -44,7 +49,11 @@ const HomeHero = props => {
           //const Homepage = homepage;
           return (
             <a.div key={key} style={props}>
-              <Hero text={hero[item].text} color={hero[item].color} />
+              <Hero
+                text={hero[item].text}
+                color={hero[item].color}
+                image={hero[item].image}
+              />
             </a.div>
           );
         })}
