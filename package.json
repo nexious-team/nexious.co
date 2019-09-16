@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run build:css && react-scripts build",
     "build:css": "npx tailwind build ./src/index.css -o ./src/styles.css",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
