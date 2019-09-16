@@ -71,7 +71,8 @@ const bottomSectionDatas = [
 
 const middleSection = middleSectionDatas.map((item, index) => {
   return (
-    <div key={index} className={(index === 0 ? 'lg:pt-24 xl:pt-40' : 'lg:pt-20 xl:pt-32') + ' w-10/12 my-0 mx-auto pt-16 pb-5 md:w-full md:px-6 lg:px-12 xl:px-16 container'}>
+    <div key={index} className={(index === 0 ? 'lg:pt-24 xl:pt-40' : 'lg:pt-20 xl:pt-32') + ' w-10/12 my-0 mx-auto pt-16 pb-5 md:w-full md:px-6 lg:px-12 xl:px-16 container'} 
+      data-aos={(index % 2 === 0 ? 'fade-right' : 'fade-left')}>
       <img src={item.imageUrl} alt={"imgWebDesign"} className="my-0 mx-auto rounded-lg shadow-xl w-full h-84 md:hidden"/>
       
       <div className="flex">
