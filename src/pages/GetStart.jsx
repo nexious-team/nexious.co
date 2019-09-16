@@ -3,11 +3,11 @@ import React from 'react';
 const GetStart = () => (
     <div className="container">
         <div className="m-5">
-            <h1 className="text-center text-5xl">Create a Project ?</h1>
+            <h1 className="text-center md:text-5xl text-4xl">Create a Project ?</h1>
             <p className="text-center">Need help with an existing project ? Visit the Support Center.</p>
         </div>
         <form className="w-full max-w-lg mx-auto">
-            <div className="flex flex-wrap -mx-3 mb-6">
+            <div className="flex flex-wrap -mx-3 mb-6 px-3">
                 <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                         First Name
@@ -22,7 +22,7 @@ const GetStart = () => (
                     <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe" />
                 </div>
             </div>
-            <div className="flex flex-wrap -mx-3 mb-6">
+            <div className="flex flex-wrap -mx-3 mb-6 px-3">
                 <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-for-email">
                         Email
@@ -37,7 +37,7 @@ const GetStart = () => (
                     <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-for-phone" type="number" placeholder="012345678" />
                 </div>
             </div>
-            <div className="flex flex-wrap -mx-3 mb-6">
+            <div className="flex flex-wrap -mx-3 mb-6 px-3">
                 <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
                         Type Of Website
@@ -61,7 +61,7 @@ const GetStart = () => (
                     <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-for-phone" type="text" placeholder="website" />
                 </div>
             </div>
-            <div className="flex flex-wrap -mx-3 mb-6">
+            <div className="flex flex-wrap -mx-3 mb-6 px-3">
                 <div className="w-full px-3">
                     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-message">
                         Message
