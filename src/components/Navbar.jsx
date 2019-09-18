@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { useSpring, animated as a } from "react-spring";
 import { Link } from "react-router-dom";
 import lifecycle from "react-pure-lifecycle";
@@ -35,10 +35,6 @@ const methods = {
 
 const NavBar = props => {
   const [sidebar, setSidebar] = useState(false);
-  const [state, setState] = useState({
-    leftNavClicked: false,
-    rightNavClicked: false
-  });
   const [isTop, setTop] = useState(true);
   const fade_animation = useSpring({
     background: isTop
@@ -59,7 +55,7 @@ const NavBar = props => {
     }
   };
   useEffect(() => {
-    if (window.location.pathname == "/") {
+    if (window.location.pathname === "/") {
       document.addEventListener("scroll", () => {
         const Top = window.scrollY < 200;
         if (Top !== isTop) {
@@ -70,17 +66,8 @@ const NavBar = props => {
     } else {
       setTop(false);
     }
-  });
+  }, [isTop]);
   const nav_classes = "fixed top-0 w-full font-sans spring-nav z-10";
-  const handleLeftNavToggle = () => {
-    this.setState({ leftNavClicked: !this.state.leftNavClicked }, () => {
-      console.log(window.location.pathname);
-    });
-    if (window.location.pathname != "/") {
-      setTop(isTop => false);
-      console.log(window.location.pathname);
-    }
-  };
   return (
     <div className="mb-20">
       {sidebar ? (
@@ -177,7 +164,12 @@ const NavBar = props => {
           {/* Right Elements */}
           <div className="flex-1 h-auto">
             <div className=" flex md:flex justify-end pr-2 lg:mr-4">
-              <RegisterButton className="navnbar-reg-btn" isTop={isTop} />
+              <Link
+                onClick={() => handleNavbarSwitch("get-start")}
+                to="/get-start"
+              >
+                <RegisterButton className="navnbar-reg-btn" isTop={isTop} />
+              </Link>
             </div>
             {/* <div className="lg:hidden md:hidden flex justify-end items-center">
           <div className="justify-center items-center align-center h-auto pt-3">

@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useTransition, animated as a } from "react-spring";
+import React, { useState } from "react";
 import HomeMainSection from "../components/HomeMainSection";
 import HomeMoreSection from "../components/HomeMoreSection";
 import HomeDarkSection from "../components/HomeDarkSection";
 import HomeHero from "components/HomeHero";
-import Sidebar from "components/Sidebar";
 
 import { ipad_pro_png } from "../assets/images/Shop website";
 import { portfolio_home } from "../assets/images/PersonalPortfolio";

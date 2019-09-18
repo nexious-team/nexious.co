@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useSpring, animated as a } from "react-spring";
 
 const HeroButton = props => {
@@ -34,7 +35,9 @@ const HeroButton = props => {
         style={{ color: props.color }}
         className="py-3 text-2xl font-bold tracking-wider text-white"
       >
-        <span>{props.children}</span> <a.hr style={animatedButtonUnderline} />
+        <Link to="/get-start">
+          <span>{props.children}</span> <a.hr style={animatedButtonUnderline} />
+        </Link>
       </button>
     </a.div>
   );

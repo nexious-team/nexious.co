@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ipad_pro_png } from "assets/images/Shop website";
 const HomeMainSection = props => {
   return (
@@ -21,14 +22,16 @@ const HomeMainSection = props => {
             <div className="hidden md:block mt-5 lg:mt-10 w-auto ">
               <div className="flex justify-center md:justify-end ">
                 <button className="ml-auto border border-1 border-black rounded-lg mr-10">
-                  <span className="text-4xl p-3">Get Started</span>
+                  <Link to="/get-start">
+                    <span className="text-4xl p-3">Get Started</span>
+                  </Link>
                 </button>
               </div>
             </div>
           </div>
           <div className="w-7/12 bg-blue-200">
-            <div className="images flex">
-              <img src={ipad_pro_png} alt="" />
+            <div className="p-3 lg:p-0">
+              <img className="shadow-lg" src={ipad_pro_png} alt="" />
             </div>
           </div>
         </div>

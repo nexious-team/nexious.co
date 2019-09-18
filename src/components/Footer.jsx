@@ -8,6 +8,7 @@ const Footer = () => {
   const handleSend = event => {
     event.preventDefault();
     console.log(email);
+    if (email.email === "") return;
     axios
       .post("https://formcarry.com/s/yHekjKv5uto", email, {
         headers: { Accept: "application/json" }

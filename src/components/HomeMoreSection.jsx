@@ -1,5 +1,5 @@
 import React from "react";
-import { ipad_pro_png } from "assets/images/Shop website";
+import { Link } from "react-router-dom";
 const HomeMoreSection = props => {
   function getColor() {
     let colors = "";
@@ -33,9 +33,11 @@ const HomeMoreSection = props => {
             }}
             className="lg:w-56 w-36 rounded-full cursor-pointer px-6 py-2 shadow-lg flex justify-center items-center  select-none outline-none"
           >
-            <button className="text-sm md:text-sm lg:text-2xl font-semi-bold text-white">
-              Get Started
-            </button>
+            <Link to="/get-start">
+              <button className="text-sm md:text-sm lg:text-2xl font-semi-bold text-white">
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
         <div className="mx-2">

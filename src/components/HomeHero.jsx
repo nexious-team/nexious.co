@@ -32,8 +32,6 @@ const HomeHero = props => {
     }
   ]);
   useEffect(() => {
-    const abortController = new AbortController();
-    const signal = abortController.signal;
     const intervalId = setInterval(() => set(state => (state + 1) % 4), 5000);
     return () => clearInterval(intervalId);
   }, []);
