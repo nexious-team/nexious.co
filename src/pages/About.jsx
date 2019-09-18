@@ -51,8 +51,8 @@ const About = () => {
         <img className="object-cover w-full h-144 opacity-75" src="https://images.pexels.com/photos/2310885/pexels-photo-2310885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
         <div className="absolute inset-0 mt-24">
           <div className="">
-            <h1 className={`text-6xl text-center`}>We are <span className={`border-black border-r-2 hidden md:inline lg:inline`}>{text}</span></h1>
-            <h1 className={`text-6xl text-center block md:hidden lg:hidden`}><span className={`border-black border-r-2`}>{text}</span></h1>
+            <h1 className={`text-5xl lg:text-6xl xl:text-7xl text-center`}>We are <span className={`border-black border-r-2 hidden md:inline lg:inline`}>{text}</span></h1>
+            <h1 className={`text-5xl lg:text-6xl xl:text-7xl text-center block md:hidden lg:hidden`}><span className={`border-black border-r-2`}>{text}</span></h1>
           </div>
           <div className="wrapper text-center mt-12">
             <div className="box">
@@ -69,8 +69,8 @@ const About = () => {
       <div className="top-path bg-gray-400 h-40 -mt-40"></div>
       <div id="our-team" className="bg-gray-400 pt-20">
         <div className="text-center">
-          <h2 className="text-5xl">Meet our team</h2>
-          <p>Passionate, creative, determined</p>
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl">Meet our team</h2>
+          <p className="text-base lg:text-lg xl:text-xl">Passionate, creative, determined</p>
         </div>
         <div className="flex flex-wrap mx-12 py-6">
           { developers.map(developer => (
@@ -88,8 +88,8 @@ const About = () => {
         </div>
         <div className="flex items-center absolute inset-0">
           <div className="text-center px-6 md:w-3/6 lg:w-3/6">
-            <h1 className="text-2xl lg:text-4xl">Our vision</h1>
-            <p className="text-xs lg:text-base">It's time for the local companies or startup team to market their products, services with the website to boost the business to reach millions of onliners. We provide the best design for friendly web pages to attract your target visitors.</p>
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl">Our vision</h1>
+            <p className="text-base lg:text-lg xl:text-xl">It's time for the local companies or startup team to market their products, services with the website to boost the business to reach millions of onliners. We provide the best design for friendly web pages to attract your target visitors.</p>
           </div>
           <div className="vision-image md:w-3/6 lg:w-3/6">
           </div>
@@ -107,17 +107,18 @@ const About = () => {
           <div className="mission-image md:w-3/6 lg:w-3/6">
           </div>
           <div className="text-center md:w-3/6 lg:w-3/6 px-6">
-            <h1 className="text-2xl lg:text-4xl">Our mission</h1>
-            <p className="text-xs lg:text-base">Our passionate team will deliver the best content web application to promote your services or products and help your organization continually grow at an unpredictable time with the best tools and latest technologies. </p>
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl">Our mission</h1>
+            <p className="text-base lg:text-lg xl:text-xl">Our passionate team will deliver the best content web application to promote your services or products and help your organization continually grow at an unpredictable time with the best tools and latest technologies. </p>
           </div>
         </div>
       </div>
       <div className="tools my-5">
         <div data-aos="fade-left">
-          <h2 className="text-4xl text-center lg:my-6">Our tools</h2>
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl text-center my-6">Our tools</h2>
         </div>
-        <div data-aos="fade-right" className="relative">
-          <div className="flex flex-wrap justify-center items-center content-center px-6 lg:px-32 lg:h-84">
+        {/* <div data-aos="fade-right" className="relative"> */}
+        <div className="relative">
+          <div className="flex flex-wrap justify-center items-center content-center px-6 lg:px-32 mt-12">
             { tools.map(tool => (
               <Tool key={tool.id} {...tool} />
             ))}
@@ -143,8 +144,8 @@ const Developer = ({imgSrc, name, skills, tools, aosDelay }) => (
     <img className="rounded-full w-24 h-24 border border-black mx-auto object-cover" src={imgSrc} alt=""/>
     <h3 className="text-xl mt-2">{name}</h3>
     <h4 className="text-md text-gray-800">{skills}</h4>
-    <p className="text-xs my-1">{tools}</p>
-    <p className="text-sm my-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, repellat eligendi laudantium nemo necessitatibus et iusto provident nesciunt animi quasi!</p>
+    <p className="text-xs lg:text-sm xl:text-base my-1">{tools}</p>
+    <p className="text-xs lg:text-sm xl:text-base my-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, repellat eligendi laudantium nemo necessitatibus et iusto provident nesciunt animi quasi!</p>
     <div className="flex justify-center my-6">
       <div className="mx-6">
         <FontAwesomeIcon icon={['fab', 'facebook']} size="lg" />
