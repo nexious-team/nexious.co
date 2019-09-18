@@ -6,6 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import Footer from "components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import routes from "./routes";
 
 import { Navbar } from "./components";
@@ -19,24 +20,26 @@ function App() {
 
   return (
     <Router>
-      <div>
-        <Navbar link={Link} location={withRouter(Navbar)} />
-
-        {routes.map((route, i) => (
-          <Route
-            key={i}
-            exact={route.exact}
-            path={route.path}
-            render={props => (
-              // pass the sub-routes down to keep nesting
-              <route.component {...props} />
-            )}
-          />
-        ))}
+      <ScrollToTop>
         <div>
-          <Footer></Footer>
+          <Navbar link={Link} location={withRouter(Navbar)} />
+
+          {routes.map((route, i) => (
+            <Route
+              key={i}
+              exact={route.exact}
+              path={route.path}
+              render={props => (
+                // pass the sub-routes down to keep nesting
+                <route.component {...props} />
+              )}
+            />
+          ))}
+          <div>
+            <Footer></Footer>
+          </div>
         </div>
-      </div>
+      </ScrollToTop>
     </Router>
   );
 }
