@@ -43,7 +43,7 @@
       "id": 2,
       "imgSrc": "https://expressjs.com/images/express-facebook-share.png",
       "imgClass": "",
-      "clacss": "lg:-mt-24"
+      "clacss": "-mt-16 md:-mt-20 lg:-mt-24"
     },
     {
       "id": 3,
@@ -54,7 +54,7 @@
       "id": 4,
       "imgSrc": "https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png",
       "imgClass": "",
-      "clacss": "lg:-mt-24"
+      "clacss": "-mt-16 md:-mt-20 lg:-mt-24"
     },
     {
       "id":5,
@@ -65,7 +65,7 @@
       "id": 6,
       "imgSrc": "https://www.b2bnn.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-17-at-2.29.34-PM.png",
       "imgClass": "",
-      "clacss": "lg:-mt-24"
+      "clacss": "-mt-16 md:-mt-20 lg:-mt-24"
     },
     {
       "id": 7,
@@ -76,7 +76,7 @@
       "id": 8,
       "imgSrc": "https://d2k1ftgv7pobq7.cloudfront.net/meta/u/res/images/brand-assets/Logos/0099ec3754bf473d2bbf317204ab6fea/trello-logo-blue.png",
       "imgClass": "",
-      "clacss": "lg:-mt-24"
+      "clacss": "-mt-16 md:-mt-20 lg:-mt-24"
     }
   ],
   "minitools": [
