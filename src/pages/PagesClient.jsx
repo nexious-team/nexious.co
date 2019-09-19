@@ -13,7 +13,7 @@ function PagesClient() {
     return (
         <div className="container mx-auto">
             <div className="text-center">
-                <h1 className="md:text-5xl text-4xl font-bold">109 websites create for our client :)</h1>
+                <h1 className="md:text-5xl text-4xl font-bold">109 websites create for our client</h1>
                 <p className="text-xl">here are what you want to create.</p>
             </div>
             <div className="mt-12">
