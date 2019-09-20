@@ -10,7 +10,7 @@ import { manage_business } from "../assets/images/ManageBusiness";
 import { blog_web } from "../assets/images/Blog";
 
 const Home = () => {
-  const [section, setSection] = useState([
+  const [section] = useState([
     {
       title: "Build Your Business Today.",
       body:

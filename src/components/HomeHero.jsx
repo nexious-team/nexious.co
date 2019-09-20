@@ -9,7 +9,7 @@ import { blog_web } from "../assets/images/Blog";
 
 const HomeHero = props => {
   const [index, set] = useState(0);
-  const [hero, setHero] = useState([
+  const [hero] = useState([
     {
       text: "Build Your Business Today.",
       image: ipad_pro_png,

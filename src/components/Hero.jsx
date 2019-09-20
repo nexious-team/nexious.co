@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useSpring, animated as a } from "react-spring";
 import HeroButton from "../commons/HeroButton";
 import "../assets/css/hero.css";
@@ -39,15 +38,11 @@ const Hero = props => {
             {props.text}
           </a.h1>
           <div className="hidden md:block z-20">
-            <HeroButton>
-              <Link to="/get-start">Get Started</Link>
-            </HeroButton>
+            <HeroButton>Get Started</HeroButton>
           </div>
         </div>
         <div className="block md:hidden order-3 pt-10 z-20">
-          <HeroButton>
-            <Link to="/get-start">Get Started</Link>
-          </HeroButton>
+          <HeroButton>Get Started</HeroButton>
         </div>
         <div className="md:py-10 w-full md:w-1/2">
           <div className="overflow-hidden min-height-img">

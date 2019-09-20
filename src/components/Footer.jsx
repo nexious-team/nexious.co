@@ -46,17 +46,21 @@ const Footer = () => {
         </div>
       </div>
       <div
-        style={{ backgroundColor: "#05170a" }}
+        style={{
+          background:
+            "linear-gradient(to right, rgba(132, 186, 101,1), rgba(38, 112, 107,1))"
+        }}
         className="font-sans font-semi-bold bg-black text-lg text-black flex justify-center"
       >
         <div className="w-11/12 md:w-11/12 lg:w-8/12 xl:w-1/2 bg-whie py-10 md:flex lg:flex justify-between">
           <div>
-            <div className=" text-center md:text-left lg:text-left pb-4 text-white tracking-wide font-sans font-semi-bold">
+            <div className=" font-serif text-center md:text-left lg:text-left pb-4 text-white tracking-wide font-sans font-semi-bold">
               Email us so we can talk
             </div>
             <div className="flex justify-center lg:justify-start">
               <div>
                 <form>
+                  <input type="hidden" value="Footer" />
                   <input
                     type="text"
                     name="customer_email"
@@ -83,7 +87,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <div className=" pb-4 text-white tracking-wide font-sans font-semi-bold text-center lg:text-left pt-5 md:pt-0 lg:pt-0">
+            <div className="font-serif pb-4 text-white tracking-wide font-sans font-semi-bold text-center lg:text-left pt-5 md:pt-0 lg:pt-0">
               Or Follow On These Social Media!
             </div>
             <div className="flex justify-between px-10 md:px-0 lg:px-0">

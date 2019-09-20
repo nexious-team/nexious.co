@@ -48,7 +48,7 @@ const HomeMoreSection = props => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center px-5">
         <div className="p-3 lg:p-0">
           <img className="shadow-lg" src={props.image} alt="" />
         </div>

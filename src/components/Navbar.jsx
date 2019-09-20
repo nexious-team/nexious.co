@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSpring, animated as a } from "react-spring";
 import { Link } from "react-router-dom";
-import lifecycle from "react-pure-lifecycle";
 import NavButton from "../commons/NavButton";
 import RegisterButton from "../elements/NavBarRegButton";
 import Sidebar from "./Sidebar";
@@ -18,21 +17,6 @@ import "../assets/navbar.css";
 //     });
 //   }
 // };
-const componentDidMount = props => {
-  // document.addEventListener("scroll", () => {
-  //   const isTop = window.scrollY < 100;
-  //   if (isTop !== this.state.isTop) {
-  //     this.state.setState({ isTop }, () => {
-  //       console.log(props.state.isTop);
-  //     });
-  //   }
-  // });
-  console.log("I mounted! Here are my props: ", props);
-};
-const methods = {
-  componentDidMount
-};
-
 const NavBar = props => {
   const [sidebar, setSidebar] = useState(false);
   const [isTop, setTop] = useState(true);
@@ -51,7 +35,7 @@ const NavBar = props => {
     if (to_path !== "home") {
       setTop(false);
     } else {
-      setTop(true);
+      // setTop(true);
     }
   };
   useEffect(() => {
@@ -182,7 +166,7 @@ const NavBar = props => {
     </div>
   );
 };
-export default lifecycle(methods)(NavBar);
+export default NavBar;
 
 // class NavBar extends Component {
 //   state = {
