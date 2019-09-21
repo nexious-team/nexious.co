@@ -1,16 +1,7 @@
 import React from "react";
-import { useSpring, animated as a } from "react-spring";
 import { Link } from "react-router-dom";
 
 const Sidebar = props => {
-  const spring = useSpring({
-    from: {
-      transform: "translateX(-100%)"
-    },
-    to: {
-      transform: "translateX(100%)"
-    }
-  });
   return (
     <div
       style={{

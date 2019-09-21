@@ -9,7 +9,7 @@ import { blog_web } from "../assets/images/Blog";
 
 const HomeHero = props => {
   const [index, set] = useState(0);
-  const [hero, setHero] = useState([
+  const [hero] = useState([
     {
       text: "Build Your Business Today.",
       image: ipad_pro_png,
@@ -32,8 +32,6 @@ const HomeHero = props => {
     }
   ]);
   useEffect(() => {
-    const abortController = new AbortController();
-    const signal = abortController.signal;
     const intervalId = setInterval(() => set(state => (state + 1) % 4), 5000);
     return () => clearInterval(intervalId);
   }, []);
