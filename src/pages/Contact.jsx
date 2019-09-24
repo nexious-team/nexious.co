@@ -38,7 +38,7 @@ function PagesClient() {
             <div className="w-full px-3 md:mb-0">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-first-name"
+                htmlFor="grid-first-name"
               >
                 Your Name
               </label>
@@ -64,7 +64,7 @@ function PagesClient() {
             <div className="w-full md:w-1/2 px-3 md:mb-0">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-for-email"
+                htmlFor="grid-for-email"
               >
                 Email
               </label>
@@ -88,7 +88,7 @@ function PagesClient() {
             <div className="w-full md:w-1/2 px-3">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-for-phone"
+                htmlFor="grid-for-phone"
               >
                 Phone
               </label>
@@ -113,7 +113,7 @@ function PagesClient() {
             <div className="w-full px-3">
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="grid-message"
+                htmlFor="grid-message"
               >
                 Message
               </label>

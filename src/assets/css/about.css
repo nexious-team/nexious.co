@@ -29,9 +29,13 @@
       margin-top: -150px;
     }
   }
-
 .top-path {
-  clip-path: polygon(0 0, 50% 100%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 77%, 70% 90%, 45% 75%, 0 100%);
+}
+.bottom-path {
+  /* height: 20rem; */
+  clip-path: polygon(0 100%, 45% 34%, 70% 70%, 100% 0%, 100% 40%, 70.2% 88%, 45% 50%, 0 100%);
+  /* clip-path: polygon(0 0, 50% 100%, 100% 0, 100% 100%, 0 100%); */
 }
 
 @-webkit-keyframes bounceInUp {

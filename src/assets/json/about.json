@@ -6,7 +6,8 @@
       "skills": "Developer",
       "tools": "Node.js | React.js | Argular.js",
       "imgSrc": "https://ca.slack-edge.com/TKFDUK2PQ-UKF3NSAB1-6f2576329b60-512",
-      "aosDelay": "50"
+      "aosDelay": "50",
+      "quote": "After graduated from high school in 2015, I had attended at Royal University of Phnom Penh as a Computer Science & Engineering student. Now I am a developer at an company located in Phnom Penhh. I love technology."
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "skills": "Developer",
       "tools": "Node.js | React.js | Laravel",
       "imgSrc": "https://scontent.fpnh9-2.fna.fbcdn.net/v/t1.0-9/15492113_1796177640637456_9152718415221894831_n.jpg?_nc_cat=102&_nc_oc=AQn5TV_KRdVWbwZsoD6ZiagXhHNJ4BD3r9uekTymt9gtTge-_1IcipTrjZ5OopuKX9o&_nc_ht=scontent.fpnh9-2.fna&oh=ddf5a11b42030509f2a352cb122f2ced&oe=5DF9EAD3",
-      "aosDelay": "100"
+      "aosDelay": "100",
+      "quote": "I am a developer working at an organizatiion. I'm am interested in technology since I was a kid."
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "skills": "Developer / Designer",
       "tools": "Node.js | React.js | Vue.js",
       "imgSrc": "https://avatars0.githubusercontent.com/u/39366164?s=400&v=4",
-      "aosDelay": "150"
+      "aosDelay": "150",
+      "quote": "I am a passinate designer, and I also like coding. Being as designer for years I have involved with a lot of projects include: brand website, e-commerce platform, article application, and more."
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "skills": "Developer",
       "tools": "Node.js | React.js | Vue.js",
       "imgSrc": "https://avatars0.githubusercontent.com/u/36428914?s=460&v=4",
-      "aosDelay": "200"
+      "aosDelay": "200",
+      "quote": "Once I never thought becoming a programmer until my first coding class. Since then I realize it is what I'm looking for"
     }
   ],
   "tools": [
@@ -90,19 +94,19 @@
       "id": 2,
       "imgSrc": "https://github.githubassets.com/images/modules/logos_page/Octocat.png",
       "clacss": "move-linear",
-      "imgClass": "rounded-full"
+      "imgClass": ""
     },
     {
       "id": 3,
       "imgSrc": "https://projecthydro.org/wp-content/uploads/2019/01/passportJS.png",
       "clacss": "move-ease-in",
-      "imgClass": "rounded-full"
+      "imgClass": "p-2"
     },
     {
       "id": 4,
       "imgSrc": "https://miro.medium.com/max/3200/1*t9d16DIcJg_-dEg0X_qTWg.png",
       "clacss": "move-ease-out",
-      "imgClass": "rounded-full"
+      "imgClass": ""
     },
     {
       "id": 5,
@@ -114,25 +118,25 @@
       "id": 6,
       "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png",
       "clacss": "move-ease-in-out",
-      "imgClass": ""
+      "imgClass": "p-2"
     },
     {
       "id": 7,
       "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS.3.svg",
       "clacss": "move-ease-out",
-      "imgClass": ""
+      "imgClass": "p-2"
     },
     {
       "id": 8,
       "imgSrc": "https://gitforwindows.org/img/gwindows_logo.png",
       "clacss": "move-linear",
-      "imgClass": ""
+      "imgClass": "p-2"
     },
     {
       "id": 9,
       "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Tux.png/220px-Tux.png",
       "clacss": "move-ease-in",
-      "imgClass": ""
+      "imgClass": "p-2"
     },
     {
       "id": 10,
@@ -144,13 +148,13 @@
       "id": 11,
       "imgSrc": "https://i.pinimg.com/originals/de/1c/91/de1c91788be0d791135736995109272a.png",
       "clacss": "move-ease-in-out",
-      "imgClass": ""
+      "imgClass": "p-2"
     },
     {
       "id": 12,
       "imgSrc": "https://cdn.freebiesupply.com/logos/large/2x/stackoverflow-com-logo-png-transparent.png",
       "clacss": "move-ease-out",
-      "imgClass": ""
+      "imgClass": "p-2"
     },
     {
       "id": 13,
@@ -162,7 +166,7 @@
       "id": 14,
       "imgSrc": "https://cdn.worldvectorlogo.com/logos/gmail-icon.svg",
       "clacss": "move-ease",
-      "imgClass": ""
+      "imgClass": "p-2"
     }
   ]
 }
