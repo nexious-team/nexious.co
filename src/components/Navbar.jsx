@@ -51,7 +51,7 @@ const NavBar = props => {
       setTop(false);
     }
   }, [isTop]);
-  const nav_classes = "fixed top-0 w-full font-sans spring-nav z-10";
+  const nav_classes = "fixed top-0 w-full font-sans spring-nav z-50";
   return (
     <div className="mb-20">
       {sidebar ? (

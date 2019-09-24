@@ -1,4 +1,12 @@
+:root {
+  --color-primary: linear-gradient(80deg, rgba(182, 244, 146,1), rgba(51, 139, 147,1));
+}
+
 @tailwind base;
+
+.bg-primary {
+  background: var(--color-primary);
+}
 
 @font-face {
   font-family: 'josefin sans';
