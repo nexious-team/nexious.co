@@ -140,11 +140,12 @@
 }
 
 .vision-image {  
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 33% 100%);
+  clip-path: polygon(33% 0, 100% 0, 100% 100%, 0% 100%);
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 33% 100%); */
 }
 
 .mission-image {
-  clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+  clip-path: polygon(0 0, 67% 0, 100% 100%, 0% 100%);
 }
 
 .move-ease {

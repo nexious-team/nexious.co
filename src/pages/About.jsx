@@ -92,7 +92,7 @@ const About = () => {
           </div>
         </div>
         <div className="flex items-center absolute inset-0">
-          <div className="text-center px-6 md:w-3/6 lg:w-3/6 lg:mt-12">
+          <div className="text-center px-6 md:w-3/6 lg:w-3/6">
             <h1 className="text-3xl lg:text-4xl xl:text-5xl">Our vision</h1>
             <p className="text-base lg:text-lg xl:text-xl">It's time for the local companies or startup team to market their products, services with the website to boost the business to reach millions of onliners. We provide the best design for friendly web pages to attract your target visitors.</p>
             <div className="mt-8">
@@ -114,7 +114,7 @@ const About = () => {
         <div className="flex items-center absolute inset-0">
           <div className="mission-image md:w-3/6 lg:w-3/6">
           </div>
-          <div className="text-center md:w-3/6 lg:w-3/6 px-6 lg:mt-12">
+          <div className="text-center md:w-3/6 lg:w-3/6 px-6">
             <h1 className="text-3xl lg:text-4xl xl:text-5xl">Our mission</h1>
             <p className="text-base lg:text-lg xl:text-xl">Our passionate team will deliver the best content web application to promote your services or products and help your organization continually grow at an unpredictable time with the best tools and latest technologies. </p>
             <div className="mt-8">
@@ -152,7 +152,7 @@ const Developer = ({imgSrc, name, skills, tools, aosDelay, quote }) => (
     <h3 className="text-xl mt-2">{name}</h3>
     <h4 className="text-md text-gray-800">{skills}</h4>
     <p className="text-xs lg:text-sm xl:text-sm my-1">{tools}</p>
-    <p className="text-xs lg:text-sm xl:text-base my-6 h-32">{quote}</p>
+    <p className="text-xs lg:text-sm xl:text-base my-6 h-24">{quote}</p>
     <div className="flex justify-center my-6">
       <div className="mx-6">
         <FontAwesomeIcon icon={['fab', 'facebook']} size="lg" />
