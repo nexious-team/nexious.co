@@ -1,6 +1,5 @@
 import React from 'react';
-import { imgServiceWebDesign, imgServiceWebDevelopment, imgServiceSSLCertificate1, imgServiceSSLCertificate2, imgServiceSSLCertificate3 } from '../assets/images/service-page/index';
-import { logoHTML, logoCSS, logoJS } from '../assets/images';
+import { imgServiceWebDesign, imgServiceWebDevelopment, imgServiceSSLCertificate3 } from '../assets/images/service-page/index';
 
 const textDesign = `Go to where your customers spend more time. Our web designs adapt to great and work smoothly on many device
 • Customer Design
