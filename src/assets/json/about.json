@@ -86,9 +86,9 @@
   "minitools": [
     {
       "id": 1,
-      "imgSrc": "http://allcracksofts.info/wp-content/uploads/2019/04/V1_113244e0-0b02-4a41-9fb2-1f39e5c5e6a4_952dc796a8d745b2b7968c50b0bcee30.jpg",
+      "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png",
       "clacss": "move-ease",
-      "imgClass": "rounded-full"
+      "imgClass": "p-2"
     },
     {
       "id": 2,
