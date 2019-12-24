@@ -163,7 +163,7 @@ function PagesClient() {
       <div className="md:flex mx-auto">
         <div className="w-full md:w-1/3 text-center md:text-right">
           <p>
-            Email: <strong>nexious.team@gmail.coms</strong>
+            Email: <strong>nexious.team@gmail.com</strong>
           </p>
         </div>
         <div className="w-full md:w-1/3 text-center md:text-center">
@@ -180,12 +180,12 @@ function PagesClient() {
       <div className="md:flex mx-auto">
         <div className="w-full md:w-1/3 text-center md:text-right">
           <p>
-            FB-Pages: <strong>Nexious</strong>
+            Facebook Page: <a href="https://www.facebook.com/Nexious-116686833048782/" alt="Facebook" target="_blank" rel="noopener noreferrer"><strong>Nexious</strong></a>
           </p>
         </div>
         <div className="w-full md:w-1/3 text-center md:text-center">
           <p>
-            IG: <strong>Nexious</strong>
+            Twitter: <a href="https://twitter.com/Nexious6" target="_blank" rel="noopener noreferrer"><strong>Nexious</strong></a>
           </p>
         </div>
         <div className="w-full md:w-1/3 text-center md:text-left">
