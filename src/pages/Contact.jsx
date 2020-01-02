@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import SweetAlert from "sweetalert2-react";
-// import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { ReactComponent as Facebook } from '../assets/icons/facebook.svg'
+import { ReactComponent as Twitter } from '../assets/icons/twitter.svg'
 
 function PagesClient() {
   const [data, setData] = useState({
@@ -19,19 +21,52 @@ function PagesClient() {
       .post("https://formcarry.com/s/yHekjKv5uto", data, {
         headers: { Accept: "application/json" }
       })
-      .then(function(response) {
+      .then(function (response) {
         console.log(response);
         setshow(true);
       })
-      .catch(function(error) {
+      .catch(function (error) {
         console.log(error);
       });
   };
   return (
-    <div className="w-full mt-5 pt-5 ">
-      <div className="border w-full max-w-lg mx-auto md:p-5 bg-gray-300 rounded-lg shadow-lg mb-3">
+    <div className="w-full">
+      <div className="relative">
+        <img className="h-120 w-full object-cover opacity-50 lg:-mt-32" src="/img/contact_us.jpg" alt="" />
+        <div className="absolute inset-0 flex justify-center mt-12 lg:mt-0 lg:items-center text-3xl uppercase font-bold">Let's get in touch</div>
+        <div className="absolute inset-x-0 bottom-0 mx-auto lg:flex justify-center my-4">
+          <div className="lg:w-1/3 text-center">
+            <FontAwesomeIcon icon="envelope" size="2x" />
+            <h1 className="font-bold mt-1">Contact</h1>
+            <p>nexious.team@gmail.com</p>
+            <p>+855 61 772 311 / +855 96 467 7007</p>
+          </div>
+          <div className="lg:w-1/3 my-6 lg:my-0 text-center border-l border-r">
+            <FontAwesomeIcon icon="map-marked-alt" size="2x" />
+            <h1 className="font-bold mt-1">Address</h1>
+            <p>Phnom Penh, Cambodia</p>
+          </div>
+          <div className="lg:w-1/3 text-center">
+            <FontAwesomeIcon icon="globe-asia" size="2x" />
+            <h1 className="font-bold mt-1">Social media</h1>
+            <div className="flex justify-center mt-2">
+              <div className="w-8 h-8 mx-2">
+                <a href="https://www.facebook.com/Nexious-116686833048782/">
+                  <Facebook />
+                </a>
+              </div>
+              <div className="w-8 h-8 mx-2">
+                <a href="https://twitter.com/Nexious6">
+                  <Twitter />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="border w-full max-w-lg mx-auto md:p-5 bg-gray-300 rounded-lg shadow-lg mb-3 mt-10">
         <div className="text-center">
-          <h1 className="md:text-5xl text-4xl">Contact US</h1>
+          <h1 className="md:text-5xl text-4xl">Contact Us</h1>
         </div>
         <form className="w-full max-w-lg mx-auto">
           <div className="flex flex-wrap -mx-3 md:mb-6 px-3">
@@ -74,14 +109,14 @@ function PagesClient() {
                 type="eamil"
                 placeholder="email@mail.com"
                 onChange={e =>
-                    setData({
-                      name: data.name,
-                      email: e.target.value,
-                      phone: data.phone,
-                      message: data.message,
-                      fromPage: "Contact"
-                    })
-                  }
+                  setData({
+                    name: data.name,
+                    email: e.target.value,
+                    phone: data.phone,
+                    message: data.message,
+                    fromPage: "Contact"
+                  })
+                }
               />
               {/* <p className="text-red-500 text-xs italic">Please fill out this field.</p> */}
             </div>
@@ -98,14 +133,14 @@ function PagesClient() {
                 type="number"
                 placeholder="012345678"
                 onChange={e =>
-                    setData({
-                      name: data.name,
-                      email: data.email,
-                      phone: e.target.value,
-                      message: data.message,
-                      fromPage: "Contact"
-                    })
-                  }
+                  setData({
+                    name: data.name,
+                    email: data.email,
+                    phone: e.target.value,
+                    message: data.message,
+                    fromPage: "Contact"
+                  })
+                }
               />
             </div>
           </div>
@@ -124,14 +159,14 @@ function PagesClient() {
                 id="grid-message"
                 placeholder="Please write your message"
                 onChange={e =>
-                    setData({
-                      name: data.name,
-                      email: data.email,
-                      phone: data.phone,
-                      message: e.target.value,
-                      fromPage: "Contact"
-                    })
-                  }
+                  setData({
+                    name: data.name,
+                    email: data.email,
+                    phone: data.phone,
+                    message: e.target.value,
+                    fromPage: "Contact"
+                  })
+                }
               />
               <p className="text-gray-600 text-xs italic">
                 We will contact to you shortly
@@ -150,49 +185,14 @@ function PagesClient() {
               SUBMIT NOW
             </button>
             <SweetAlert
-                show={showswal}
-                type="success"
-                title="Thank You For Choosing Nexious"
-                text="We will contact you shortly!"
-                onConfirm={() => setshow(false)}
-              />
+              show={showswal}
+              type="success"
+              title="Thank You For Choosing Nexious"
+              text="We will contact you shortly!"
+              onConfirm={() => setshow(false)}
+            />
           </div>
         </form>
-      </div>
-      <h1 className="md:text-5xl text-4xl text-center">Or</h1>
-      <div className="md:flex mx-auto">
-        <div className="w-full md:w-1/3 text-center md:text-right">
-          <p>
-            Email: <strong>nexious.team@gmail.com</strong>
-          </p>
-        </div>
-        <div className="w-full md:w-1/3 text-center md:text-center">
-          <p>
-            Phone: <strong>+855 61 772 311 / +855 96 467 7007</strong>
-          </p>
-        </div>
-        <div className="w-full md:w-1/3 text-center md:text-left">
-          <p>
-            Location: <strong>Phnom Penh, Cambodia</strong>
-          </p>
-        </div>
-      </div>
-      <div className="md:flex mx-auto">
-        <div className="w-full md:w-1/3 text-center md:text-right">
-          <p>
-            Facebook Page: <a href="https://www.facebook.com/Nexious-116686833048782/" alt="Facebook" target="_blank" rel="noopener noreferrer"><strong>Nexious</strong></a>
-          </p>
-        </div>
-        <div className="w-full md:w-1/3 text-center md:text-center">
-          <p>
-            Twitter: <a href="https://twitter.com/Nexious6" target="_blank" rel="noopener noreferrer"><strong>Nexious</strong></a>
-          </p>
-        </div>
-        <div className="w-full md:w-1/3 text-center md:text-left">
-          <p>
-            Telegram: <strong>+855 61 772 311</strong>
-          </p>
-        </div>
       </div>
     </div>
   );
