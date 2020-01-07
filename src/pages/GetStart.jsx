@@ -36,10 +36,10 @@ const GetStart = () => {
       >
         <div className="m-5">
           <h1 className="text-center md:text-5xl text-4xl">
-            Need A Website? ?
+            Need A Website?
           </h1>
           <p className="text-center">
-            Need help with an existing project ? Visit the Support Center.
+            Need help with an existing project? Visit the Support Center.
           </p>
         </div>
         <div>
