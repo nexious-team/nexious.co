@@ -12,30 +12,29 @@ import { blog_web } from "../assets/images/Blog";
 const Home = () => {
   const [section] = useState([
     {
-      title: "Build Your Business Today.",
-      body:
-        "Design your website in a way to keep your customers engage. We'll help your product to be easily searchable through search engines and increase your business performances.",
+      title: "home.build_your_business_today",
+      body: "home.design_your_website_in_",
       image: ipad_pro_png,
       color: ["#3474eb"]
     },
     {
-      title: "Manage Your Business.",
+      title: "home.manage_your_business",
       body:
-        "Keep track of what is happening in your businesses. See your business performance from your office computer, on your tablet, or even on your phone while enjoying your coffee. Visualize the data and make the decisions faster and better.",
+        "home.keep_track_of_what_",
       image: manage_business,
       color: ["#12c2e9", "#c471ed", "#f64f59"]
     },
     {
-      title: "Express Yourself and Share Your Passions",
+      title: "home.express_yourself_and_share_your_passions",
       body:
-        "Post news article to keep people informed. Start a blog to share your knowledge. Or if you simply want to refine your writing skill.",
+        "home.post_news_article_to_",
       image: blog_web,
       color: ["#ff9966", "#ff5e62"]
     },
     {
-      title: "Be Seen. Be Heard.",
+      title: "home.be_seen_be_heard",
       body:
-        "Show the world who you are and what you can do. Build a presence in your industry and become known by others. Be one step ahead of others.",
+        "home.show_the_world_who_",
       image: portfolio_home,
       color: ["#fff"]
     }

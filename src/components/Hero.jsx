@@ -1,7 +1,10 @@
 import React from "react";
 import { useSpring, animated as a } from "react-spring";
 import HeroButton from "../commons/HeroButton";
+import { FormattedMessage as Text } from 'react-intl';
+
 import "../assets/css/hero.css";
+
 const Hero = props => {
   const animatedText = useSpring({
     to: {
@@ -35,14 +38,15 @@ const Hero = props => {
             style={animatedText}
             className="text-4xl lg:text-6xl font-weight-light text-white"
           >
-            {props.text}
+            <Text id={props.text} defaultMessage={props.text} />
           </a.h1>
           <div className="hidden md:block z-20">
-            <HeroButton>Get Started</HeroButton>
+            <HeroButton>
+              <Text id="app.get_started" defaultMessage="Get Started" />            </HeroButton>
           </div>
         </div>
         <div className="block md:hidden order-3 pt-10 z-20">
-          <HeroButton>Get Started</HeroButton>
+          <HeroButton><Text id="app.get_started" defaultMessage="Get Started" /></HeroButton>
         </div>
         <div className="md:py-10 w-full md:w-1/2">
           <div className="overflow-hidden min-height-img">

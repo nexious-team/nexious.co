@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FormattedMessage } from 'react-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'assets/css/about.css'
 import { developers, tools, minitools } from 'assets/json/about.json'
@@ -54,8 +55,8 @@ const About = () => {
         </div>
         <div className="absolute inset-0 mt-24 z-20">
           <div className="">
-            <h1 className={`text-5xl lg:text-6xl xl:text-7xl text-center`}>We are <span className={`border-black border-r-2 hidden md:inline lg:inline`}>{text}</span></h1>
-            <h1 className={`text-5xl lg:text-6xl xl:text-7xl text-center block md:hidden lg:hidden`}><span className={`border-black border-r-2`}>{text}</span></h1>
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center`}>We are <span className={`border-black border-r-2 hidden md:inline lg:inline`}>{text}</span></h1>
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center block md:hidden lg:hidden`}><span className={`border-black border-r-2`}>{text}</span></h1>
           </div>
           <div className="wrapper text-center mt-12">
             <div className="box">
@@ -64,6 +65,7 @@ const About = () => {
           </div>
           <div className="move-scroll-arrow text-center mt-32">
             <p className="text-base">Click me!</p>
+            <p><FormattedMessage id="team.hello"/></p>
             <a href="#our-team">
               <FontAwesomeIcon icon="angle-double-down" size="2x"/>
             </a>

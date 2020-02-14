@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSpring, animated as a } from "react-spring";
+import { FormattedMessage as Text } from 'react-intl';
 
 const RegisterButton = ({ isTop }) => {
   const [clicked, setClicked] = useState(false);
@@ -40,7 +41,7 @@ const RegisterButton = ({ isTop }) => {
             style={textColorAnimation}
             className="text-xl cursor-pointer select-none"
           >
-            Get Started
+            <Text id="app.get_started" defaultMessage="Get Started"/>
           </a.h1>
         </a.div>
       </a.div>

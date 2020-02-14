@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import SweetAlert from "sweetalert2-react";
+import { FormattedMessage as Text } from 'react-intl';
 
 const Footer = () => {
   const [email, setEmail] = useState({ email: "" });
@@ -24,7 +25,7 @@ const Footer = () => {
   return (
     <div className="w-full bg-gray-100 pt-16">
       <div className="font-sans font-semi-bold text-4xl text-center text-black tracking-widest">
-        What You Envision, Come To Existence
+        <Text id="footer.what_you_envision_come_to_existence" />
         <div
           style={{
             left: "50%",
@@ -39,9 +40,7 @@ const Footer = () => {
       <div className="font-sans font-semi-bold text-xl text-black text-center pt-10 pb-20 flex justify-center">
         <div className="w-11/12 lg:w-1/2 ">
           <span className="font-serif">
-            Build any type websites you can imagine with Nexious. We build
-            professional looking website with modern design using the latest
-            technologies for easily maintainability and usability.
+            <Text id="footer.build_any_type_websites_" />
           </span>
         </div>
       </div>
@@ -55,7 +54,7 @@ const Footer = () => {
         <div className="w-11/12 md:w-11/12 lg:w-8/12 xl:w-1/2 bg-whie py-10 md:flex lg:flex justify-between">
           <div>
             <div className=" font-serif text-center md:text-left lg:text-left pb-4 text-white tracking-wide font-sans font-semi-bold">
-              Email us so we can talk
+              <Text id="footer.email_us_so_we_" />
             </div>
             <div className="flex justify-center lg:justify-start">
               <div>
@@ -73,7 +72,7 @@ const Footer = () => {
                     className="h-10 px-4 rounded-lg ml-2 text-black font-semi-bold"
                     onClick={handleSend}
                   >
-                    Send
+                    <Text id="app.send" />
                   </button>
                   <SweetAlert
                     show={showswal}
@@ -88,7 +87,7 @@ const Footer = () => {
           </div>
           <div>
             <div className="font-serif pb-4 text-white tracking-wide font-sans font-semi-bold text-center lg:text-left pt-5 md:pt-0 lg:pt-0">
-              Or follow us on these social media!
+              <Text id="footer.or_follow_us_on_" />
             </div>
             <div className="flex justify-between px-10 md:px-0 lg:px-0">
               <div className="w-10 h-10">
@@ -247,21 +246,6 @@ const Footer = () => {
                       </g>
                     </g>
                   </svg>
-                </a>
-              </div>
-            </div>
-            <div className="pt-5 flex justify-center">
-              <div className="text-white text-sm">
-                Icons made by{" "}
-                <a
-                  href="https://www.flaticon.com/authors/freepik"
-                  title="Freepik"
-                >
-                  Freepik
-                </a>{" "}
-                from{" "}
-                <a href="https://www.flaticon.com/" title="Flaticon">
-                  www.flaticon.com
                 </a>
               </div>
             </div>

@@ -1,17 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FormattedMessage as Text } from 'react-intl';
+
 const HomeDarkSection = props => {
   return (
     <div className="bg-black md:flex md:justify-between">
       <div className="w-full md:w-1/2 lg:w-6/12 bg-red-0">
         <div className="text-center">
           <h1 className="font-josefin text-4xl md:text-4xl xl:text-6xl text-white lg:text-5xl font-semi-bold">
-            {props.title}
+            <Text id={props.title} />
           </h1>
         </div>
         <div className="sub-text text-center flex justify-center">
           <p className="px-3 lg:px-0 text-xl lg:text-2xl font-josefin font-regular text-gray-100 w-11/12 md:w-11/12 lg:w-11/12">
-            {props.body}
+            <Text id={props.body} />
           </p>
         </div>
         <div className="flex justify-center py-5">
@@ -22,7 +24,7 @@ const HomeDarkSection = props => {
             >
               <Link to="/get-start">
                 <button className="text-sm md:text-sm lg:text-2xl font-semi-bold text-black">
-                  Get Started
+                  <Text id="app.get_started" defaultMessage="Get Started"/>
                 </button>
               </Link>
             </div>
@@ -30,7 +32,7 @@ const HomeDarkSection = props => {
           <div className="mx-2">
             <div className="bg-gray-100 w-36 lg:w-56 cursor-pointer rounded-full px-6 py-2 shadow-lg flex justify-center items-center  select-none outline-none">
               <button className="text-md lg:text-2xl font-semi-bold text-black">
-                See More
+                <Text id="app.see_more" defaultMessage="See More" />
               </button>
             </div>
           </div>

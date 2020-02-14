@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSpring, animated as a } from "react-spring";
 import { Link } from "react-router-dom";
+import { FormattedMessage } from 'react-intl';
 import NavButton from "../commons/NavButton";
 import RegisterButton from "../elements/NavBarRegButton";
 import Sidebar from "./Sidebar";
@@ -17,7 +18,7 @@ import "../assets/navbar.css";
 //     });
 //   }
 // };
-const NavBar = props => {
+const NavBar = ({ lang }) => {
   const [sidebar, setSidebar] = useState(false);
   const [isTop, setTop] = useState(true);
   const fade_animation = useSpring({
@@ -38,6 +39,10 @@ const NavBar = props => {
       // setTop(true);
     }
   };
+
+  const navTextSize = lang === 'en' ? 'text-sm md:text-md lg:text-xl' : 'text-sm md:text-md lg:text-base mx-2'
+  const navLinkClassNames = `font-semibold font-josefin ${navTextSize} ${ isTop ? " text-white" : " text-black"}`
+
   useEffect(() => {
     if (window.location.pathname === "/") {
       document.addEventListener("scroll", () => {
@@ -62,8 +67,8 @@ const NavBar = props => {
           ></Sidebar>
         </div>
       ) : (
-        ""
-      )}
+          ""
+        )}
       <a.nav
         className={isTop ? nav_classes + "bg-black" : nav_classes + " shadow"}
         style={fade_animation}
@@ -78,49 +83,33 @@ const NavBar = props => {
               <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
                 <span
                   onClick={() => handleNavbarSwitch("client")}
-                  className={
-                    isTop
-                      ? "text-sm text-white md:text-md lg:text-xl font-semibold font-josefin"
-                      : "text-sm text-black md:text-md lg:text-xl font-semibold font-josefin"
-                  }
+                  className={navLinkClassNames}
                 >
-                  <Link to="/client">Clients</Link>
+                  <Link to="/client"><FormattedMessage id="app.clients" defaultMessage="Clients" /></Link>
                 </span>
               </div>
               <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
                 <span
                   onClick={() => handleNavbarSwitch("client")}
-                  className={
-                    isTop
-                      ? "text-sm text-white md:text-md lg:text-xl font-semibold font-josefin"
-                      : "text-sm text-black md:text-md lg:text-xl font-semibold font-josefin"
-                  }
+                  className={navLinkClassNames}
                 >
-                  <Link to="/service">Services</Link>
+                  <Link to="/service"><FormattedMessage id="app.services" defaultMessage="Services" /></Link>
                 </span>
               </div>
               <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
                 <span
                   onClick={() => handleNavbarSwitch("client")}
-                  className={
-                    isTop
-                      ? "text-sm text-white md:text-md lg:text-xl font-semibold font-josefin"
-                      : "text-sm text-black md:text-md lg:text-xl font-semibold font-josefin"
-                  }
+                  className={navLinkClassNames}
                 >
-                  <Link to="/about">Team</Link>
+                  <Link to="/about"><FormattedMessage id="app.team" defaultMessage="Team" /></Link>
                 </span>
               </div>
               <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
                 <span
                   onClick={() => handleNavbarSwitch("client")}
-                  className={
-                    isTop
-                      ? "text-sm text-white md:text-md lg:text-xl font-semibold font-josefin"
-                      : "text-sm text-black md:text-md lg:text-xl font-semibold font-josefin"
-                  }
+                  className={navLinkClassNames}
                 >
-                  <Link to="/contact">Contact</Link>
+                  <Link to="/contact"><FormattedMessage id="app.contact" defaultMessage="Contact" /></Link>
                 </span>
               </div>
             </div>

@@ -33,7 +33,7 @@ function PagesClient() {
     <div className="w-full">
       <div className="relative">
         <img className="h-120 w-full object-cover opacity-50 lg:-mt-32" src="/img/contact_us.jpg" alt="" />
-        <div className="absolute inset-0 flex justify-center mt-12 lg:mt-0 lg:items-center text-3xl uppercase font-bold">Let's get in touch</div>
+        <div className="absolute inset-0 flex justify-center mt-12 lg:mt-0 lg:items-center text-4xl md:text-5xl lg:text-6xl xl:text-7xl">Let's get in touch</div>
         <div className="absolute inset-x-0 bottom-0 mx-auto lg:flex justify-center my-4">
           <div className="lg:w-1/3 text-center">
             <FontAwesomeIcon icon="envelope" size="2x" />
