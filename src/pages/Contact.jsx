@@ -4,6 +4,7 @@ import SweetAlert from "sweetalert2-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ReactComponent as Facebook } from '../assets/icons/facebook.svg'
 import { ReactComponent as Twitter } from '../assets/icons/twitter.svg'
+import { FormattedMessage as Text } from 'react-intl';
 
 function PagesClient() {
   const [data, setData] = useState({
@@ -33,22 +34,30 @@ function PagesClient() {
     <div className="w-full">
       <div className="relative">
         <img className="h-120 w-full object-cover opacity-50 lg:-mt-32" src="/img/contact_us.jpg" alt="" />
-        <div className="absolute inset-0 flex justify-center mt-12 lg:mt-0 lg:items-center text-4xl md:text-5xl lg:text-6xl xl:text-7xl">Let's get in touch</div>
+        <div className="absolute inset-0 flex justify-center mt-12 lg:mt-0 lg:items-center text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+          <Text id="contact.lets_get_in_touch" />
+        </div>
         <div className="absolute inset-x-0 bottom-0 mx-auto lg:flex justify-center my-4">
           <div className="lg:w-1/3 text-center">
             <FontAwesomeIcon icon="envelope" size="2x" />
-            <h1 className="font-bold mt-1">Contact</h1>
+            <h1 className="font-bold mt-1">
+              <Text id="contact.contact" />
+            </h1>
             <p>nexious.team@gmail.com</p>
             <p>+855 61 772 311 / +855 96 467 7007</p>
           </div>
           <div className="lg:w-1/3 my-6 lg:my-0 text-center border-l border-r">
             <FontAwesomeIcon icon="map-marked-alt" size="2x" />
-            <h1 className="font-bold mt-1">Address</h1>
-            <p>Phnom Penh, Cambodia</p>
+            <h1 className="font-bold mt-1">
+              <Text id="contact.address" />
+            </h1>
+            <p><Text id="contact.phone_penh_cambodia" /></p>
           </div>
           <div className="lg:w-1/3 text-center">
             <FontAwesomeIcon icon="globe-asia" size="2x" />
-            <h1 className="font-bold mt-1">Social media</h1>
+            <h1 className="font-bold mt-1">
+              <Text id="contact.social_media" />
+            </h1>
             <div className="flex justify-center mt-2">
               <div className="w-8 h-8 mx-2">
                 <a href="https://www.facebook.com/Nexious-116686833048782/">
@@ -66,7 +75,9 @@ function PagesClient() {
       </div>
       <div className="border w-full max-w-lg mx-auto md:p-5 bg-gray-300 rounded-lg shadow-lg mb-3 mt-10">
         <div className="text-center">
-          <h1 className="md:text-5xl text-4xl">Contact Us</h1>
+          <h1 className="md:text-5xl text-4xl">
+            <Text id="contact.contact_us" />
+          </h1>
         </div>
         <form className="w-full max-w-lg mx-auto">
           <div className="flex flex-wrap -mx-3 md:mb-6 px-3">
@@ -75,7 +86,7 @@ function PagesClient() {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-first-name"
               >
-                Your Name
+                <Text id="contact.your_name" />
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
@@ -101,7 +112,7 @@ function PagesClient() {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-for-email"
               >
-                Email
+                <Text id="contact.email" />
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
@@ -125,7 +136,7 @@ function PagesClient() {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-for-phone"
               >
-                Phone
+                <Text id="contact.phone" />
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -150,7 +161,7 @@ function PagesClient() {
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-message"
               >
-                Message
+                <Text id="contact.message" />
               </label>
               <textarea
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -169,7 +180,7 @@ function PagesClient() {
                 }
               />
               <p className="text-gray-600 text-xs italic">
-                We will contact to you shortly
+                <Text id="contact.we_will_contact_you_shortly" />
               </p>
             </div>
           </div>
@@ -182,7 +193,7 @@ function PagesClient() {
               className=" mx-auto my-3 text-white font-bold py-2 px-4 rounded-lg w-full"
               onClick={handleSend}
             >
-              SUBMIT NOW
+              <Text id="contact.submit_now" />
             </button>
             <SweetAlert
               show={showswal}
