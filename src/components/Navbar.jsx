@@ -101,7 +101,7 @@ const NavBar = ({ lang }) => {
                   onClick={() => handleNavbarSwitch("client")}
                   className={navLinkClassNames}
                 >
-                  <Link to="/about"><FormattedMessage id="app.team" defaultMessage="Team" /></Link>
+                  <Link to="/about"><FormattedMessage id="app.about_us" defaultMessage="About Us" /></Link>
                 </span>
               </div>
               <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">

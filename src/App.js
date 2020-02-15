@@ -10,8 +10,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import routes from "./routes";
 import { IntlProvider } from 'react-intl';
 
-import messages_kh from "./translations/kh.json";
-import messages_en from "./translations/en.json";
+import messages_kh from "./translations/km";
+import messages_en from "./translations/en";
 import { Navbar } from "./components";
 import AOS from "aos";
 import "aos/dist/aos.css";

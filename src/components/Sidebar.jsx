@@ -53,7 +53,7 @@ const Sidebar = props => {
               </Link>
             </li>
             <li className="py-2" onClick={props.linkClick}>
-              <Link to="/about">Team</Link>
+              <Link to="/about">About us</Link>
             </li>
             <li className="py-2">
               <Link to="/service" onClick={props.linkClick}>
