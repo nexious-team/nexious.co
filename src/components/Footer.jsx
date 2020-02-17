@@ -253,8 +253,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center bg-gray-300 text-black py-2 font-semi-bold">
-        Copyright © 2019 Nexious Team | Credits | Powered by Nexious | Created
-        with React
+        <Text id="footer.copyright" /> © {(new Date()).getFullYear()} <Text id="footer.nexious_team_credits_powered_by_nexious_created_with_reactjs" />
       </div>
     </div>
   );

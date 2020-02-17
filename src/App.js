@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useReducer, createContext } from "react";
 import {
   BrowserRouter as Router,
   withRouter,
@@ -9,6 +9,7 @@ import Footer from "components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import routes from "./routes";
 import { IntlProvider } from 'react-intl';
+import { initialState, reducer, TYPES } from './store';
 
 import messages_kh from "./translations/km";
 import messages_en from "./translations/en";
@@ -16,33 +17,35 @@ import { Navbar } from "./components";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+export const StoreContext = createContext();
+
 const messages = {
   'km': messages_kh,
   'en': messages_en
 };
 
 function App() {
-  const [lang, setLang] = useState('en');
+  const [state, dispatch] = useReducer(reducer, initialState)
 
   useEffect(() => {
     AOS.init();
   });
 
   const onLangChange = (e) => {
-    setLang(e.target.value);
+    dispatch({type: TYPES.CHANGE_LANGUAGE, payload: { language: e.target.value }});
   }
   return (
-    <IntlProvider defaultLocale="en" locale={lang} messages={messages[lang]}>
+    <IntlProvider defaultLocale="en" locale={state.language} messages={messages[state.language]}>
       <Router>
         <ScrollToTop>
-          <div className="fixed z-60 ml-2 mt-6 top-0">
-            <select className="p-1" value={lang} onChange={onLangChange}>
+          <div className="fixed z-60 ml-2 mt-16 top-0">
+            <select className="p-1" value={state.language} onChange={onLangChange}>
               <option value="en">En</option>
               <option value="km">Km</option>
             </select>
           </div>
-          <div>
-            <Navbar link={Link} location={withRouter(Navbar)} lang={lang} onLangChange={onLangChange} />
+          <StoreContext.Provider value={{ state }}>
+            <Navbar link={Link} location={withRouter(Navbar)} lang={state.language} onLangChange={onLangChange} />
             {routes.map((route, i) => (
               <Route
                 key={i}
@@ -57,7 +60,7 @@ function App() {
             <div>
               <Footer></Footer>
             </div>
-          </div>
+          </StoreContext.Provider>
         </ScrollToTop>
       </Router>
     </IntlProvider>

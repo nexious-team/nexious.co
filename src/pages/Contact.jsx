@@ -1,12 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
 import SweetAlert from "sweetalert2-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ReactComponent as Facebook } from '../assets/icons/facebook.svg'
 import { ReactComponent as Twitter } from '../assets/icons/twitter.svg'
 import { FormattedMessage as Text } from 'react-intl';
+import { StoreContext } from '../App';
+
+const languages = {
+  en: {
+    name: "Jane Doe",
+    description: "Please write your message here"
+  }, 
+  km: {
+    name: "សុខ សាន",
+    description: "សូមសរសេរសាររបស់អ្នកនៅទីនេះ"
+  }
+}
 
 function PagesClient() {
+  const { state } = useContext(StoreContext);
+
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -30,6 +44,9 @@ function PagesClient() {
         console.log(error);
       });
   };
+
+  const getPlaceholder = (key) => languages[state.language][key];
+
   return (
     <div className="w-full">
       <div className="relative">
@@ -92,7 +109,7 @@ function PagesClient() {
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                 id="grid-first-name"
                 type="text"
-                placeholder="Jane"
+                placeholder={getPlaceholder("name")}
                 onChange={e =>
                   setData({
                     name: e.target.value,
@@ -168,7 +185,7 @@ function PagesClient() {
                 cols="30"
                 rows="6"
                 id="grid-message"
-                placeholder="Please write your message"
+                placeholder={getPlaceholder("description")}
                 onChange={e =>
                   setData({
                     name: data.name,

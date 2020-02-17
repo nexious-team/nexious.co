@@ -1,0 +1,18 @@
+{
+  "get_started.need_a_website": "Need A Website?",
+  "get_started.need_help_with_an_": "Need help with an existing project? Visit the Support Center.",
+  "get_started.first_name": "FIRST NAME",
+  "get_started.last_name": "LAST NAME",
+  "get_started.email": "EMAIL",
+  "get_started.phone": "PHONE",
+  "get_started.type_of_website": "TYPE OF WEBSITE",
+  "get_started.select_a_type": "Select a type",
+  "get_started.ecommerce_website": "E-Commernce Website",
+  "get_started.web_application": "Web Application",
+  "get_started.branding_website": "Branding Website",
+  "get_started.article_website": "Article Website",
+  "get_started.other": "Other",
+  "get_started.website_summary": "WEBSITE SUMMARY",
+  "get_started.we_will_contact_you_shortly": "We will contact you shortly",
+  "get_started.submit_now": "SUBMIT NOW"
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FormattedMessage as Text } from 'react-intl';
 
 const Sidebar = props => {
   return (
@@ -49,20 +50,20 @@ const Sidebar = props => {
           <ul className="text-white text-4xl font-bold font-josefin">
             <li className="py-2">
               <Link to="/contact" onClick={props.linkClick}>
-                Contact
+                <Text id="app.contact" />
               </Link>
             </li>
             <li className="py-2" onClick={props.linkClick}>
-              <Link to="/about">About us</Link>
+              <Link to="/about"><Text id="app.about_us" /></Link>
             </li>
             <li className="py-2">
               <Link to="/service" onClick={props.linkClick}>
-                Services
+                <Text id="app.services" />
               </Link>
             </li>
             <li className="py-2">
               <Link to="/client" onClick={props.linkClick}>
-                Clients
+                <Text id="app.clients" />
               </Link>
             </li>
           </ul>

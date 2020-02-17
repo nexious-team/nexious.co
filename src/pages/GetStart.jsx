@@ -1,8 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
 import SweetAlert from "sweetalert2-react";
+import { FormattedMessage as Text } from 'react-intl';
+import { StoreContext } from '../App'
+
+const languages = {
+  en: {
+    default: 'Select a type',
+    types: ['E-Commernce Website', 'Web Application', 'Branding Website', 'Article Website', 'Other'],
+    placeholders: {
+      firstName: "Jane",
+      lastName: "Doe",
+      description: "Short Detail About Your Website"
+    }
+  },
+  km: {
+    default: 'ជ្រើសរើសប្រភេទ​ណាមួយ',
+    types: ['គេហទំព័រសម្រាប់លក់តាមអ៊ីនធឺណិត', 'កម្មវិធីគេហទំព័រ', 'គេហទំព័រពាណិជ្ជកម្ម', 'គេហទំព័រអត្ថបទ','ផ្សេងទៀត' ],
+    placeholders: {
+      firstName: "សុខ",
+      lastName: "សាន",
+      description: "ពត៌មានលំអិតខ្លីអំពីគេហទំព័ររបស់អ្នក"
+    }
+  }
+}
 
 const GetStart = () => {
+  const { state } = useContext(StoreContext);
+
+  const websiteTypes = languages[state.language].types;
+  const defaultWebsiteType = languages[state.language].default;
+
   const [data, setData] = useState({
     firstName: "",
     lastName: "",
@@ -20,14 +48,16 @@ const GetStart = () => {
       .post("https://formcarry.com/s/yHekjKv5uto", data, {
         headers: { Accept: "application/json" }
       })
-      .then(function(response) {
+      .then(function (response) {
         console.log(response);
         setshow(true);
       })
-      .catch(function(error) {
+      .catch(function (error) {
         console.log(error);
       });
   };
+  const getPlaceholder = (key) => languages[state.language].placeholders[key];
+
   return (
     <div className="container mx-auto pt-5">
       <div
@@ -36,10 +66,10 @@ const GetStart = () => {
       >
         <div className="m-5">
           <h1 className="text-center md:text-5xl text-4xl">
-            Need A Website?
+            <Text id="get_started.need_a_website" />
           </h1>
           <p className="text-center">
-            Need help with an existing project? Visit the Support Center.
+            <Text id="get_started.need_help_with_an_" />
           </p>
         </div>
         <div>
@@ -50,13 +80,13 @@ const GetStart = () => {
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                   htmlFor="grid-first-name"
                 >
-                  First Name
+                  <Text id="get_started.first_name" />
                 </label>
                 <input
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="grid-first-name"
                   type="text"
-                  placeholder="Jane"
+                  placeholder={getPlaceholder('firstName')}
                   onChange={e =>
                     setData({
                       firstName: e.target.value,
@@ -76,13 +106,13 @@ const GetStart = () => {
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                   htmlFor="grid-last-name"
                 >
-                  Last Name
+                  <Text id="get_started.last_name" />
                 </label>
                 <input
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-last-name"
                   type="text"
-                  placeholder="Doe"
+                  placeholder={getPlaceholder('lastName')}
                   onChange={e =>
                     setData({
                       firstName: data.firstName,
@@ -103,7 +133,7 @@ const GetStart = () => {
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                   htmlFor="grid-for-email"
                 >
-                  Email
+                  <Text id="get_started.email" />
                 </label>
                 <input
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
@@ -129,7 +159,7 @@ const GetStart = () => {
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                   htmlFor="grid-for-phone"
                 >
-                  Phone
+                  <Text id="get_started.phone" />
                 </label>
                 <input
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -151,12 +181,12 @@ const GetStart = () => {
               </div>
             </div>
             <div className="flex flex-wrap -mx-3 mb-6 px-3">
-              <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <div className="w-full md:w-2/3 px-3 mb-6 md:mb-0">
                 <label
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                   htmlFor="grid-state"
                 >
-                  Type Of Website
+                  <Text id="get_started.type_of_website" />
                 </label>
                 <div className="relative">
                   <select
@@ -174,14 +204,10 @@ const GetStart = () => {
                       });
                     }}
                   >
-                    <option value disabled selected></option>
-                    <option value="E-Commernce Website">
-                      E-Commernce Website
-                    </option>
-                    <option value="Web Application">Web Application</option>
-                    <option value="Branding Website">Branding Website</option>
-                    <option value="Article Website">Article Website</option>
-                    <option value="Other">Other</option>
+                    <option value={defaultWebsiteType}>{defaultWebsiteType}</option>
+                    {websiteTypes.map((type) => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                     <svg
@@ -201,14 +227,14 @@ const GetStart = () => {
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                   htmlFor="grid-message"
                 >
-                  Website Summary
+                  <Text id="get_started.website_summary" />
                 </label>
                 <textarea
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   cols="30"
                   rows="10"
                   id="grid-message"
-                  placeholder="Short Detail About Your Website"
+                  placeholder={getPlaceholder('description')}
                   onChange={e => {
                     setData({
                       firstName: data.firstName,
@@ -222,7 +248,7 @@ const GetStart = () => {
                   }}
                 />
                 <p className="text-gray-600 text-xs italic">
-                  We will contact to you shortly
+                  <Text id="get_started.we_will_contact_you_shortly" />
                 </p>
               </div>
             </div>
@@ -235,7 +261,7 @@ const GetStart = () => {
                 className="w-11/12 h-10 mx-auto my-3 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
                 onClick={handleSend}
               >
-                SUBMIT NOW
+                <Text id="get_started.submit_now" />
               </button>
               <SweetAlert
                 show={showswal}
