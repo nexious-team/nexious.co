@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FormattedMessage as Text } from 'react-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'assets/css/about.css'
 import { developers, tools, minitools } from 'assets/json/about.json'
-import { StoreContext } from '../App';
 import { Link } from "react-router-dom";
 
 const languages = {
@@ -12,14 +11,14 @@ const languages = {
 }
 
 const About = () => {
-  const { state } = useContext(StoreContext);
+  const lang = localStorage.getItem('lang') || 'en'
   
   const [text, setText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [typeSpeed, setTypeSpeed] = useState(200);
 
-  const words = languages[state.language]
+  const words = languages[lang]
   const wait = 1000;
 
   useEffect(() => {

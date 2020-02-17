@@ -1,5 +1,5 @@
 export const initialState = {
-  language: 'en'
+  language: localStorage.getItem('lang') || 'en'
 }
 export const TYPES = {
   CHANGE_LANGUAGE: 'CHANGE_LANGUAGE'
@@ -7,12 +7,11 @@ export const TYPES = {
 export function reducer(state, action) {
   switch(action.type) {
     case TYPES.CHANGE_LANGUAGE: {
-      console.log(action)
+      localStorage.setItem('lang', action.payload.language)
       state.language = action.payload.language
       return { ...state }
     }
     default: {
-      console.log(action)
       return state;
     }
   }

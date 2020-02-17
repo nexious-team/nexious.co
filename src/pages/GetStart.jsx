@@ -1,8 +1,7 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import SweetAlert from "sweetalert2-react";
 import { FormattedMessage as Text } from 'react-intl';
-import { StoreContext } from '../App'
 
 const languages = {
   en: {
@@ -26,10 +25,10 @@ const languages = {
 }
 
 const GetStart = () => {
-  const { state } = useContext(StoreContext);
+  const lang = localStorage.getItem('lang') || 'en';
 
-  const websiteTypes = languages[state.language].types;
-  const defaultWebsiteType = languages[state.language].default;
+  const websiteTypes = languages[lang].types;
+  const defaultWebsiteType = languages[lang].default;
 
   const [data, setData] = useState({
     firstName: "",
@@ -56,7 +55,7 @@ const GetStart = () => {
         console.log(error);
       });
   };
-  const getPlaceholder = (key) => languages[state.language].placeholders[key];
+  const getPlaceholder = (key) => languages[lang].placeholders[key];
 
   return (
     <div className="container mx-auto pt-5">

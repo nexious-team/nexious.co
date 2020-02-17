@@ -1,11 +1,10 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import SweetAlert from "sweetalert2-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ReactComponent as Facebook } from '../assets/icons/facebook.svg'
 import { ReactComponent as Twitter } from '../assets/icons/twitter.svg'
 import { FormattedMessage as Text } from 'react-intl';
-import { StoreContext } from '../App';
 
 const languages = {
   en: {
@@ -19,7 +18,7 @@ const languages = {
 }
 
 function PagesClient() {
-  const { state } = useContext(StoreContext);
+  const lang = localStorage.getItem('lang') || 'en'
 
   const [data, setData] = useState({
     name: "",
@@ -45,7 +44,7 @@ function PagesClient() {
       });
   };
 
-  const getPlaceholder = (key) => languages[state.language][key];
+  const getPlaceholder = (key) => languages[lang][key];
 
   return (
     <div className="w-full">
