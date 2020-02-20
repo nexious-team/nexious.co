@@ -6,12 +6,12 @@ import { developers, tools, minitools } from 'assets/json/about.json'
 import { Link } from "react-router-dom";
 
 const languages = {
-  en: ['designers', 'developers', 'creators'],
-  km: ['អ្នករចនា', 'អ្នកអភិវឌ្ឍន៍', 'អ្នកបង្កើត']
+  En: ['designers', 'developers', 'creators'],
+  Km: ['អ្នករចនា', 'អ្នកអភិវឌ្ឍន៍', 'អ្នកបង្កើត']
 }
 
 const About = () => {
-  const lang = localStorage.getItem('lang') || 'en'
+  const lang = localStorage.getItem('lang') || 'En'
   
   const [text, setText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);

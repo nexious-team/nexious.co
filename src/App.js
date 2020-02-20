@@ -5,45 +5,40 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Footer from "components/Footer";
-import ScrollToTop from "./components/ScrollToTop";
-import routes from "./routes";
 import { IntlProvider } from 'react-intl';
-
-import messages_kh from "./translations/km";
-import messages_en from "./translations/en";
-import { Navbar } from "./components";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import { Navbar, ScrollToTop, Footer } from "./components";
+import { Dropdown } from "elements";
+import routes from "./routes";
+
+import messages_kh from "./translations/km";
+import messages_en from "./translations/en";
+
 const messages = {
-  'km': messages_kh,
-  'en': messages_en
+  'Km': messages_kh,
+  'En': messages_en
 };
 
 function App() {
-  const [lang, setLang] = useState(localStorage.getItem('lang') || 'en')
+  const [lang, setLang] = useState(localStorage.getItem('lang') || 'En')
 
   useEffect(() => {
     AOS.init();
   });
 
-  const onLangChange = (e) => {
-    setLang(e.target.value)
-    localStorage.setItem('lang', e.target.value)
+  const onLangChange = (language) => {
+    setLang(language)
+    localStorage.setItem('lang', language)
   }
   return (
-    <IntlProvider defaultLocale="en" locale={lang} messages={messages[lang]}>
+    <IntlProvider defaultLocale="En" locale={lang} messages={messages[lang]}>
       <Router>
         <ScrollToTop>
-          <div className="fixed z-60 ml-2 mt-16 top-0">
-            <select className="p-1" value={lang} onChange={onLangChange}>
-              <option value="en">En</option>
-              <option value="km">Km</option>
-            </select>
-          </div>
+          <Dropdown lang={lang} onLangChange={onLangChange}/>
           <div>
-            <Navbar link={Link} location={withRouter(Navbar)} lang={lang} onLangChange={onLangChange} />
+            <Navbar link={Link} location={withRouter(Navbar)} lang={lang} />
             {routes.map((route, i) => (
               <Route
                 key={i}
