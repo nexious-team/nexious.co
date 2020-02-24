@@ -4,7 +4,7 @@ import SweetAlert from "sweetalert2-react";
 import { FormattedMessage as Text } from 'react-intl';
 
 const languages = {
-  en: {
+  En: {
     default: 'Select a type',
     types: ['E-Commernce Website', 'Web Application', 'Branding Website', 'Article Website', 'Other'],
     placeholders: {
@@ -13,7 +13,7 @@ const languages = {
       description: "Short Detail About Your Website"
     }
   },
-  km: {
+  Km: {
     default: 'ជ្រើសរើសប្រភេទ​ណាមួយ',
     types: ['គេហទំព័រសម្រាប់លក់តាមអ៊ីនធឺណិត', 'កម្មវិធីគេហទំព័រ', 'គេហទំព័រពាណិជ្ជកម្ម', 'គេហទំព័រអត្ថបទ','ផ្សេងទៀត' ],
     placeholders: {
@@ -25,7 +25,7 @@ const languages = {
 }
 
 const GetStart = () => {
-  const lang = localStorage.getItem('lang') || 'en';
+  const lang = localStorage.getItem('lang') || 'En';
 
   const websiteTypes = languages[lang].types;
   const defaultWebsiteType = languages[lang].default;
