@@ -41,7 +41,7 @@ const NavBar = ({ lang }) => {
   };
 
   const navTextSize = lang === 'En' ? 'text-sm md:text-md lg:text-xl' : 'text-sm md:text-md lg:text-base mx-2'
-  const navLinkClassNames = `font-semibold font-josefin ${navTextSize} ${ isTop ? " text-white" : " text-black"}`
+  const navLinkClassNames = `font-semibold  ${navTextSize} ${ isTop ? " text-white" : " text-black"}`
 
   useEffect(() => {
     if (window.location.pathname === "/") {
@@ -56,7 +56,7 @@ const NavBar = ({ lang }) => {
       setTop(false);
     }
   }, [isTop]);
-  const nav_classes = "fixed top-0 w-full font-sans spring-nav z-50";
+  const nav_classes = "fixed top-0 w-full  spring-nav z-50";
   return (
     <div className="mb-20">
       {sidebar ? (
@@ -75,11 +75,11 @@ const NavBar = ({ lang }) => {
       >
         <a.div
           style={fade_animation_height}
-          className="container mx-auto md:px-10 lg:px-0 flex items-center justify-between"
+          className="container mx-auto md:px-0 lg:px-0 flex items-center justify-between"
         >
           <div className="flex-1 h-auto">
             {/* Left Element */}
-            <div className="hidden lg:flex md:flex ml-5 justify-start font-sans">
+            <div className="hidden lg:flex md:flex ml-5 justify-start ">
               <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
                 <span
                   onClick={() => handleNavbarSwitch("client")}
@@ -121,13 +121,13 @@ const NavBar = ({ lang }) => {
           </div>
 
           {/* Middle Elements */}
-          <div className="flex-1 h-auto text-center md:text-center lg:text-center px-5 ">
+          <div className="font-josefin flex-1 h-auto text-center md:text-center lg:text-center px-5 ">
             <span
               onClick={() => handleNavbarSwitch("home")}
               className={
                 isTop
-                  ? "text-3xl text-white font-josefin"
-                  : "text-3xl text-black font-josefin"
+                  ? "text-3xl text-white "
+                  : "text-3xl text-black "
               }
             >
               <Link to="/">Nexious</Link>

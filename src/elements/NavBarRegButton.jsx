@@ -31,7 +31,7 @@ const RegisterButton = ({ isTop }) => {
           setTimeout(() => setClicked(clicked => !clicked), 150);
         }}
         style={borderColorAnimation}
-        className="h-16 text-center flex items-center justify-center text:lg lg:text-2xl font-josefin w-20 md:w-40 lg:w-40 rounded-lg cursor-pointer"
+        className="h-16 text-center flex items-center justify-center text:lg lg:text-2xl  w-20 md:w-40 lg:w-40 rounded-lg cursor-pointer"
       >
         <a.div
           style={colorAnimation}
@@ -41,7 +41,7 @@ const RegisterButton = ({ isTop }) => {
             style={textColorAnimation}
             className="text-xl cursor-pointer select-none"
           >
-            <Text id="app.get_started" defaultMessage="Get Started"/>
+            <Text id="app.get_started" defaultMessage="Get Started" />
           </a.h1>
         </a.div>
       </a.div>

@@ -33,7 +33,7 @@ const Hero = props => {
       className="w-screen h-screen flex justify-center md:items-center pt-32 md:pt-0 z-20"
     >
       <div className="flex flex-col items-stretch md:flex-row md:justify-center md:items-center h-64 w-10/12">
-        <div className="font-josefin w-full md:w-8/12">
+        <div className=" w-full md:w-8/12">
           <a.h1
             style={animatedText}
             className="text-4xl lg:text-6xl font-weight-light text-white"

@@ -32,6 +32,8 @@ function App() {
     setLang(language)
     localStorage.setItem('lang', language)
   }
+  const styles = lang === 'km' ? { fontFamily: 'KhmerOsContent'} : {};
+
   return (
     <IntlProvider defaultLocale="En" locale={lang} messages={messages[lang]}>
       <Router>

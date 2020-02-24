@@ -24,7 +24,7 @@ const Footer = () => {
   };
   return (
     <div className="w-full bg-gray-100 pt-16">
-      <div className="font-sans font-semi-bold text-4xl text-center text-black tracking-widest">
+      <div className=" font-semi-bold text-4xl text-center text-black tracking-widest">
         <Text id="footer.what_you_envision_come_to_existence" />
         <div
           style={{
@@ -37,7 +37,7 @@ const Footer = () => {
           className="absolute mx-auto rounded sm:w-10/12 lg:w-4/12"
         ></div>
       </div>
-      <div className="font-sans font-semi-bold text-xl text-black text-center pt-10 pb-20 flex justify-center">
+      <div className=" font-semi-bold text-xl text-black text-center pt-10 pb-20 flex justify-center">
         <div className="w-11/12 lg:w-1/2 ">
           <span className="font-serif">
             <Text id="footer.build_any_type_websites_" />
@@ -49,11 +49,11 @@ const Footer = () => {
           background:
             "linear-gradient(to right, rgba(132, 186, 101,1), rgba(38, 112, 107,1))"
         }}
-        className="font-sans font-semi-bold bg-black text-lg text-black flex justify-center"
+        className=" font-semi-bold bg-black text-lg text-black flex justify-center"
       >
         <div className="w-11/12 md:w-11/12 lg:w-8/12 xl:w-1/2 bg-whie py-10 md:flex lg:flex justify-between">
           <div>
-            <div className=" font-serif text-center md:text-left lg:text-left pb-4 text-white tracking-wide font-sans font-semi-bold">
+            <div className=" font-serif text-center md:text-left lg:text-left pb-4 text-white tracking-wide  font-semi-bold">
               <Text id="footer.email_us_so_we_" />
             </div>
             <div className="flex justify-center lg:justify-start">
@@ -86,7 +86,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <div className="font-serif pb-4 text-white tracking-wide font-sans font-semi-bold text-center lg:text-left pt-5 md:pt-0 lg:pt-0">
+            <div className="font-serif pb-4 text-white tracking-wide  font-semi-bold text-center lg:text-left pt-5 md:pt-0 lg:pt-0">
               <Text id="footer.or_follow_us_on_" />
             </div>
             <div className="flex justify-between px-10 md:px-0 lg:px-0">
