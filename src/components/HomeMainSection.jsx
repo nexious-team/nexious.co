@@ -8,7 +8,7 @@ const HomeMainSection = props => {
     <div className=" py-20">
       <div className="container mx-auto">
         <div className="text-center">
-          <h1 className="text-4xl lg:text-6xl font-josefin font-semi-bold">
+          <h1 className="text-4xl lg:text-6xl font-semi-bold">
             <Text id={props.title} defaultMessage={props.title} />
           </h1>
         </div>

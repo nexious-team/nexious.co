@@ -32,6 +32,8 @@ function App() {
     setLang(e.target.value)
     localStorage.setItem('lang', e.target.value)
   }
+  const styles = lang === 'km' ? { fontFamily: 'KhmerOsContent'} : {};
+
   return (
     <IntlProvider defaultLocale="en" locale={lang} messages={messages[lang]}>
       <Router>
@@ -42,7 +44,7 @@ function App() {
               <option value="km">Km</option>
             </select>
           </div>
-          <div>
+          <div className="app" style={styles}>
             <Navbar link={Link} location={withRouter(Navbar)} lang={lang} onLangChange={onLangChange} />
             {routes.map((route, i) => (
               <Route

@@ -7,12 +7,12 @@ const HomeDarkSection = props => {
     <div className="bg-black md:flex md:justify-between">
       <div className="w-full md:w-1/2 lg:w-6/12 bg-red-0">
         <div className="text-center">
-          <h1 className="font-josefin text-4xl md:text-4xl xl:text-6xl text-white lg:text-5xl font-semi-bold">
+          <h1 className=" text-4xl md:text-4xl xl:text-6xl text-white lg:text-5xl font-semi-bold">
             <Text id={props.title} />
           </h1>
         </div>
         <div className="sub-text text-center flex justify-center">
-          <p className="px-3 lg:px-0 text-xl lg:text-2xl font-josefin font-regular text-gray-100 w-11/12 md:w-11/12 lg:w-11/12">
+          <p className="px-3 lg:px-0 text-xl lg:text-2xl font-regular text-gray-100 w-11/12 md:w-11/12 lg:w-11/12">
             <Text id={props.body} />
           </p>
         </div>
@@ -24,7 +24,7 @@ const HomeDarkSection = props => {
             >
               <Link to="/get-start">
                 <button className="text-sm md:text-sm lg:text-2xl font-semi-bold text-black">
-                  <Text id="app.get_started" defaultMessage="Get Started"/>
+                  <Text id="app.get_started" defaultMessage="Get Started" />
                 </button>
               </Link>
             </div>

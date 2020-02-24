@@ -16,6 +16,14 @@
   font-family: 'josefin';
   src: url('assets/fonts/JosefinSans-Regular.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'KhmerOsContent';
+  src: url('assets/fonts/KhmerOSContent-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'KhmerOsDangrek';
+  src: url('assets/fonts/KhmerOSDangrek.ttf') format('truetype');
+}
 
 body {
   margin: 0;

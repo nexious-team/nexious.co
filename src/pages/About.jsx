@@ -161,7 +161,7 @@ const Developer = ({ imgSrc, name, skills, tools, aosDelay, snapshot }) => (
     <h3 className="text-xl mt-2"><Text id={name} /></h3>
     <h4 className="text-md text-gray-800"><Text id={skills} /></h4>
     <p className="text-xs lg:text-sm xl:text-sm my-1">{tools}</p>
-    <p className="text-xs lg:text-sm xl:text-base my-6 h-24"><Text id={snapshot} /></p>
+    <p className="text-xs lg:text-sm xl:text-base my-6 h-16 lg:h-24"><Text id={snapshot} /></p>
     <div className="flex justify-center my-6">
       <div className="mx-6">
         <FontAwesomeIcon icon={['fab', 'facebook']} size="lg" />
