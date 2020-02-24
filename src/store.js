@@ -1,5 +1,5 @@
 export const initialState = {
-  language: localStorage.getItem('lang') || 'en'
+  language: localStorage.getItem('lang') || 'En'
 }
 export const TYPES = {
   CHANGE_LANGUAGE: 'CHANGE_LANGUAGE'

@@ -28,7 +28,7 @@ export default ({ lang, onLangChange}) => {
           {<img className="object-cover h-full w-full" src={`/img/${flag}.png`} alt="Flag"/>}
         </span>
         <span className="my-auto ml-1">{lang}</span>
-        <span className="ml-2 mt-1"><FontAwesomeIcon icon="angle-down" /></span>
+        <span className="my-auto ml-2"><FontAwesomeIcon icon="angle-down" size="sm"/></span>
       </div>
       {isOpen && <button onClick={onClose} tabIndex="-1" className="fixed inset-0 h-full w-full bg-black opacity-50 cursor-default"></button>}
       {isOpen && (

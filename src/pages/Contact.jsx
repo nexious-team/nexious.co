@@ -18,7 +18,7 @@ const languages = {
 }
 
 function PagesClient() {
-  const lang = localStorage.getItem('lang') || 'en'
+  const lang = localStorage.getItem('lang') || 'En'
 
   const [data, setData] = useState({
     name: "",
