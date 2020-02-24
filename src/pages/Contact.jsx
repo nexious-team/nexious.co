@@ -7,11 +7,11 @@ import { ReactComponent as Twitter } from '../assets/icons/twitter.svg'
 import { FormattedMessage as Text } from 'react-intl';
 
 const languages = {
-  en: {
+  En: {
     name: "Jane Doe",
     description: "Please write your message here"
   }, 
-  km: {
+  Km: {
     name: "សុខ សាន",
     description: "សូមសរសេរសាររបស់អ្នកនៅទីនេះ"
   }

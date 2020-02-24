@@ -40,7 +40,7 @@ const NavBar = ({ lang }) => {
     }
   };
 
-  const navTextSize = lang === 'en' ? 'text-sm md:text-md lg:text-xl' : 'text-sm md:text-md lg:text-base mx-2'
+  const navTextSize = lang === 'En' ? 'text-sm md:text-md lg:text-xl' : 'text-sm md:text-md lg:text-base mx-2'
   const navLinkClassNames = `font-semibold  ${navTextSize} ${ isTop ? " text-white" : " text-black"}`
 
   useEffect(() => {
