@@ -20,7 +20,7 @@ const Sidebar = props => {
       >
         <div className="flex justify-between items-center pt-8">
           <div className="pl-5">
-            <p className="text-white text-5xl  pointer-cursor hover:text-black">
+            <p className="font-josefin text-white text-5xl  pointer-cursor hover:text-black">
               <Link to="/" onClick={props.linkClick}>
                 Nexious
               </Link>

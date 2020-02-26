@@ -6,6 +6,8 @@ import NavButton from "../commons/NavButton";
 import RegisterButton from "../elements/NavBarRegButton";
 import Sidebar from "./Sidebar";
 import "../assets/navbar.css";
+import FlagButton from '../elements/FlagButton';
+
 // const method = {
 //   componentDidMount() {
 //     document.addEventListener("scroll", () => {
@@ -18,7 +20,8 @@ import "../assets/navbar.css";
 //     });
 //   }
 // };
-const NavBar = ({ lang }) => {
+
+const NavBar = ({ lang, onLangChange }) => {
   const [sidebar, setSidebar] = useState(false);
   const [isTop, setTop] = useState(true);
   const fade_animation = useSpring({
@@ -41,7 +44,7 @@ const NavBar = ({ lang }) => {
   };
 
   const navTextSize = lang === 'En' ? 'text-sm md:text-md lg:text-xl' : 'text-sm md:text-md lg:text-base mx-2'
-  const navLinkClassNames = `font-semibold  ${navTextSize} ${ isTop ? " text-white" : " text-black"}`
+  const navLinkClassNames = `font-semibold  ${navTextSize} ${isTop ? " text-white" : " text-black"}`
 
   useEffect(() => {
     if (window.location.pathname === "/") {
@@ -137,6 +140,9 @@ const NavBar = ({ lang }) => {
           {/* Right Elements */}
           <div className="flex-1 h-auto">
             <div className=" flex md:flex justify-end pr-2 lg:mr-4">
+              <div className="my-auto mr-6">
+                <FlagButton lang={lang} onClickFlag={onLangChange} />
+              </div>
               <Link
                 onClick={() => handleNavbarSwitch("get-start")}
                 to="/get-start"

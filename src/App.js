@@ -10,7 +10,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import { Navbar, ScrollToTop, Footer } from "./components";
-import { Dropdown } from "elements";
 import routes from "./routes";
 
 import messages_kh from "./translations/km";
@@ -28,9 +27,11 @@ function App() {
     AOS.init();
   });
 
-  const onLangChange = (language) => {
-    setLang(language)
-    localStorage.setItem('lang', language)
+  const onLangChange = () => {
+    const language = lang === 'En' ? 'Km' : 'En';
+
+    setLang(language);
+    localStorage.setItem('lang', language);
   }
   const styles = lang === 'Km' ? { fontFamily: 'KhmerOsContent'} : {};
 
@@ -38,9 +39,9 @@ function App() {
     <IntlProvider defaultLocale="En" locale={lang} messages={messages[lang]}>
       <Router>
         <ScrollToTop>
-          <Dropdown lang={lang} onLangChange={onLangChange}/>
+          {/* <Dropdown lang={lang} onLangChange={onLangChange}/> */}
           <div style={styles}>
-            <Navbar link={Link} location={withRouter(Navbar)} lang={lang} />
+            <Navbar link={Link} location={withRouter(Navbar)} lang={lang} onLangChange={onLangChange}/>
             {routes.map((route, i) => (
               <Route
                 key={i}
