@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FormattedMessage as Text } from 'react-intl';
 
 const Sidebar = props => {
   return (
@@ -19,7 +20,7 @@ const Sidebar = props => {
       >
         <div className="flex justify-between items-center pt-8">
           <div className="pl-5">
-            <p className="text-white text-5xl font-josefin pointer-cursor hover:text-black">
+            <p className="font-josefin text-white text-5xl  pointer-cursor hover:text-black">
               <Link to="/" onClick={props.linkClick}>
                 Nexious
               </Link>
@@ -46,23 +47,23 @@ const Sidebar = props => {
           </div>
         </div>
         <div className="pt-10 pl-16">
-          <ul className="text-white text-4xl font-bold font-josefin">
+          <ul className="text-white text-4xl font-bold ">
             <li className="py-2">
               <Link to="/contact" onClick={props.linkClick}>
-                Contact
+                <Text id="app.contact" />
               </Link>
             </li>
             <li className="py-2" onClick={props.linkClick}>
-              <Link to="/about">Team</Link>
+              <Link to="/about"><Text id="app.about_us" /></Link>
             </li>
             <li className="py-2">
               <Link to="/service" onClick={props.linkClick}>
-                Services
+                <Text id="app.services" />
               </Link>
             </li>
             <li className="py-2">
               <Link to="/client" onClick={props.linkClick}>
-                Clients
+                <Text id="app.clients" />
               </Link>
             </li>
           </ul>

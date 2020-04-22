@@ -1,46 +1,65 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   withRouter,
   Route,
   Link
 } from "react-router-dom";
-import Footer from "components/Footer";
-import ScrollToTop from "./components/ScrollToTop";
-import routes from "./routes";
-
-import { Navbar } from "./components";
+import { IntlProvider } from 'react-intl';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import { Navbar, ScrollToTop, Footer } from "./components";
+import routes from "./routes";
+
+import messages_kh from "./translations/km";
+import messages_en from "./translations/en";
+
+const messages = {
+  'Km': messages_kh,
+  'En': messages_en
+};
+
 function App() {
+  const [lang, setLang] = useState(localStorage.getItem('lang') || 'En')
+
   useEffect(() => {
     AOS.init();
   });
 
-  return (
-    <Router>
-      <ScrollToTop>
-        <div>
-          <Navbar link={Link} location={withRouter(Navbar)} />
+  const onLangChange = () => {
+    const language = lang === 'En' ? 'Km' : 'En';
 
-          {routes.map((route, i) => (
-            <Route
-              key={i}
-              exact={route.exact}
-              path={route.path}
-              render={props => (
-                // pass the sub-routes down to keep nesting
-                <route.component {...props} />
-              )}
-            />
-          ))}
-          <div>
-            <Footer></Footer>
+    setLang(language);
+    localStorage.setItem('lang', language);
+  }
+  const styles = lang === 'Km' ? { fontFamily: 'KhmerOsContent'} : {};
+
+  return (
+    <IntlProvider defaultLocale="En" locale={lang} messages={messages[lang]}>
+      <Router>
+        <ScrollToTop>
+          {/* <Dropdown lang={lang} onLangChange={onLangChange}/> */}
+          <div style={styles}>
+            <Navbar link={Link} location={withRouter(Navbar)} lang={lang} onLangChange={onLangChange}/>
+            {routes.map((route, i) => (
+              <Route
+                key={i}
+                exact={route.exact}
+                path={route.path}
+                render={props => (
+                  // pass the sub-routes down to keep nesting
+                  <route.component {...props} />
+                )}
+              />
+            ))}
+            <div>
+              <Footer></Footer>
+            </div>
           </div>
-        </div>
-      </ScrollToTop>
-    </Router>
+        </ScrollToTop>
+      </Router>
+    </IntlProvider>
   );
 }
 

@@ -2,39 +2,39 @@
   "developers": [
     {
       "id": 1,
-      "name": "Sathya",
-      "skills": "Developer",
+      "name": "about.sathya",
+      "skills": "about.developer",
       "tools": "Node.js | React.js | Argular.js",
       "imgSrc": "https://ca.slack-edge.com/TKFDUK2PQ-UKF3NSAB1-6f2576329b60-512",
       "aosDelay": "50",
-      "quote": "I am a full-time developer. I love technology. I enjoy building things. Coding is fun"
+      "snapshot": "about.sathya_snapshot"
     },
     {
       "id": 2,
-      "name": "Harry",
-      "skills": "Developer",
+      "name": "about.harry",
+      "skills": "about.developer",
       "tools": "Node.js | React.js | Laravel",
       "imgSrc": "/img/avatar_harry.jpg",
       "aosDelay": "100",
-      "quote": "I am a developer working at an organizatiion. I'm am interested in technology since I was a kid."
+      "snapshot": "about.harry_snapshot"
     },
     {
       "id": 3,
-      "name": "Bunly",
-      "skills": "Developer / Designer",
+      "name": "about.bunly",
+      "skills": "about.designer_developer",
       "tools": "Node.js | React.js | Vue.js",
       "imgSrc": "https://avatars0.githubusercontent.com/u/39366164?s=400&v=4",
       "aosDelay": "150",
-      "quote": "I am a passinate designer, and I also like coding. I have joint with many projects include: brand website, e-commerce platform, article application, and more."
+      "snapshot": "about.bunly_snapshot"
     },
     {
       "id": 4,
-      "name": "Banly",
-      "skills": "Developer",
+      "name": "about.banly",
+      "skills": "about.developer",
       "tools": "Node.js | React.js | Vue.js",
       "imgSrc": "https://avatars0.githubusercontent.com/u/36428914?s=460&v=4",
       "aosDelay": "200",
-      "quote": "Once I never thought becoming a programmer until my first coding class. Since then I realize it is what I'm looking for."
+      "snapshot": "about.banly_snapshot"
     }
   ],
   "tools": [

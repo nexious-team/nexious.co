@@ -1,8 +1,9 @@
 import React from 'react';
 // import { useState, useEffect } from 'react';
 import { Carousel } from '../components'
-import { logo_1,logo_2,logo_3,logo_4,logo_5,logo_6,logo_7,logo_8,logo_9,logo_10 } from '../assets'
+// import { logo_1,logo_2,logo_3,logo_4,logo_5,logo_6,logo_7,logo_8,logo_9,logo_10 } from '../assets'
 import Data from './Client.json'
+import { FormattedMessage as Text } from 'react-intl';
 
 function PagesClient() {
     // Declare a new state variable
@@ -11,28 +12,28 @@ function PagesClient() {
     const branding_web = Data.branding_web;
     const article_web = Data.article_web;
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto mt-24">
             <div className="text-center">
-                <h1 className="md:text-5xl text-4xl font-bold">109 websites create for our client</h1>
-                <p className="text-xl">here are what you want to create.</p>
+                <h1 className="md:text-5xl text-4xl font-bold"><Text id="client.all_types_of_website_which_we_are_capable_to_create_for_clients" /></h1>
+                <p className="text-xl"><Text id="client.here_are_what_you_want_to_create" /></p>
             </div>
             <div className="mt-12">
-                <p className="text-2xl font-bold">E-Commerce Websites</p>
+                <p className="text-2xl font-bold"><Text id="client.ecommerce_websites" /></p>
                 <Carousel items={e_commerce} />
             </div>
             <div className="mt-12">
-                <p className="text-2xl font-bold">Web Applications</p>
+                <p className="text-2xl font-bold"><Text id="client.web_applications" /></p>
                 <Carousel items={web_app} />
             </div>
             <div className="mt-12">
-                <p className="text-2xl font-bold">Branding Websites</p>
+                <p className="text-2xl font-bold"><Text id="client.branding_websites" /></p>
                 <Carousel items={branding_web} />
             </div>
             <div className="mt-12">
-                <p className="text-2xl font-bold">Article Websites</p>
+                <p className="text-2xl font-bold"><Text id="client.article_websites" /></p>
                 <Carousel items={article_web} />
             </div>
-            <div className="mt-12 max-w-xl mx-auto">
+            {/* <div className="mt-12 max-w-xl mx-auto">
                 <p className="text-2xl font-bold text-center">OUR CLIENTS LOGOs</p>
                 <div className="flex flex-wrap justify-center">
                     <div className="w-1/6">
@@ -66,7 +67,7 @@ function PagesClient() {
                         <img className="w-24" src={logo_10} alt={logo_10} />
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

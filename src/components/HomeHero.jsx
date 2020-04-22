@@ -11,22 +11,22 @@ const HomeHero = props => {
   const [index, set] = useState(0);
   const [hero] = useState([
     {
-      text: "Build Your Business Today.",
+      text: "home.build_your_business_today",
       image: ipad_pro_png,
       color: "#396afc"
     },
     {
-      text: "Express Yourself and Share Your Passions",
+      text: "home.express_yourself_and_share_your_passions",
       image: blog_web,
       color: "#ff5e62"
     },
     {
-      text: "Manage Your Business.",
+      text: "home.manage_your_business",
       image: manage_business,
       color: "#ec38bc"
     },
     {
-      text: "Be Seen. Be Heard.",
+      text: "home.be_seen_be_heard",
       image: portfolio_home,
       color: "#000000"
     }

@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useSpring, animated as a } from "react-spring";
 import { Link } from "react-router-dom";
+import { FormattedMessage } from 'react-intl';
 import NavButton from "../commons/NavButton";
 import RegisterButton from "../elements/NavBarRegButton";
 import Sidebar from "./Sidebar";
 import "../assets/navbar.css";
+import FlagButton from '../elements/FlagButton';
+
 // const method = {
 //   componentDidMount() {
 //     document.addEventListener("scroll", () => {
@@ -17,7 +20,8 @@ import "../assets/navbar.css";
 //     });
 //   }
 // };
-const NavBar = props => {
+
+const NavBar = ({ lang, onLangChange }) => {
   const [sidebar, setSidebar] = useState(false);
   const [isTop, setTop] = useState(true);
   const fade_animation = useSpring({
@@ -38,6 +42,10 @@ const NavBar = props => {
       // setTop(true);
     }
   };
+
+  const navTextSize = lang === 'En' ? 'text-sm md:text-md lg:text-xl' : 'text-sm md:text-md lg:text-base mx-2'
+  const navLinkClassNames = `font-semibold  ${navTextSize} ${isTop ? " text-white" : " text-black"}`
+
   useEffect(() => {
     if (window.location.pathname === "/") {
       document.addEventListener("scroll", () => {
@@ -51,7 +59,7 @@ const NavBar = props => {
       setTop(false);
     }
   }, [isTop]);
-  const nav_classes = "fixed top-0 w-full font-sans spring-nav z-50";
+  const nav_classes = "fixed top-0 w-full  spring-nav z-50";
   return (
     <div className="mb-20">
       {sidebar ? (
@@ -62,65 +70,49 @@ const NavBar = props => {
           ></Sidebar>
         </div>
       ) : (
-        ""
-      )}
+          ""
+        )}
       <a.nav
         className={isTop ? nav_classes + "bg-black" : nav_classes + " shadow"}
         style={fade_animation}
       >
         <a.div
           style={fade_animation_height}
-          className="container mx-auto md:px-10 lg:px-0 flex items-center justify-between"
+          className="container mx-auto md:px-0 lg:px-0 flex items-center justify-between"
         >
           <div className="flex-1 h-auto">
             {/* Left Element */}
-            <div className="hidden lg:flex md:flex ml-5 justify-start font-sans">
+            <div className="hidden lg:flex md:flex ml-5 justify-start ">
               <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
                 <span
                   onClick={() => handleNavbarSwitch("client")}
-                  className={
-                    isTop
-                      ? "text-sm text-white md:text-md lg:text-xl font-semibold font-josefin"
-                      : "text-sm text-black md:text-md lg:text-xl font-semibold font-josefin"
-                  }
+                  className={navLinkClassNames}
                 >
-                  <Link to="/client">Clients</Link>
+                  <Link to="/client"><FormattedMessage id="app.clients" defaultMessage="Clients" /></Link>
                 </span>
               </div>
               <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
                 <span
                   onClick={() => handleNavbarSwitch("client")}
-                  className={
-                    isTop
-                      ? "text-sm text-white md:text-md lg:text-xl font-semibold font-josefin"
-                      : "text-sm text-black md:text-md lg:text-xl font-semibold font-josefin"
-                  }
+                  className={navLinkClassNames}
                 >
-                  <Link to="/service">Services</Link>
+                  <Link to="/service"><FormattedMessage id="app.services" defaultMessage="Services" /></Link>
                 </span>
               </div>
               <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
                 <span
                   onClick={() => handleNavbarSwitch("client")}
-                  className={
-                    isTop
-                      ? "text-sm text-white md:text-md lg:text-xl font-semibold font-josefin"
-                      : "text-sm text-black md:text-md lg:text-xl font-semibold font-josefin"
-                  }
+                  className={navLinkClassNames}
                 >
-                  <Link to="/about">Team</Link>
+                  <Link to="/about"><FormattedMessage id="app.about_us" defaultMessage="About Us" /></Link>
                 </span>
               </div>
               <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
                 <span
                   onClick={() => handleNavbarSwitch("client")}
-                  className={
-                    isTop
-                      ? "text-sm text-white md:text-md lg:text-xl font-semibold font-josefin"
-                      : "text-sm text-black md:text-md lg:text-xl font-semibold font-josefin"
-                  }
+                  className={navLinkClassNames}
                 >
-                  <Link to="/contact">Contact</Link>
+                  <Link to="/contact"><FormattedMessage id="app.contact" defaultMessage="Contact" /></Link>
                 </span>
               </div>
             </div>
@@ -132,13 +124,13 @@ const NavBar = props => {
           </div>
 
           {/* Middle Elements */}
-          <div className="flex-1 h-auto text-center md:text-center lg:text-center px-5 ">
+          <div className="font-josefin flex-1 h-auto text-center md:text-center lg:text-center px-5 ">
             <span
               onClick={() => handleNavbarSwitch("home")}
               className={
                 isTop
-                  ? "text-3xl text-white font-josefin"
-                  : "text-3xl text-black font-josefin"
+                  ? "text-3xl text-white "
+                  : "text-3xl text-black "
               }
             >
               <Link to="/">Nexious</Link>
@@ -148,6 +140,9 @@ const NavBar = props => {
           {/* Right Elements */}
           <div className="flex-1 h-auto">
             <div className=" flex md:flex justify-end pr-2 lg:mr-4">
+              <div className="my-auto mr-6">
+                <FlagButton lang={lang} onClickFlag={onLangChange} />
+              </div>
               <Link
                 onClick={() => handleNavbarSwitch("get-start")}
                 to="/get-start"
