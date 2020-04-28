@@ -91,7 +91,7 @@ const Footer = () => {
             </div>
             <div className="flex justify-between px-10 md:px-0 lg:px-0">
               <div className="w-10 h-10">
-                <a href="https://github.com/nexious-team" alt="Facebook" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/nexious-team" alt="GitHub" target="_blank" rel="noopener noreferrer">
                   <svg 
                     version="1.1" 
                     id="Capa_1" 
@@ -186,7 +186,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="w-10 h-10">
-                <a href="https://www.linkedin.com/in/nexious-team-07674319a/" alt="Twitter" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/nexious-team-07674319a/" alt="LinkedIn" target="_blank" rel="noopener noreferrer">
                   <svg
                     version="1.1"
                     id="Capa_1"
@@ -218,7 +218,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="w-10 h-10">
-                <a href="https://www.pinterest.com/nexiousteam3410/" alt="Twitter" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.pinterest.com/nexiousteam3410/" alt="Pinterest" target="_blank" rel="noopener noreferrer">
                   <svg
                     version="1.1"
                     id="Capa_1"
