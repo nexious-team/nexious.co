@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import SweetAlert from "sweetalert2-react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { ReactComponent as Facebook } from '../assets/icons/facebook.svg'
-import { ReactComponent as Twitter } from '../assets/icons/twitter.svg'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FormattedMessage as Text } from 'react-intl';
 
 const languages = {
@@ -76,20 +74,25 @@ function PagesClient() {
             </h1>
             <div className="flex justify-center mt-2">
               <div className="w-8 h-8 mx-2">
-                <a href="https://www.facebook.com/Nexious-116686833048782/">
-                  <Facebook />
+                <a href="https://www.facebook.com/Nexious-116686833048782/" alt="Facebook" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" color="#3b5998" />
                 </a>
               </div>
               <div className="w-8 h-8 mx-2">
-                <a href="https://twitter.com/Nexious6">
-                  <Twitter />
+                <a href="https://twitter.com/Nexious6" alt="Twitter" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={["fab", "twitter"]} size="2x" color="#1da1f2" />
+                </a>
+              </div>
+              <div className="w-8 h-8 mx-2">
+                <a href="https://www.linkedin.com/in/nexious-team-07674319a/" alt="LinkedIn" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" color="#007bb5" />
                 </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="border w-full max-w-lg mx-auto md:p-5 bg-gray-300 rounded-lg shadow-lg mb-3 mt-10">
+      <div className="w-full sm:w-11/12 lg:w-2/3 mx-auto py-5 bg-gray-300 rounded-lg shadow-lg mb-3 mt-10">
         <div className="text-center">
           <h1 className="md:text-5xl text-4xl">
             <Text id="contact.contact_us" />

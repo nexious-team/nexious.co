@@ -61,7 +61,7 @@ const GetStart = () => {
     <div className="container mx-auto pt-5">
       <div
         style={{ borderRadius: "1.5rem" }}
-        className="bg-gray-100 rounded-xl mb-10 shadow-lg py-4 mx-2 md:mx-3 lg:mx-0"
+        className="w-full sm:w-11/12 lg:w-2/3 mx-auto bg-gray-100 rounded-xl mb-10 shadow-lg py-4"
       >
         <div className="m-5">
           <h1 className="text-center md:text-5xl text-4xl">
