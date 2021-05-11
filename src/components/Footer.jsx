@@ -63,13 +63,13 @@ const Footer = () => {
                   <input
                     type="text"
                     name="customer_email"
-                    className="h-10 w-56 bg-gray-200 border-2 border-white rounded-lg px-2"
+                    className="h-10 w-56 text-sm bg-gray-200 border-2 border-white rounded-full px-2 focus:outline-none"
                     placeholder=" Your Email Here"
                     onChange={e => setEmail({ email: e.target.value })}
                   />
                   <button
                     style={{ backgroundColor: "#FFF" }}
-                    className="h-10 px-4 rounded-lg ml-2 text-black font-semi-bold"
+                    className="h-10 px-4 text-sm rounded-full ml-2 text-black font-semi-bold"
                     onClick={handleSend}
                   >
                     <Text id="app.send" />

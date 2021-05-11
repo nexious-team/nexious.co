@@ -86,84 +86,98 @@
   "minitools": [
     {
       "id": 1,
+      "alt": "VS code",
       "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png",
       "clacss": "move-ease",
       "imgClass": "p-2"
     },
     {
       "id": 2,
+      "alt": "GitHub",
       "imgSrc": "https://github.githubassets.com/images/modules/logos_page/Octocat.png",
       "clacss": "move-linear",
       "imgClass": ""
     },
     {
       "id": 3,
-      "imgSrc": "https://projecthydro.org/wp-content/uploads/2019/01/passportJS.png",
+      "alt": "PassportJS",
+      "imgSrc": "https://pbs.twimg.com/profile_images/599259952574693376/DMrPoJtc_400x400.png",
       "clacss": "move-ease-in",
       "imgClass": "p-2"
     },
     {
       "id": 4,
+      "alt": "JWT",
       "imgSrc": "https://miro.medium.com/max/3200/1*t9d16DIcJg_-dEg0X_qTWg.png",
       "clacss": "move-ease-out",
       "imgClass": ""
     },
     {
       "id": 5,
+      "alt": "Medium",
       "imgSrc": "https://cdn.mos.cms.futurecdn.net/xJGh6cXvC69an86AdrLD98-320-80.jpg",
       "clacss": "move-linear",
       "imgClass": ""
     },
     {
       "id": 6,
+      "alt": "HTML",
       "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png",
       "clacss": "move-ease-in-out",
       "imgClass": "p-2"
     },
     {
       "id": 7,
+      "alt": "CSS",
       "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS.3.svg",
       "clacss": "move-ease-out",
       "imgClass": "p-2"
     },
     {
       "id": 8,
+      "alt": "Git",
       "imgSrc": "https://gitforwindows.org/img/gwindows_logo.png",
       "clacss": "move-linear",
       "imgClass": "p-2"
     },
     {
       "id": 9,
+      "alt": "Ubuntu",
       "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Tux.png/220px-Tux.png",
       "clacss": "move-ease-in",
       "imgClass": "p-2"
     },
     {
       "id": 10,
-      "imgSrc": "https://blog.hubspot.com/hubfs/image8-2.jpg",
+      "alt": "Google",
+      "imgSrc": "https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png",
       "clacss": "move-ease-out",
       "imgClass": ""
     },
     {
       "id": 11,
+      "alt": "YouTube",
       "imgSrc": "https://i.pinimg.com/originals/de/1c/91/de1c91788be0d791135736995109272a.png",
       "clacss": "move-ease-in-out",
       "imgClass": "p-2"
     },
     {
       "id": 12,
-      "imgSrc": "https://cdn.freebiesupply.com/logos/large/2x/stackoverflow-com-logo-png-transparent.png",
+      "alt": "Stackoverflow",
+      "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Stack_Overflow_icon.svg/768px-Stack_Overflow_icon.svg.png",
       "clacss": "move-ease-out",
       "imgClass": "p-2"
     },
     {
       "id": 13,
+      "alt": "DigitalOcean",
       "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/DigitalOcean_logo.svg/1200px-DigitalOcean_logo.svg.png",
       "clacss": "move-linear",
       "imgClass": ""
     },
     {
       "id": 14,
+      "alt": "Gmail",
       "imgSrc": "https://cdn.worldvectorlogo.com/logos/gmail-icon.svg",
       "clacss": "move-ease",
       "imgClass": "p-2"

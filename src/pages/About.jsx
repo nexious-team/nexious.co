@@ -182,10 +182,10 @@ const Tool = ({ imgSrc, clacss, imgClass }) => (
   </div>
 )
 
-const MiniTool = ({ imgSrc, clacss, imgClass }) => (
+const MiniTool = ({ imgSrc, alt, clacss, imgClass }) => (
   <div className={`mx-8 lg:mx-16 ${clacss || ''}`}>
     <div className="h-8 w-8 lg:h-12 lg:w-12 rounded-full shadow-lg ">
-      <img className={`h-8 w-8 lg:h-12 lg:w-12 object-scale-down ${imgClass || ''}`} src={imgSrc} alt="" />
+      <img className={`h-8 w-8 lg:h-12 lg:w-12 object-scale-down ${imgClass || ''}`} src={imgSrc} alt={alt} />
     </div>
   </div>
 )
