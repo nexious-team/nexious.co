@@ -18,7 +18,7 @@ const HomeMoreSection = props => {
   return (
     <div>
       <div className="text-center">
-        <h1 className=" text-4xl lg:text-6xl font-semi-bold">
+        <h1 className=" text-4xl lg:text-6xl font-semibold">
           <Text id={props.title} />
         </h1>
       </div>
@@ -36,7 +36,7 @@ const HomeMoreSection = props => {
             className="lg:w-56 w-36 rounded-full cursor-pointer px-6 py-2 shadow-lg flex justify-center items-center  select-none outline-none"
           >
             <Link to="/get-start">
-              <button className="text-sm md:text-sm lg:text-2xl font-semi-bold text-white">
+              <button className="text-sm md:text-sm lg:text-2xl font-semibold text-white">
                 <Text id="app.get_started" />
               </button>
             </Link>
@@ -44,7 +44,7 @@ const HomeMoreSection = props => {
         </div>
         <div className="mx-2">
           <div className="bg-gray-500 w-36 lg:w-56 cursor-pointer rounded-full px-6 py-2 shadow-lg flex justify-center items-center  select-none outline-none">
-            <button className="text-md lg:text-2xl font-semi-bold text-white">
+            <button className="text-md lg:text-2xl font-semibold text-white">
               <Text id="app.see_more" defaultMessage="See More" />
             </button>
           </div>

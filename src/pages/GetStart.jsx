@@ -67,12 +67,12 @@ const GetStart = () => {
           <h1 className="text-center md:text-5xl text-4xl">
             <Text id="get_started.need_a_website" />
           </h1>
-          <p className="text-center">
+          <p className="text-center text-gray-500">
             <Text id="get_started.need_help_with_an_" />
           </p>
         </div>
         <div>
-          <form className="w-full max-w-lg mx-auto">
+          <form className="w-full px-8 md:px-12 lg:px-20">
             <div className="flex flex-wrap -mx-3 mb-6 px-3">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
@@ -135,7 +135,7 @@ const GetStart = () => {
                   <Text id="get_started.email" />
                 </label>
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:ring-1 focus:ring-green-500"
                   id="grid-for-email"
                   type="eamil"
                   placeholder="email@mail.com"
@@ -257,7 +257,7 @@ const GetStart = () => {
                   background:
                     "linear-gradient(80deg, rgba(182, 244, 146,1), rgba(51, 139, 147,1),rgba(182, 244, 146,1))"
                 }}
-                className="w-11/12 h-10 mx-auto my-3 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                className="w-11/12 h-12 mx-auto my-3 hover:bg-green-700 text-black font-bold py-2 px-4 rounded-lg"
                 onClick={handleSend}
               >
                 <Text id="get_started.submit_now" />
