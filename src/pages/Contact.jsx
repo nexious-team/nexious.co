@@ -58,7 +58,7 @@ function PagesClient() {
               <Text id="contact.contact" />
             </h1>
             <p>nexious.team@gmail.com</p>
-            <p>+855 61 772 311 / +855 96 467 7007</p>
+            <p>(+855)61 77 23 11 / (+855)70 924 961</p>
           </div>
           <div className="lg:w-1/3 my-6 lg:my-0 text-center border-l border-r">
             <FontAwesomeIcon icon="map-marked-alt" size="2x" />

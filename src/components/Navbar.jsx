@@ -59,6 +59,7 @@ const NavBar = ({ lang, onLangChange }) => {
       setTop(false);
     }
   }, [isTop]);
+
   const nav_classes = "fixed top-0 w-full  spring-nav z-50";
   return (
     <div className="mb-20">

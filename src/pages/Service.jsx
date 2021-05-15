@@ -35,7 +35,7 @@ const middleSection = middleSectionDatas.map((item, index) => {
   return (
     <div key={index} className={(index === 0 ? 'lg:pt-24 xl:pt-40' : 'lg:pt-20 xl:pt-32') + ' w-10/12 my-0 mx-auto pt-16 pb-5 md:w-full md:px-6 lg:px-12 xl:px-16 container'} 
       data-aos={(index % 2 === 0 ? 'fade-right' : 'fade-left')}>
-      <img src={item.imageUrl} alt={"imgWebDesign"} className="my-0 mx-auto rounded-lg shadow-xl w-full h-84 md:hidden"/>
+      <img src={item.imageUrl} alt={"imgWebDesign"} className="my-0 mx-auto rounded-lg shadow-xl w-full h-84 md:hidden object-cover"/>
       
       <div className="flex">
         { index % 2 === 0 ? (
@@ -54,7 +54,7 @@ const middleSection = middleSectionDatas.map((item, index) => {
 
             <div className="hidden md:block md:w-1/2 md:relative md:pl-4">
               <div className="hidden w-full top-1/2 h-72 -mt-36 md:block md:relative md:h-64 md:-mt-32 lg:h-72 lg:-mt-36 xl:h-96 xl:-mt-48">
-                <img src={item.imageUrl} alt={"imgWebDesign"} className="rounded-lg shadow-xl absolute h-72 md:h-64 lg:h-72 xl:h-96"/>
+                <img src={item.imageUrl} alt={"imgWebDesign"} className="rounded-lg shadow-xl absolute h-72 md:h-64 lg:h-72 xl:h-96 object-cover"/>
               </div>
             </div>
           </>
@@ -62,7 +62,7 @@ const middleSection = middleSectionDatas.map((item, index) => {
           <>
             <div className="hidden md:block md:w-1/2 md:relative md:pr-4">
               <div className="hidden w-full top-1/2 h-72 -mt-36 md:block md:relative md:h-64 md:-mt-32 lg:h-72 lg:-mt-36 xl:h-96 xl:-mt-48">
-                <img src={item.imageUrl} alt={"imgWebDesign"} className="rounded-lg shadow-xl absolute h-72 md:h-64 lg:h-72 xl:h-96"/>
+                <img src={item.imageUrl} alt={"imgWebDesign"} className="rounded-lg shadow-xl absolute h-72 md:h-64 lg:h-72 xl:h-96 object-cover"/>
               </div>
             </div>
 

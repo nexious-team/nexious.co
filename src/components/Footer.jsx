@@ -3,7 +3,7 @@ import axios from "axios";
 import SweetAlert from "sweetalert2-react";
 import { FormattedMessage as Text } from "react-intl";
 import { ReactComponent as GitHubIcon } from "../assets/icons/github.svg";
-import { ReactComponent as FacebookIcon } from "../assets/icons/facebook.svg";
+import { ReactComponent as FacebookIcon } from "../assets/icons/facebook-brands.svg";
 import { ReactComponent as TwitterIcon } from "../assets/icons/twitter.svg";
 import { ReactComponent as LinkedInIcon } from "../assets/icons/linkedin.svg";
 import { ReactComponent as PinterestIcon } from "../assets/icons/pinterest.svg";
@@ -52,7 +52,7 @@ const Footer = () => {
       <div
         style={{
           background:
-            "linear-gradient(to right, rgba(132, 186, 101,1), rgba(38, 112, 107,1))",
+            "linear-gradient(to left, rgba(132, 186, 101,1), rgba(38, 112, 107,1))",
         }}
         className="flex justify-center"
       >
