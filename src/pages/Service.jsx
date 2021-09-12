@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { FormattedMessage as Text } from 'react-intl';
 import {
-	imgServiceWebDesign,
+	imgServiceWebDesign2,
 	imgServiceWebDevelopment,
 	imgServiceSSLCertificate3
 } from '../assets/images/service-page/index';
@@ -11,7 +11,7 @@ const middleSectionDatas = [
 	{
 		title: 'service.web_design',
 		text: `service.go_to_where_your_`,
-		imageUrl: imgServiceWebDesign
+		imageUrl: imgServiceWebDesign2
 	},
 	{
 		title: 'service.web_development',
