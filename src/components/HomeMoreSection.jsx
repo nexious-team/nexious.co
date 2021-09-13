@@ -18,12 +18,12 @@ const HomeMoreSection = props => {
   return (
     <div>
       <div className="text-center">
-        <h1 className=" text-4xl lg:text-6xl font-semibold">
+        <h1 className=" text-3xl lg:text-5xl font-semibold">
           <Text id={props.title} />
         </h1>
       </div>
       <div className="sub-text text-center flex justify-center">
-        <p className="px-3 lg:px-0 text-xl lg:text-2xl  font-regular text-gray-600 md:w-10/12 lg:w-1/2">
+        <p className="px-3 lg:px-0 text-sm lg:text-xl font-regular text-gray-600 md:w-10/12 lg:w-1/2">
           <Text id={props.body} />
         </p>
       </div>
