@@ -7,12 +7,12 @@ const HomeDarkSection = props => {
     <div className="bg-black md:flex md:justify-between md:items-center">
       <div className="w-full md:w-1/2 lg:w-6/12 bg-red-0">
         <div className="text-center">
-          <h1 className=" text-4xl md:text-4xl xl:text-6xl text-white lg:text-5xl font-semibold">
+          <h1 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-white font-semibold">
             <Text id={props.title} />
           </h1>
         </div>
-        <div className="sub-text text-center flex justify-center">
-          <p className="px-3 lg:px-0 text-xl lg:text-2xl font-regular text-gray-100 w-11/12 md:w-11/12 lg:w-11/12">
+        <div className="mt-2 sub-text text-center flex justify-center">
+          <p className="px-3 lg:px-0 text-sm lg:text-xl font-regular text-gray-100 w-11/12 md:w-11/12 lg:w-11/12">
             <Text id={props.body} />
           </p>
         </div>

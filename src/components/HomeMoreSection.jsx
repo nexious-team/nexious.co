@@ -22,7 +22,7 @@ const HomeMoreSection = props => {
           <Text id={props.title} />
         </h1>
       </div>
-      <div className="sub-text text-center flex justify-center">
+      <div className="mt-2 sub-text text-center flex justify-center">
         <p className="px-3 lg:px-0 text-sm lg:text-xl font-regular text-gray-600 md:w-10/12 lg:w-1/2">
           <Text id={props.body} />
         </p>
