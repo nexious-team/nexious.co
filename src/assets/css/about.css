@@ -1,5 +1,5 @@
 .move-scroll-arrow {
-  animation: moveScrollArrow 2s linear infinite;
+  animation: moveScrollArrow 2s linear 4;
 }
 
 @keyframes moveScrollArrow {
@@ -115,10 +115,10 @@
 }
 
 .bounceInUp {
-  -webkit-animation-name: bounceInUp;
+  /* -webkit-animation-name: bounceInUp;
   animation-name: bounceInUp;
   animation-duration: 500ms;
-  animation-iteration-count: 1;
+  animation-iteration-count: 1; */
 }
 .bounceInUp:hover {
   animation-name: scaleButton;
@@ -130,12 +130,12 @@
 
 @keyframes scaleButton {
   0% {
-    padding: 0.75rem 3rem;
-    font-size: 1.5rem;
+    padding: 1.5rem 6rem;
+    font-size: 2.25rem;
   }
   100% {
-    padding: 1rem 4rem;
-    font-size: 1.75rem;
+    padding: 2rem 8rem;
+    font-size: 2.75rem;
   }
 }
 

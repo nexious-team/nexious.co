@@ -3,7 +3,7 @@ import { FormattedMessage as Text } from "react-intl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "assets/css/about.css";
 import { developers, tools, minitools } from "assets/json/about.json";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const languages = {
   En: ["designers", "developers", "creators"],
@@ -11,6 +11,7 @@ const languages = {
 };
 
 const About = () => {
+  const history = useHistory()
   const lang = localStorage.getItem("lang") || "En";
 
   const [text, setText] = useState("");
@@ -84,7 +85,10 @@ const About = () => {
           </div>
           <div className="wrapper text-center mt-12">
             <div className="box">
-              <button className="bounceInUp px-12 py-3 bg-primary text-2xl rounded hover:shadow-lg">
+              <button 
+                className="bounceInUp px-24 py-6 bg-primary text-4xl rounded-lg hover:shadow-lg"
+                onClick={() => history.push('/contact')}
+              >
                 <Text id="about.join_us" />
               </button>
             </div>
@@ -116,6 +120,25 @@ const About = () => {
           ))}
         </div>
       </div>
+      <div className="tools my-20">
+        <div data-aos="fade-left">
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl text-center my-6">
+            <Text id="about.our_tools" />
+          </h2>
+        </div>
+        <div data-aos="fade-right" className="relative my-4">
+          <div className="flex flex-wrap justify-center items-center content-center px-6 lg:px-32 mt-12">
+            {tools.map((tool) => (
+              <Tool key={tool.id} {...tool} />
+            ))}
+          </div>
+          <div className="absolute inset-0 flex flex-wrap justify-center items-center">
+            {minitools.map((minitool) => (
+              <MiniTool key={minitool.id} {...minitool} />
+            ))}
+          </div>
+        </div>
+      </div>
       <div>
         <div data-aos="fade-left" className="relative">
           <div className="flex items-center opacity-75">
@@ -123,7 +146,7 @@ const About = () => {
             <div className="vision-image w-4/5 md:w-3/5 lg:w-3/5">
               <img
                 className="w-full object-cover"
-                src="https://image.freepik.com/free-photo/man-s-hand-holding-led-light-bulb-black-wall_43448-145.jpg"
+                src="/img/vision.jpg"
                 alt=""
               />
             </div>
@@ -149,53 +172,34 @@ const About = () => {
           </div>
         </div>
       </div>
-        <div data-aos="fade-right" className="relative">
-          <div className="flex items-center opacity-75">
-            <div className="mission-image w-4/5 md:w-3/5 lg:w-3/5">
-              <img
-                className="object-cover"
-                src="https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt=""
-              />
-            </div>
-            <div className="text-center w-1/5 md:w-2/5 lg:w-2/5"></div>
+      <div data-aos="fade-right" className="relative">
+        <div className="flex items-center opacity-75">
+          <div className="mission-image w-4/5 md:w-3/5 lg:w-3/5">
+            <img
+              className="object-cover"
+              src="https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              alt=""
+            />
           </div>
-          <div className="flex items-center absolute inset-0">
-            <div className="mission-image md:w-3/6 lg:w-3/6"></div>
-            <div className="text-center md:w-3/6 lg:w-3/6 px-6">
-              <h1 className="text-3xl lg:text-4xl xl:text-5xl">
-                <Text id="about.our_mission" />
-              </h1>
-              <p className="text-base lg:text-lg xl:text-xl">
-                <Text id="about.our_mission_description" />
-              </p>
-              <div className="mt-8">
-                <Link
-                  className="bg-primary px-4 py-2 lg:px-6 lg:py-4 rounded-full shadow-lg"
-                  to="/client"
-                >
-                  <Text id="about.learn_more" />
-                </Link>
-              </div>
-            </div>
-          </div>
+          <div className="text-center w-1/5 md:w-2/5 lg:w-2/5"></div>
         </div>
-      <div className="tools my-20">
-        <div data-aos="fade-left">
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl text-center my-6">
-            <Text id="about.our_tools" />
-          </h2>
-        </div>
-        <div data-aos="fade-right" className="relative my-4">
-          <div className="flex flex-wrap justify-center items-center content-center px-6 lg:px-32 mt-12">
-            {tools.map((tool) => (
-              <Tool key={tool.id} {...tool} />
-            ))}
-          </div>
-          <div className="absolute inset-0 flex flex-wrap justify-center items-center">
-            {minitools.map((minitool) => (
-              <MiniTool key={minitool.id} {...minitool} />
-            ))}
+        <div className="flex items-center absolute inset-0">
+          <div className="mission-image md:w-3/6 lg:w-3/6"></div>
+          <div className="text-center md:w-3/6 lg:w-3/6 px-6">
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl">
+              <Text id="about.our_mission" />
+            </h1>
+            <p className="text-base lg:text-lg xl:text-xl">
+              <Text id="about.our_mission_description" />
+            </p>
+            <div className="mt-8">
+              <Link
+                className="bg-primary px-4 py-2 lg:px-6 lg:py-4 rounded-full shadow-lg"
+                to="/client"
+              >
+                <Text id="about.learn_more" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -209,36 +213,32 @@ const Developer = ({ imgSrc, name, skills, tools, aosDelay, snapshot }) => (
     data-aos-delay={aosDelay}
     className="sm:w-1/2 lg:w-1/4 text-center px-4"
   >
-    <div className="py-6 px-2 transition duration-500 ease-in-out transform hover:translate-y-1 hover:scale-110 hover:shadow-xl">
-
-    <img
-      className="rounded-full w-24 h-24 border border-black mx-auto object-cover"
-      src={imgSrc}
-      alt=""
-    />
-    <h3 className="text-xl mt-2">
-      <Text id={name} />
-    </h3>
-    <h4 className="text-md text-gray-800">
-      <Text id={skills} />
-    </h4>
-    <p className="text-xs lg:text-sm xl:text-sm my-1">{tools}</p>
-    <p className="text-xs lg:text-sm xl:text-base my-6 h-16 lg:h-24">
-      <Text id={snapshot} />
-    </p>
-    <div className="flex justify-center my-6">
-      <div className="px-2">
-        <FontAwesomeIcon icon={["fab", "facebook"]} size="lg" />
+    <div className="py-6 px-2 transition duration-500 ease-in-out transform hover:translate-y-1 hover:scale-110 hover:shadow-xl rounded-lg">
+      <img
+        className="rounded-full w-24 h-24 border border-gray-300 mx-auto object-cover"
+        src={imgSrc}
+        alt=""
+      />
+      <h3 className="text-xl mt-2">
+        <Text id={name} />
+      </h3>
+      <h4 className="text-xs text-gray-800">
+        <Text id={skills} />
+      </h4>
+      <p className="text-xs my-1">{tools}</p>
+      <p className="text-xs lg:text-sm xl:text-base my-6 h-16 lg:h-24">
+        <Text id={snapshot} />
+      </p>
+      <div className="flex justify-center my-6">
+        {/* <div className="px-2">
+          <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" />
+        </div> */}
+        <div className="px-2">
+          <a href="https://github.com/nexious-team">
+            <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
+          </a>
+        </div>
       </div>
-      <div className="px-2">
-        <a href="https://github.com/nexious-team">
-          <FontAwesomeIcon icon={["fab", "github"]} size="lg" />
-        </a>
-      </div>
-    </div>
-    <button className="bg-primary text-black px-5 py-2 rounded-full text-sm shadow">
-      <Text id="about.view_profile" />
-    </button>
     </div>
   </div>
 );
