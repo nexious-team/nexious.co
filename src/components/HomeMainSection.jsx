@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ipad_pro_png } from "assets/images/Shop website";
 import { FormattedMessage as Text } from 'react-intl';
 
 const HomeMainSection = props => {
@@ -35,7 +34,7 @@ const HomeMainSection = props => {
           </div>
           <div className="w-7/12 pt-5 md:pt-0">
             <div className="p-3 lg:p-0">
-              <img className="shadow-lg" src={ipad_pro_png} alt="" />
+              <img className="shadow-lg" src={props.image} alt="" />
             </div>
           </div>
         </div>
