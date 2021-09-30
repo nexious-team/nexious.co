@@ -2,32 +2,32 @@ import React, { useState, useEffect } from "react";
 import { useTransition, animated as a } from "react-spring";
 import Hero from "./Hero";
 
-import { ipad_pro_png } from "../assets/images/Shop website";
-import { portfolio_home } from "../assets/images/PersonalPortfolio";
-import { manage_business } from "../assets/images/ManageBusiness";
-import { blog_web } from "../assets/images/Blog";
+import hero_image_1 from "../assets/images/projects/cloud_store.png";
+import hero_image_2 from "../assets/images/projects/cloud_store_dashboard.png";
+import hero_image_3 from "../assets/images/projects/fl_20_ui.png";
+import hero_image_4 from "../assets/images/projects/fl_20_dashboard.png";
 
 const HomeHero = props => {
   const [index, set] = useState(0);
   const [hero] = useState([
     {
       text: "home.build_your_business_today",
-      image: ipad_pro_png,
+      image: hero_image_1,
       color: "#396afc"
     },
     {
       text: "home.express_yourself_and_share_your_passions",
-      image: blog_web,
+      image: hero_image_2,
       color: "#ff5e62"
     },
     {
       text: "home.manage_your_business",
-      image: manage_business,
+      image: hero_image_3,
       color: "#ec38bc"
     },
     {
       text: "home.be_seen_be_heard",
-      image: portfolio_home,
+      image: hero_image_4,
       color: "#000000"
     }
   ]);
