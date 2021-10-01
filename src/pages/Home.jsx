@@ -50,7 +50,7 @@ const Home = () => {
         ></HomeMainSection>
       </div>
       <div className="bg-gray-200 rounded">
-        <div className="py-10 bg-gray-200">
+        <div className="py-24 bg-gray-200">
           <HomeMoreSection
             title={section[1].title}
             body={section[1].body}
@@ -60,7 +60,7 @@ const Home = () => {
         </div>
       </div>
       {/* Manage your business */}
-      <div className="py-10 bg-white">
+      <div className="py-24 bg-white">
         <HomeMoreSection
           title={section[2].title}
           body={section[2].body}
@@ -68,7 +68,7 @@ const Home = () => {
           image={section[2].image}
         ></HomeMoreSection>
       </div>
-      <div className="py-10 bg-black">
+      <div className="py-32 bg-black">
         <HomeDarkSection
           title={section[3].title}
           body={section[3].body}
