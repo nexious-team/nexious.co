@@ -11,7 +11,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "aos": "^2.3.4",
     "autoprefixer": "^9",
-    "axios": "^0.19.0",
+    "axios": "^0.21.2",
     "postcss": "^7",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
