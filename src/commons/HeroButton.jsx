@@ -2,21 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSpring, animated as a } from "react-spring";
 
-const HeroButton = props => {
+export default function HeroButton (props) {
   const animatedButtonUnderline = useSpring({
     from: {
       width: "0%",
-      height: "5px",
-      border: "none",
-      color: "white",
-      backgroundColor: "white"
     },
     to: {
       width: "100%",
-      height: "5px",
-      border: "none",
-      color: "white",
-      backgroundColor: "white"
     },
     delay: 2000
   });
@@ -31,16 +23,16 @@ const HeroButton = props => {
   });
   return (
     <a.div style={animatedButtonText} className="order-3 md:order-first">
-      <button
-        style={{ color: props.color }}
-        className="py-3 text-2xl font-bold tracking-wider text-white"
-      >
-        <Link to="/get-start">
-          <span>{props.children}</span> <a.hr style={animatedButtonUnderline} />
-        </Link>
-      </button>
+      <div className="w-64">
+        <a.button
+          style={animatedButtonUnderline}
+          className="h-20 py-3 text-2xl text-white font-bold truncate tracking-wider border-2 border-white rounded-lg"
+        >
+          <Link to="/get-start">
+            <span>{props.children}</span>
+          </Link>
+        </a.button>
+        </div>
     </a.div>
   );
 };
-
-export default HeroButton;

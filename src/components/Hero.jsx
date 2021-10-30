@@ -40,7 +40,7 @@ const Hero = (props) => {
           >
             <Text id={props.text} defaultMessage={props.text} />
           </a.h1>
-          <div className="hidden md:block z-20">
+          <div className="hidden md:block z-20 mt-4">
             <HeroButton>
               <Text id="app.get_started" defaultMessage="Get Started" />{" "}
             </HeroButton>
@@ -54,7 +54,7 @@ const Hero = (props) => {
         <div className="md:py-10 w-full md:w-6/12">
           <div className="overflow-hidden min-height-img">
             <a.div style={animatedImage}>
-              <img className="w-full" src={props.image} alt="" />
+              <img className="w-full rounded-lg" src={props.image} alt="" />
             </a.div>
           </div>
         </div>

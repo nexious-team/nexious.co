@@ -2,11 +2,11 @@
   will-change: transform, opacity;
 }
 .hero_animation > div {
-  z-index: -10;
   position: absolute;
   will-change: transform, opacity;
 }
 
 .navnbar-reg-btn {
+  z-index: 10;
   cursor: pointer;
 }

@@ -7,21 +7,9 @@ import RegisterButton from "../elements/NavBarRegButton";
 import Sidebar from "./Sidebar";
 import "../assets/navbar.css";
 import FlagButton from '../elements/FlagButton';
+import { classNames } from 'utils'
 
-// const method = {
-//   componentDidMount() {
-//     document.addEventListener("scroll", () => {
-//       const isTop = window.scrollY < 100;
-//       if (isTop !== this.state.isTop) {
-//         this.setState({ isTop }, () => {
-//           console.log(this.state.isTop);
-//         });
-//       }
-//     });
-//   }
-// };
-
-const NavBar = ({ lang, onLangChange }) => {
+export default function Navbar ({ lang, onLangChange }) {
   const [sidebar, setSidebar] = useState(false);
   const [isTop, setTop] = useState(true);
   const fade_animation = useSpring({
@@ -60,7 +48,6 @@ const NavBar = ({ lang, onLangChange }) => {
     }
   }, [isTop]);
 
-  const nav_classes = "fixed top-0 w-full  spring-nav z-50";
   return (
     <div className="mb-20">
       {sidebar ? (
@@ -74,7 +61,7 @@ const NavBar = ({ lang, onLangChange }) => {
           ""
         )}
       <a.nav
-        className={isTop ? nav_classes + "bg-black" : nav_classes + " shadow"}
+        className={classNames("fixed top-0 w-full spring-nav z-50", isTop ? "bg-black" : " shadow")}
         style={fade_animation}
       >
         <a.div
@@ -162,41 +149,3 @@ const NavBar = ({ lang, onLangChange }) => {
     </div>
   );
 };
-export default NavBar;
-
-// class NavBar extends Component {
-//   state = {
-//     leftNavClicked: false,
-//     rightNavClicked: false,
-//     isTop: true
-//   };
-//   componentDidMount() {
-//     document.addEventListener("scroll", () => {
-//       const isTop = window.scrollY < 100;
-//       if (isTop !== this.state.isTop) {
-//         this.setState({ isTop }, () => {
-//           console.log(this.state.isTop);
-//         });
-//       }
-//     });
-//   }
-//   handleLeftNavToggle = () => {
-//     this.setState({ leftNavClicked: !this.state.leftNavClicked });
-//   };
-//   handleRightNavToggle = () => {
-//     this.setState({ rightNavClicked: !this.state.rightNavClicked });
-//   };
-
-//   render() {
-//     const nav_classes = "fixed top-0 w-full h-20 font-sans ";
-//     const nav_fade_animation = useSpring({
-//       from: { opacity: 0.75 },
-//       to: { opacity: 1 }
-//     });
-//     return (
-
-//     );
-//   }
-// }
-
-// export default NavBar;
