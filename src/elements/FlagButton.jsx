@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default ({ lang, onClickFlag }) => {
+export default function FlagButton ({ lang, onClickFlag }) {
   
   const flagName = lang === 'Km' ? 'united-states-of-america-flag-icon-32' : 'cambodia-flag-icon-32';
 

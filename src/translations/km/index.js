@@ -7,4 +7,6 @@ import service from './service.json'
 import client from './client.json'
 import getStarted from './get_started.json'
 
-export default { ...app, ...home, ...contact, ...about , ...footer, ...service, ...client, ...getStarted }
+const index = { ...app, ...home, ...contact, ...about , ...footer, ...service, ...client, ...getStarted }
+
+export default index

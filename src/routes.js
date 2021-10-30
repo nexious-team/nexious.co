@@ -1,6 +1,6 @@
 import { Home, Service, About, PagesClient,GetStart,Contact } from './pages';
 
-export default [
+const routes = [
   {
     exact: true,
     path: "/",
@@ -27,3 +27,5 @@ export default [
     component: Contact
   }
 ]
+
+export default routes

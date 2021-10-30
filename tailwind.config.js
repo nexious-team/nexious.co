@@ -1,4 +1,5 @@
 module.exports = {
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
     extend: {
       fontFamily: {
@@ -41,6 +42,8 @@ module.exports = {
       }
     }
   },
-  variants: {},
+  variants: {
+    height: ['responsive', 'group-hover']
+  },
   plugins: []
 }
