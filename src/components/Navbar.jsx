@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSpring, animated as a } from "react-spring";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from 'react-intl';
-import NavButton from "../commons/NavButton";
+import NavButton from "../elements/NavButton";
 import RegisterButton from "../elements/NavBarRegButton";
 import Sidebar from "./Sidebar";
 import "../assets/navbar.css";

@@ -1,6 +1,6 @@
 import React from "react";
 import { useSpring, animated as a } from "react-spring";
-import HeroButton from "../commons/HeroButton";
+import HeroButton from "../elements/HeroButton";
 import { FormattedMessage as Text } from "react-intl";
 
 import "../assets/css/hero.css";
