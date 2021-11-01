@@ -5,5 +5,6 @@
   "app.clients": "Clients",
   "app.get_started": "Get Started",
   "app.see_more": "See More",
-  "app.send": "Send"
+  "app.send": "Send",
+  "app.please_input_a_valid_email": "Please input a valid email"
 }

@@ -4,18 +4,7 @@ import { FormattedMessage as Text } from "react-intl";
 import { Button } from "elements";
 
 export default function HomeMoreSection (props) {
-  function getColor() {
-    let colors = "";
-    let count = 0;
-    Array.prototype.slice.call(props.color).forEach(function (color) {
-      colors += `, ${color}`;
-      count++;
-    });
-    if (count < 2) {
-      colors += colors;
-    }
-    return colors;
-  }
+
   return (
     <div>
       <div className="text-center">
@@ -38,7 +27,7 @@ export default function HomeMoreSection (props) {
         </div>
         <div className="mx-2">
           <Button _style="normal" className="w-32">
-            <Link to="/services">
+            <Link to="/service">
               <Text id="app.see_more" defaultMessage="See More" />
             </Link>
           </Button>

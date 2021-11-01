@@ -7,14 +7,32 @@ import { ReactComponent as FacebookIcon } from "../assets/icons/facebook-brands.
 import { ReactComponent as TwitterIcon } from "../assets/icons/twitter.svg";
 import { ReactComponent as LinkedInIcon } from "../assets/icons/linkedin.svg";
 import { ReactComponent as PinterestIcon } from "../assets/icons/pinterest.svg";
+import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+import { classNames } from "utils";
 
-const Footer = () => {
+const validateEmail = (v) => {
+  // eslint-disable-next-line no-useless-escape
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(v);
+}
+
+export default function Footer () {
   const [email, setEmail] = useState({ email: "" });
   const [showswal, setshow] = useState(false);
+  const [isValidEmail, setIsValidEmail] = useState(true);
+  
+  const onChangeEmail = (e) => {
+    if (!isValidEmail) setIsValidEmail(true)
+    setEmail({ email: e.target.value })
+  }
+
   const handleSend = (event) => {
     event.preventDefault();
     console.log(email);
-    if (email.email === "") return;
+    const isValid = validateEmail(email.email)
+    if (!isValid) {
+      setIsValidEmail(false)
+      return;
+    }
     axios
       .post("https://formcarry.com/s/yHekjKv5uto", email, {
         headers: { Accept: "application/json" },
@@ -42,23 +60,19 @@ const Footer = () => {
           className="absolute mx-auto rounded sm:w-10/12 lg:w-4/12"
         ></div>
       </div>
-      <div className="font-serif text-xl text-black text-center pt-10 pb-20 flex justify-center">
+      <div className="text-xl text-black text-center pt-10 pb-20 flex justify-center">
         <div className="w-11/12 lg:w-1/2 ">
-          <span className="">
+          <Icon icon="quote-left" size="xs"/>
+          <span className="px-2">            
             <Text id="footer.build_any_type_websites_" />
           </span>
+          <Icon icon="quote-right" size="xs"/>
         </div>
       </div>
-      <div
-        style={{
-          background:
-            "linear-gradient(to left, rgba(132, 186, 101,1), rgba(38, 112, 107,1))",
-        }}
-        className="flex justify-center"
-      >
+      <div className="flex justify-center">
         <div className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-1/2 bg-whie py-10 md:flex justify-between">
           <div className="md:w-2/3">
-            <div className="font-serif text-center md:text-left pb-2 text-gray-300 tracking-wide">
+            <div className="text-center md:text-left pb-1 tracking-wide">
               <Text id="footer.email_us_so_we_" />:
             </div>
             <div className="flex justify-center md:justify-start">
@@ -68,21 +82,27 @@ const Footer = () => {
                   <input
                     type="text"
                     name="customer_email"
-                    className="h-10 w-56 text-sm bg-gray-200 border-2 border-white rounded-full px-2 focus:outline-none"
-                    placeholder="Your Email Here"
-                    onChange={(e) => setEmail({ email: e.target.value })}
+                    className={classNames("h-10 w-64 text-sm bg-gray-200 border-2 rounded-lg px-2 focus:outline-none", isValidEmail? "border-black": "border-red-500")}
+                    placeholder="Email address"
+                    onChange={onChangeEmail}
                   />
                   <button
                     style={{ backgroundColor: "#FFF" }}
-                    className="h-10 px-4 text-sm rounded-full ml-2 text-black font-semibold"
+                    className="h-10 px-6 text-sm rounded-lg ml-2 text-black font-semibold border-2 border-black"
                     onClick={handleSend}
                   >
                     <Text id="app.send" />
                   </button>
+                  {!isValidEmail && (
+                    <p className="mt-1 text-xs text-red-500">
+                      <Text id="app.please_input_a_valid_email" />!
+                    </p>
+                  )}
                   <SweetAlert
                     show={showswal}
                     type="success"
                     title="Sent"
+                    confirmButtonColor="black"
                     text="We will contact you shortly!!"
                     onConfirm={() => setshow(false)}
                   />
@@ -91,7 +111,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="md:w-1/3">
-            <div className="font-serif pb-2 text-gray-300 tracking-wide text-center md:text-left pt-5 md:pt-0 lg:pt-0">
+            <div className="pb-2 tracking-wide text-center md:text-left pt-5 md:pt-0 lg:pt-0">
               <Text id="footer.or_follow_us_on_" />:
             </div>
             <div className="flex justify-center md:justify-start -mx-2">
@@ -159,12 +179,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="py-2 text-center text-black text-sm font-semibold bg-gray-300">
-        <Text id="footer.copyright" /> © {new Date().getFullYear()}{" "}
-        <Text id="footer.nexious_team_credits_powered_by_nexious_created_with_reactjs" />
+      <div className="py-2 text-center text-gray-300 text-sm bg-gray-900">
+        <Text id="footer.copyright" /> © {new Date().getFullYear()}{" | "}
+        <Text id="footer.powered_by_nexious" />
       </div>
     </div>
   );
 };
-
-export default Footer;

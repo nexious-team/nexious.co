@@ -5,5 +5,6 @@
   "app.clients": "អតិថិជន",
   "app.get_started": "ចាប់ផ្តើម",
   "app.see_more": "ផ្សេងទៀត",
-  "app.send": "ផ្ញើ"
+  "app.send": "ផ្ញើ",
+  "app.please_input_a_valid_email": "សូមពិនិត្យអ៊ីម៉ែលម្តងទៀត"
 }

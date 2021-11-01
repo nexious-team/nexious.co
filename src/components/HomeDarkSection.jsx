@@ -26,7 +26,7 @@ const HomeDarkSection = props => {
             </Link>
           </div>
           <div className="mx-2">
-            <Link to="/services">
+            <Link to="/service">
               <Button _style="normal" className="w-32">
                 <Text id="app.see_more" defaultMessage="See More" />
               </Button>
