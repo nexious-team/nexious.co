@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "assets/css/about.css";
 import { developers, tools, minitools } from "assets/json/about.json";
 import { Link, useHistory } from "react-router-dom";
+import Button from "elements/Button";
 
 const languages = {
   En: ["designers", "developers", "creators"],
@@ -11,7 +12,7 @@ const languages = {
 };
 
 const About = () => {
-  const history = useHistory()
+  const history = useHistory();
   const lang = localStorage.getItem("lang") || "En";
 
   const [text, setText] = useState("");
@@ -83,11 +84,11 @@ const About = () => {
               <span className={`border-black border-r-2`}>{text}</span>
             </h1>
           </div>
-          <div className="wrapper text-center mt-12">
+          <div className="wrapper text-center mt-16">
             <div className="box">
-              <button 
-                className="bounceInUp px-24 py-6 bg-primary text-4xl rounded-lg hover:shadow-lg"
-                onClick={() => history.push('/contact')}
+              <button
+                className="bounceInUp px-20 py-4 border-4 border-black text-black text-4xl rounded-lg hover:shadow-lg"
+                onClick={() => history.push("/contact")}
               >
                 <Text id="about.join_us" />
               </button>
@@ -102,13 +103,13 @@ const About = () => {
             </a>
           </div>
         </div>
-        <div className="bottom-path absolute inset-x-0 bottom-0 z-10 h-64 bg-primary"></div>
+        <div className="bottom-path absolute inset-x-0 bottom-0 z-10 h-64 bg-black"></div>
         <div className="absolute inset-x-0 bottom-0 h-20"></div>
       </div>
       <div className="bg-gray-400 py-4">
         <div className="text-center">
           <h2 className="text-3xl lg:text-4xl xl:text-5xl">
-            <Text id="about.meet_our_team" />
+            <Text id="about.our_team" />
           </h2>
           <p className="text-xs lg:text-sm xl:text-lg mt-2">
             <Text id="about.passionate_creative_determined" />
@@ -160,45 +161,46 @@ const About = () => {
                 <Text id="about.our_vision_description" />
               </p>
               <div className="mt-8">
-                <Link
-                  className="bg-primary px-4 py-2 lg:px-6 lg:py-4 rounded-full shadow-lg"
-                  to="/client"
-                >
-                  <Text id="about.learn_more" />
-                </Link>
+                <Button _style="normal" className="w-32">
+                  <Link to="/client">
+                    <Text id="about.learn_more" />
+                  </Link>
+                </Button>
               </div>
             </div>
             <div className="vision-image md:w-3/6 lg:w-3/6"></div>
           </div>
         </div>
       </div>
-      <div data-aos="fade-right" className="relative">
-        <div className="flex items-center opacity-75">
-          <div className="mission-image w-4/5 md:w-3/5 lg:w-3/5">
-            <img
-              className="object-cover"
-              src="https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              alt=""
-            />
+      <div></div>
+      <div>
+        <div data-aos="fade-left" className="relative">
+          <div className="flex items-center opacity-75">
+            <div className="mission-image w-4/5 md:w-3/5 lg:w-3/5">
+              <img
+                className="object-cover"
+                src="https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt=""
+              />
+            </div>
+            <div className="text-center w-1/5 md:w-2/5 lg:w-2/5"></div>
           </div>
-          <div className="text-center w-1/5 md:w-2/5 lg:w-2/5"></div>
-        </div>
-        <div className="flex items-center absolute inset-0">
-          <div className="mission-image md:w-3/6 lg:w-3/6"></div>
-          <div className="text-center md:w-3/6 lg:w-3/6 px-6">
-            <h1 className="text-3xl lg:text-4xl xl:text-5xl">
-              <Text id="about.our_mission" />
-            </h1>
-            <p className="text-base lg:text-lg xl:text-xl">
-              <Text id="about.our_mission_description" />
-            </p>
-            <div className="mt-8">
-              <Link
-                className="bg-primary px-4 py-2 lg:px-6 lg:py-4 rounded-full shadow-lg"
-                to="/client"
-              >
-                <Text id="about.learn_more" />
-              </Link>
+          <div className="flex items-center absolute inset-0">
+            <div className="mission-image md:w-3/6 lg:w-3/6"></div>
+            <div className="text-center md:w-3/6 lg:w-3/6 px-6">
+              <h1 className="text-3xl lg:text-4xl xl:text-5xl">
+                <Text id="about.our_mission" />
+              </h1>
+              <p className="text-base lg:text-lg xl:text-xl">
+                <Text id="about.our_mission_description" />
+              </p>
+              <div className="mt-8">
+                <Button _style="normal" className="w-32">
+                  <Link to="/client">
+                    <Text id="about.learn_more" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>

@@ -6,6 +6,42 @@ import FL20UI from "../assets/images/projects/fl_20_ui.png";
 import FL20Dashboard from "../assets/images/projects/fl_20_dashboard.png";
 import { classNames } from '../utils'
 
+export default function PagesClient() {
+
+  return (
+    <div className="container mx-auto mt-40">
+      <div className="text-center">
+        <h1 className="md:text-5xl text-4xl font-bold">
+          <Text id="client.all_types_of_website_which_we_are_capable_to_create_for_clients" />
+        </h1>
+        <p className="text-xl">
+          <Text id="client.here_are_what_you_want_to_create" />
+        </p>
+      </div>
+      <div className="mt-20">
+        <Project
+          name="Cluod-Store"
+          ui={CloudStoreFull}
+          dashboard={CloudStoreDashboard} 
+          bgColor="bg-red-600"
+          link="store.nexious.co"
+          href="https://store.nexious.co"
+        />
+      </div>
+      <div className="mt-20">
+        <Project
+          name="FL-20"
+          ui={FL20UI}
+          dashboard={FL20Dashboard} 
+          bgColor="bg-blue-500"
+          link="fl-20-landing-page.vercel.app"
+          href="https://fl-20-landing-page.vercel.app"
+        />
+      </div>
+    </div>
+  );
+}
+
 function Project({ name, ui, dashboard, link, href, bgColor }) {
 
   return (
@@ -35,40 +71,3 @@ function Project({ name, ui, dashboard, link, href, bgColor }) {
     </div>
   );
 }
-function PagesClient() {
-
-  return (
-    <div className="container mx-auto mt-40">
-      <div className="text-center">
-        <h1 className="md:text-5xl text-4xl font-bold">
-          <Text id="client.all_types_of_website_which_we_are_capable_to_create_for_clients" />
-        </h1>
-        <p className="text-xl">
-          <Text id="client.here_are_what_you_want_to_create" />
-        </p>
-      </div>
-      <div className="mt-20">
-        <Project
-          name="Cluod-Store"
-          ui={CloudStoreFull}
-          dashboard={CloudStoreDashboard} 
-          bgColor="bg-red-500"
-          link="store.nexious.co"
-          href="https://store.nexious.co"
-        />
-      </div>
-      <div className="mt-20">
-        <Project
-          name="FL-20"
-          ui={FL20UI}
-          dashboard={FL20Dashboard} 
-          bgColor="bg-gray-800"
-          link="fl-20-landing-page.vercel.app"
-          href="https://fl-20-landing-page.vercel.app"
-        />
-      </div>
-    </div>
-  );
-}
-
-export default PagesClient;

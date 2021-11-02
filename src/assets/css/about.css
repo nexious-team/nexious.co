@@ -130,12 +130,12 @@
 
 @keyframes scaleButton {
   0% {
-    padding: 1.5rem 6rem;
+    padding: 1rem 5rem;
     font-size: 2.25rem;
   }
   100% {
-    padding: 2rem 8rem;
-    font-size: 2.75rem;
+    padding: 1.5rem 6rem;
+    font-size: 2.5rem;
   }
 }
 

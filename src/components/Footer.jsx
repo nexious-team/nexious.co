@@ -55,7 +55,7 @@ export default function Footer () {
             transform: "translateX(-50%)",
             height: "3px",
             background:
-              "linear-gradient(80deg, rgba(182, 244, 146,1), rgba(51, 139, 147,1))",
+              "linear-gradient(80deg, rgba(209, 213, 219,1), rgba(31, 41, 55,1))",
           }}
           className="absolute mx-auto rounded sm:w-10/12 lg:w-4/12"
         ></div>
