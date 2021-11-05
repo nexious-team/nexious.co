@@ -54,7 +54,7 @@ const Hero = (props) => {
         <div className="md:py-10 w-full md:w-6/12">
           <div className="overflow-hidden min-height-img">
             <a.div style={animatedImage}>
-              <img className="w-full rounded-lg" src={props.image} alt="" />
+              <img className="w-full rounded-lg shadow" src={props.image} alt="" />
             </a.div>
           </div>
         </div>

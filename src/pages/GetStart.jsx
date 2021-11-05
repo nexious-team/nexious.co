@@ -60,8 +60,7 @@ const GetStart = () => {
   return (
     <div className="container mx-auto pt-5">
       <div
-        style={{ borderRadius: "1.5rem" }}
-        className="w-full sm:w-11/12 lg:w-2/3 mx-auto bg-gray-100 rounded-xl mb-10 shadow-lg py-4"
+        className="w-full sm:w-11/12 lg:w-2/3 mx-auto rounded-xl mb-10 shadow-lg py-4"
       >
         <div className="m-5">
           <h1 className="text-center md:text-5xl text-4xl">
@@ -71,7 +70,7 @@ const GetStart = () => {
             <Text id="get_started.need_help_with_an_" />
           </p>
         </div>
-        <div>
+        <div className="mt-12">
           <form className="w-full px-8 md:px-12 lg:px-20">
             <div className="flex flex-wrap -mx-3 mb-6 px-3">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -82,7 +81,7 @@ const GetStart = () => {
                   <Text id="get_started.first_name" />
                 </label>
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  className="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="grid-first-name"
                   type="text"
                   placeholder={getPlaceholder('firstName')}
@@ -108,7 +107,7 @@ const GetStart = () => {
                   <Text id="get_started.last_name" />
                 </label>
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  className="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-500 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-last-name"
                   type="text"
                   placeholder={getPlaceholder('lastName')}
@@ -135,7 +134,7 @@ const GetStart = () => {
                   <Text id="get_started.email" />
                 </label>
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:ring-1 focus:ring-green-500"
+                  className="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-500 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-for-email"
                   type="eamil"
                   placeholder="email@mail.com"
@@ -161,7 +160,7 @@ const GetStart = () => {
                   <Text id="get_started.phone" />
                 </label>
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  className="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-500 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-for-phone"
                   type="number"
                   placeholder="012345678"
@@ -189,7 +188,7 @@ const GetStart = () => {
                 </label>
                 <div className="relative">
                   <select
-                    className="block appearance-none w-full bg-gray-200 border border-gray-500 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    className="block appearance-none w-full bg-gray-100 border border-gray-500 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="grid-state"
                     onChange={e => {
                       setData({
@@ -229,7 +228,7 @@ const GetStart = () => {
                   <Text id="get_started.website_summary" />
                 </label>
                 <textarea
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  className="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   cols="30"
                   rows="10"
                   id="grid-message"
@@ -253,11 +252,7 @@ const GetStart = () => {
             </div>
             <div className="flex flex-wrap -mx-3 mb-2">
               <button
-                style={{
-                  background:
-                    "linear-gradient(80deg, rgba(182, 244, 146,1), rgba(51, 139, 147,1),rgba(182, 244, 146,1))"
-                }}
-                className="w-11/12 h-12 mx-auto my-3 hover:bg-green-700 text-black font-bold py-2 px-4 rounded-lg"
+                className="w-11/12 h-12 mx-auto my-3 border-2 bg-black text-white font-bold py-2 px-4 rounded-lg"
                 onClick={handleSend}
               >
                 <Text id="get_started.submit_now" />
