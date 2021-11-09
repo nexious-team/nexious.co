@@ -1,12 +1,13 @@
 import React from 'react';   
 import { classNames } from "../utils";
-const base = 'focus:outline-none rounded-lg disabled:opacity-50'
+const base = 'focus:outline-none border-2 rounded-lg disabled:opacity-50'
 
 const styles = {
-  'normal': 'bg-gray-500 hover:bg-gray-600 text-white border-gray-700',
+  'normal': 'text-black border-black',
+  'normal:dark': 'text-white border-white',
   'action': 'bg-gray-900 hover:bg-black text-white border-gray-900',
   'hook': 'bg-gray-200 text-gray-600 border-gray-200',
-  'action-dark': 'bg-gray-100 hover:bg-white text-black border-gray-100',
+  'action:dark': 'bg-gray-100 hover:bg-white text-black border-gray-100',
 }
 
 const sizes = {

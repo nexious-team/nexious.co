@@ -4,7 +4,7 @@ import { FormattedMessage as Text } from "react-intl";
 import {
   imgServiceWebDesign2,
   imgServiceWebDevelopment,
-  imgServiceSSLCertificate3,
+  imgServiceMobileAppDevelopment
 } from "../assets/images/service-page/index";
 import Button from "elements/Button";
 
@@ -20,9 +20,9 @@ const middleSectionDatas = [
     imageUrl: imgServiceWebDevelopment,
   },
   {
-    title: "service.ssl_certificated",
-    text: `service.an_ssl_certificate_lets_`,
-    imageUrl: imgServiceSSLCertificate3,
+    title: "service.mobile_app_development",
+    text: `service.bring_your_product_to_comsumer_hands`,
+    imageUrl: imgServiceMobileAppDevelopment,
   },
 ];
 
@@ -124,11 +124,11 @@ const Service = () => {
 
   const bottomSection = bottomSectionDatas.map((item, index) => {
     return (
-      <div key={index} className="my-6 xl:mx-2">
+      <div key={index} className="my-6 xl:mx-2 px-4">
         <div className="font-bold text-gray-800 sm:text-xl md:text-2xl xl:text-3xl">
           <Text id={item.title} />
         </div>
-        <div className="whitespace-pre-wrap text-gray-700 text-base sm:text-base lg:text-lg xl:text-xl">
+        <div className="mt-4 whitespace-pre-wrap text-gray-700 text-sm sm:text-base lg:text-lg xl:text-xl">
           <Text id={item.text} />
         </div>
       </div>
@@ -148,7 +148,7 @@ const Service = () => {
 
       {middleSection}
 
-      <div className="my-8 mx-auto bg-gray-200 py-6 px-10 w-full xl:flex">
+      <div className="mt-24 mx-auto bg-gray-200 py-12 px-10 w-full xl:flex">
         {bottomSection}
       </div>
     </div>

@@ -20,14 +20,14 @@ const HomeDarkSection = props => {
         <div className="flex justify-center py-5">
           <div className="mx-2">
             <Link to="/get-start">
-              <Button _style="action-dark" className="w-32">
+              <Button _style="action:dark" className="w-32">
                 <Text id="app.get_started" defaultMessage="Get Started" />
               </Button>
             </Link>
           </div>
           <div className="mx-2">
             <Link to="/service">
-              <Button _style="normal" className="w-32">
+              <Button _style="normal:dark" className="w-32">
                 <Text id="app.see_more" defaultMessage="See More" />
               </Button>
             </Link>

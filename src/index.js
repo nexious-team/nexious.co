@@ -15,7 +15,12 @@ import {
   faGlobeAsia, 
   faAngleDown,
   faQuoteLeft,
-  faQuoteRight
+  faQuoteRight,
+  faWindowMaximize,
+  faMobileAlt,
+  faPencilRuler,
+  faWindowRestore,
+  faPenNib
 } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
@@ -31,7 +36,12 @@ library.add(
   faGlobeAsia, 
   faAngleDown,
   faQuoteLeft,
-  faQuoteRight
+  faQuoteRight,
+  faWindowMaximize,
+  faMobileAlt,
+  faPencilRuler,
+  faWindowRestore,
+  faPenNib,
 )
 
 ReactDOM.render(<App />, document.getElementById('root'));

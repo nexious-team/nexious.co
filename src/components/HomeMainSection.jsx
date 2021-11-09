@@ -13,7 +13,7 @@ const HomeMainSection = (props) => {
           </h1>
         </div>
         <div className="flex justify-center flex-wrap py-2 lg:pt-16">
-          <div className="text w-full sm:w-full lg:w-5/12 md:w-full flex flex-col items-right px-10">
+          <div className="text w-full sm:w-full lg:w-6/12 md:w-full flex flex-col items-right pr-12">
             <div className="">
               <div className="ml-auto">
                 <p className="font-thin text-sm md:text-xl lg:text-2xl text-center lg:text-right">
@@ -31,7 +31,7 @@ const HomeMainSection = (props) => {
               </div>
             </div>
           </div>
-          <div className="w-7/12 pt-5 md:pt-0">
+          <div className="w-6/12 pt-5 md:pt-0">
             <div className="p-3 lg:p-0">
               <img className="rounded-lg shadow-lg" src={props.image} alt="" />
             </div>

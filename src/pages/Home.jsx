@@ -3,6 +3,7 @@ import HomeMainSection from "../components/HomeMainSection";
 import HomeMoreSection from "../components/HomeMoreSection";
 import HomeDarkSection from "../components/HomeDarkSection";
 import HomeHero from "components/HomeHero";
+import Services from "components/Services";
 
 import cloud_store_image from "../assets/images/projects/cloud_store.png";
 import cloud_store_dashboard from "../assets/images/projects/cloud_store_dashboard.png";
@@ -36,6 +37,7 @@ const Home = () => {
       color: ["#fff"],
     },
   ]);
+
   return (
     <div className="">
       <div style={{ marginTop: "-5rem" }} className="overflow-hidden">
@@ -75,6 +77,9 @@ const Home = () => {
           image={section[3].image}
           color={section[3].color}
         ></HomeDarkSection>
+      </div>
+      <div className="py-12">
+        <Services />
       </div>
     </div>
   );

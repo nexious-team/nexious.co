@@ -180,8 +180,7 @@ export default function Footer () {
         </div>
       </div>
       <div className="py-2 text-center text-gray-300 text-sm bg-gray-900">
-        <Text id="footer.copyright" /> © {new Date().getFullYear()}{" | "}
-        <Text id="footer.powered_by_nexious" />
+        © 2019 - {new Date().getFullYear()} Nexious. <Text id="footer.copyright" /> {" | "} <Text id="footer.powered_by_nexious" />
       </div>
     </div>
   );
