@@ -4,6 +4,7 @@ import About from './About'
 import PagesClient from './PagesClient'
 import GetStart from './GetStart'
 import Contact from './Contact'
+import CardPage from './Card'
 
 export {
   Home,
@@ -11,5 +12,6 @@ export {
   About,
   PagesClient,
   GetStart,
-  Contact
+  Contact,
+  CardPage,
 }

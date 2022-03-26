@@ -1,4 +1,4 @@
-import { Home, Service, About, PagesClient,GetStart,Contact } from './pages';
+import { Home, Service, About, PagesClient,GetStart,Contact, CardPage } from './pages';
 
 const routes = [
   {
@@ -9,6 +9,10 @@ const routes = [
   {
     path: "/service",
     component: Service
+  },
+  {
+    path: "/card",
+    component: CardPage,
   },
   {
     path: "/about",
