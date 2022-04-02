@@ -20,7 +20,10 @@ import {
   faMobileAlt,
   faPencilRuler,
   faWindowRestore,
-  faPenNib
+  faPenNib,
+  faGlobeAmericas,
+  faAddressCard,
+  faPhone
 } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
@@ -42,6 +45,9 @@ library.add(
   faPencilRuler,
   faWindowRestore,
   faPenNib,
+  faGlobeAmericas,
+  faAddressCard,
+  faPhone,
 )
 
 ReactDOM.render(<App />, document.getElementById('root'));
