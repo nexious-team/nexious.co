@@ -20,7 +20,7 @@ export default function PagesClient() {
       </div>
       <div className="mt-20">
         <Project
-          name="Cluod-Store"
+          name="Cloud-Store"
           ui={CloudStoreFull}
           dashboard={CloudStoreDashboard} 
           bgColor="bg-red-600"
