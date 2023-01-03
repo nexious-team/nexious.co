@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "yarn run build:css && craco build",
     "test": "craco test",
     "build:css": "npx tailwind build -i ./src/index.css -o ./src/styles.css",
     "eject": "react-scripts eject"
