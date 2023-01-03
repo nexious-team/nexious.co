@@ -1,9 +1,9 @@
 {
-  "name": "developers-town",
+  "name": "nexious-team",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^6.3.0",
+    "@craco/craco": "^7.0.0",
     "@fortawesome/fontawesome-free": "^5.10.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-brands-svg-icons": "^5.10.2",
@@ -13,24 +13,24 @@
     "aos": "^2.3.4",
     "autoprefixer": "^9",
     "axios": "^0.21.2",
-    "postcss": "^7",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
+    "postcss": "^8.4.20",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-intl": "^3.11.0",
     "react-pure-lifecycle": "^3.0.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.1",
     "react-spring": "^8.0.27",
     "react-use-gesture": "^5.2.4",
     "styled-components": "^4.3.2",
     "sweetalert2-react": "^0.8.3",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "tailwindcss": "^3.2.4"
   },
   "scripts": {
-    "start": "craco --openssl-legacy-provider start",
+    "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "build:css": "npx tailwind build ./src/index.css -o ./src/styles.css",
+    "build:css": "npx tailwind build -i ./src/index.css -o ./src/styles.css",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
