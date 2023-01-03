@@ -121,25 +121,6 @@ const About = () => {
           ))}
         </div>
       </div>
-      <div className="tools my-20">
-        <div data-aos="fade-left">
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl text-center my-6">
-            <Text id="about.our_tools" />
-          </h2>
-        </div>
-        <div data-aos="fade-right" className="relative my-4">
-          <div className="flex flex-wrap justify-center items-center content-center px-6 lg:px-32 mt-12">
-            {tools.map((tool) => (
-              <Tool key={tool.id} {...tool} />
-            ))}
-          </div>
-          <div className="absolute inset-0 flex flex-wrap justify-center items-center">
-            {minitools.map((minitool) => (
-              <MiniTool key={minitool.id} {...minitool} />
-            ))}
-          </div>
-        </div>
-      </div>
       <div>
         <div data-aos="fade-left" className="relative">
           <div className="flex items-center opacity-75">
@@ -202,6 +183,25 @@ const About = () => {
                 </Button>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="tools my-20">
+        <div data-aos="fade-left">
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl text-center my-6">
+            <Text id="about.our_tools" />
+          </h2>
+        </div>
+        <div data-aos="fade-right" className="relative my-4">
+          <div className="flex flex-wrap justify-center items-center content-center px-6 lg:px-32 mt-12">
+            {tools.map((tool) => (
+              <Tool key={tool.id} {...tool} />
+            ))}
+          </div>
+          <div className="absolute inset-0 flex flex-wrap justify-center items-center">
+            {minitools.map((minitool) => (
+              <MiniTool key={minitool.id} {...minitool} />
+            ))}
           </div>
         </div>
       </div>
