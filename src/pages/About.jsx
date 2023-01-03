@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import { FormattedMessage as Text } from "react-intl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "assets/css/about.css";
-import { developers, tools, minitools } from "assets/json/about.json";
 import { Link, useHistory } from "react-router-dom";
 import Button from "elements/Button";
+import data from "assets/json/about.json";
+
+const { developers, tools, minitools } = data;
 
 const languages = {
   En: ["designers", "developers", "creators"],
