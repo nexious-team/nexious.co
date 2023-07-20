@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": ["src/**/*.{ts,tsx}", "declaration.d.ts"],
+  "exclude": ["node_modules"]
+}
