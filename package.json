@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^7.0.0",
+    "@craco/craco": "^7.1.0",
     "@fortawesome/fontawesome-free": "^5.10.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-brands-svg-icons": "^5.10.2",
@@ -16,7 +16,7 @@
     "postcss": "^8.4.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-intl": "^3.11.0",
+    "react-intl": "^6.4.4",
     "react-pure-lifecycle": "^3.0.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^5.0.1",

@@ -146,8 +146,8 @@ function PagesClient() {
               </label>
               <textarea
                 className="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                cols="30"
-                rows="6"
+                cols={30}
+                rows={6}
                 id="grid-message"
                 placeholder={getPlaceholder("description")}
                 onChange={e =>

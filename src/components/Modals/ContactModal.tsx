@@ -1,9 +1,15 @@
-/* This example requires Tailwind CSS v2.0+ */
+import React from 'react';
 import { Fragment, useRef } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-export default function ContactModal({ open, setOpen }) {
+interface ContactModalProps {
+  open: boolean;
+  onClose: () => void;
+}
+export default function ContactModal(props: ContactModalProps) {
+  const { open, onClose } = props;
   const cancelButtonRef = useRef(null);
 
   return (
@@ -12,7 +18,7 @@ export default function ContactModal({ open, setOpen }) {
         as="div"
         className="fixed z-10 inset-0 overflow-y-auto"
         initialFocus={cancelButtonRef}
-        onClose={setOpen}
+        onClose={onClose}
       >
         <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
           <Transition.Child
@@ -53,14 +59,14 @@ export default function ContactModal({ open, setOpen }) {
                       text="(+855)16 77 3002"
                     />
                   </div>
-                  <div  className="mt-2">
+                  <div className="mt-2">
                     <ContactItem
                       icon={"mobile-alt"}
                       iconColor="#2A3B80"
                       text="(+855)95 77 3002"
                     />
                   </div>
-                  <div  className="mt-2">
+                  <div className="mt-2">
                     <ContactItem
                       icon={"envelope"}
                       iconColor="#2A3B80"
@@ -82,7 +88,14 @@ export default function ContactModal({ open, setOpen }) {
   );
 }
 
-function ContactItem({ icon, iconColor, text }) {
+interface ContactItemProps {
+  icon: IconProp;
+  iconColor: string;
+  text: string;
+}
+function ContactItem(props: ContactItemProps) {
+  const { icon, iconColor, text } = props;
+
   return (
     <div className="flex items-center">
       <div className="w-8 h-8 text-center border rounded p-1">

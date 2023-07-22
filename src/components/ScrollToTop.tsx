@@ -1,7 +1,16 @@
-import { useEffect } from 'react';
-import { withRouter } from 'react-router';
+import { ReactNode, useEffect } from "react";
+import { withRouter } from "react-router-dom";
 
-const ScrollToTop = ({ children, location: { pathname } }) => {
+interface ScrollToTopProps {
+  location: any;
+  children: ReactNode;
+}
+const ScrollToTop = (props: ScrollToTopProps) => {
+  const {
+    location: { pathname },
+    children,
+  } = props;
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);

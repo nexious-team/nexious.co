@@ -2,7 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FormattedMessage as Text } from 'react-intl';
 
-const Sidebar = props => {
+interface SidebarProps {
+  onClick: () => void;
+  onLinkClick: () => void;
+}
+const Sidebar = (props: SidebarProps) => {
+  const { onClick, onLinkClick } = props;
+
   return (
     <div
       style={{
@@ -21,14 +27,14 @@ const Sidebar = props => {
         <div className="flex justify-between items-center pt-8">
           <div className="pl-5">
             <p className="font-josefin text-white text-5xl  pointer-cursor hover:text-black">
-              <Link to="/" onClick={props.linkClick}>
+              <Link to="/" onClick={onLinkClick}>
                 Nexious
               </Link>
             </p>
           </div>
           <div className="pr-4">
             <button
-              onClick={props.sidebarClick}
+              onClick={onClick}
               className="text-white text-4xl"
             >
               <svg
@@ -49,20 +55,20 @@ const Sidebar = props => {
         <div className="pt-10 pl-16">
           <ul className="text-white text-4xl font-bold ">
             <li className="py-2">
-              <Link to="/contact" onClick={props.linkClick}>
+              <Link to="/contact" onClick={onLinkClick}>
                 <Text id="app.contact" />
               </Link>
             </li>
-            <li className="py-2" onClick={props.linkClick}>
+            <li className="py-2" onClick={onLinkClick}>
               <Link to="/about"><Text id="app.about_us" /></Link>
             </li>
             <li className="py-2">
-              <Link to="/service" onClick={props.linkClick}>
+              <Link to="/service" onClick={onLinkClick}>
                 <Text id="app.services" />
               </Link>
             </li>
             <li className="py-2">
-              <Link to="/client" onClick={props.linkClick}>
+              <Link to="/client" onClick={onLinkClick}>
                 <Text id="app.clients" />
               </Link>
             </li>

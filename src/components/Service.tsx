@@ -1,10 +1,18 @@
 import React from "react";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { FormattedMessage as Text } from "react-intl";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-export default function Service({
-  service
-}) {
+export interface IService {
+  title: string;
+  icon: IconProp;
+  description: string;
+}
+interface ServiceProps {
+  service: IService;
+}
+export default function Service(props: ServiceProps) {
+  const { service } = props;
   const { title, icon, description } = service
 
   return (

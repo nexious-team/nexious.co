@@ -3,8 +3,8 @@ import { FormattedMessage as Text } from "react-intl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "assets/css/about.css";
 import { Link, useHistory } from "react-router-dom";
-import Button from "elements/Button";
-import data from "assets/json/about.json";
+import Button from "../elements/Button";
+import data from "../assets/json/about.json";
 
 const { developers, tools, minitools } = data;
 
@@ -144,7 +144,7 @@ const About = () => {
                 <Text id="about.our_vision_description" />
               </p>
               <div className="mt-8">
-                <Button _style="normal" className="w-32">
+                <Button variant="normal" className="w-32">
                   <Link to="/client">
                     <Text id="about.learn_more" />
                   </Link>
@@ -178,7 +178,7 @@ const About = () => {
                 <Text id="about.our_mission_description" />
               </p>
               <div className="mt-8">
-                <Button _style="normal" className="w-32">
+                <Button variant="normal" className="w-32">
                   <Link to="/client">
                     <Text id="about.learn_more" />
                   </Link>
@@ -211,65 +211,96 @@ const About = () => {
   );
 };
 
-const Developer = ({ imgSrc, name, skills, tools, aosDelay, snapshot }) => (
-  <div
-    data-aos="fade-up"
-    data-aos-delay={aosDelay}
-    className="sm:w-1/2 lg:w-1/4 text-center px-4"
-  >
-    <div className="py-6 px-2 transition duration-500 ease-in-out transform hover:translate-y-1 hover:scale-110 hover:shadow-xl rounded-lg">
-      <img
-        className="rounded-full w-24 h-24 border border-gray-300 mx-auto object-cover"
-        src={imgSrc}
-        alt=""
-      />
-      <h3 className="text-xl mt-2">
-        <Text id={name} />
-      </h3>
-      <h4 className="text-xs text-gray-800">
-        <Text id={skills} />
-      </h4>
-      <p className="text-xs my-1">{tools}</p>
-      <p className="text-xs lg:text-sm xl:text-base my-6 h-16 lg:h-24">
-        <Text id={snapshot} />
-      </p>
-      <div className="flex justify-center my-6">
-        {/* <div className="px-2">
+interface DeveloperProps {
+  imgSrc: string;
+  name: string;
+  skills: string;
+  tools: string;
+  aosDelay: string;
+  snapshot: string;
+}
+const Developer = (props: DeveloperProps) => {
+  const { imgSrc, name, skills, tools, aosDelay, snapshot } = props;
+
+  return (
+    <div
+      data-aos="fade-up"
+      data-aos-delay={aosDelay}
+      className="sm:w-1/2 lg:w-1/4 text-center px-4"
+    >
+      <div className="py-6 px-2 transition duration-500 ease-in-out transform hover:translate-y-1 hover:scale-110 hover:shadow-xl rounded-lg">
+        <img
+          className="rounded-full w-24 h-24 border border-gray-300 mx-auto object-cover"
+          src={imgSrc}
+          alt=""
+        />
+        <h3 className="text-xl mt-2">
+          <Text id={name} />
+        </h3>
+        <h4 className="text-xs text-gray-800">
+          <Text id={skills} />
+        </h4>
+        <p className="text-xs my-1">{tools}</p>
+        <p className="text-xs lg:text-sm xl:text-base my-6 h-16 lg:h-24">
+          <Text id={snapshot} />
+        </p>
+        <div className="flex justify-center my-6">
+          {/* <div className="px-2">
           <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" />
         </div> */}
-        <div className="px-2">
-          <a href="https://github.com/nexious-team">
-            <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
-          </a>
+          <div className="px-2">
+            <a href="https://github.com/nexious-team">
+              <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
-const Tool = ({ imgSrc, clacss, imgClass }) => (
-  <div className={`mx-4 lg:mx-10 mb-12 ${clacss || ""}`}>
-    <img
-      className={`${
-        imgClass || ""
-      } h-16 w-16 md:h-24 md:w-24 lg:h-32 lg:w-32 mx-auto object-contain shadow-lg `}
-      src={imgSrc}
-      alt=""
-    />
-  </div>
-);
-
-const MiniTool = ({ imgSrc, alt, clacss, imgClass }) => (
-  <div className={`mx-8 lg:mx-16 ${clacss || ""}`}>
-    <div className="h-8 w-8 lg:h-12 lg:w-12 rounded-full shadow-lg ">
+interface ToolProps {
+  imgSrc: string;
+  clacss?: string;
+  imgClass: string;
+}
+const Tool = (props: ToolProps) => {
+  const { imgSrc, clacss, imgClass } = props;
+  return (
+    <div className={`mx-4 lg:mx-10 mb-12 ${clacss || ""}`}>
       <img
-        className={`h-8 w-8 lg:h-12 lg:w-12 object-scale-down ${
+        className={`${
           imgClass || ""
-        }`}
+        } h-16 w-16 md:h-24 md:w-24 lg:h-32 lg:w-32 mx-auto object-contain shadow-lg `}
         src={imgSrc}
-        alt={alt}
+        alt=""
       />
     </div>
-  </div>
-);
+  );
+};
+
+interface MiniToolProps {
+  imgSrc: string;
+  alt: string;
+  clacss: string;
+  imgClass: string;
+}
+const MiniTool = (props: MiniToolProps) => {
+  const { imgSrc, alt, clacss, imgClass } = props;
+
+  return (
+    <div className={`mx-8 lg:mx-16 ${clacss || ""}`}>
+      <div className="h-8 w-8 lg:h-12 lg:w-12 rounded-full shadow-lg ">
+        <img
+          className={`h-8 w-8 lg:h-12 lg:w-12 object-scale-down ${
+            imgClass || ""
+          }`}
+          src={imgSrc}
+          alt={alt}
+        />
+      </div>
+    </div>
+  );
+};
+
 export default About;
