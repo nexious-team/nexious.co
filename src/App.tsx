@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
-  withRouter,
   Route,
-  Link
 } from "react-router-dom";
 import { IntlProvider } from 'react-intl';
 import AOS from "aos";
@@ -41,7 +39,7 @@ function App() {
         <ScrollToTop>
           {/* <Dropdown lang={lang} onLangChange={onLangChange}/> */}
           <div style={styles}>
-            <Navbar link={Link} location={withRouter(Navbar)} lang={lang} onLangChange={onLangChange}/>
+            <Navbar lang={lang} onLangChange={onLangChange}/>
             {routes.map((route, i) => (
               <Route
                 key={i}

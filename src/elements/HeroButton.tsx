@@ -1,8 +1,13 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { useSpring, animated as a } from "react-spring";
 
-export default function HeroButton (props) {
+interface HeroButtonProps {
+  children: ReactNode;
+}
+export default function HeroButton (props: HeroButtonProps) {
+  const { children } = props;
+
   const animatedButtonUnderline = useSpring({
     from: {
       width: "0%",
@@ -29,10 +34,10 @@ export default function HeroButton (props) {
           className="h-20 py-3 text-2xl text-white font-bold truncate tracking-wider border-2 border-white rounded-lg"
         >
           <Link to="/get-start">
-            <span>{props.children}</span>
+            <span>{children}</span>
           </Link>
         </a.button>
         </div>
     </a.div>
   );
-};
+}

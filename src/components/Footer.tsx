@@ -8,29 +8,31 @@ import { ReactComponent as TwitterIcon } from "../assets/icons/twitter.svg";
 import { ReactComponent as LinkedInIcon } from "../assets/icons/linkedin.svg";
 import { ReactComponent as PinterestIcon } from "../assets/icons/pinterest.svg";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
-import { classNames } from "utils";
+import { classNames } from "../utils";
 
-const validateEmail = (v) => {
+const validateEmail = (v: string) => {
   // eslint-disable-next-line no-useless-escape
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(v);
-}
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    v
+  );
+};
 
-export default function Footer () {
+export default function Footer() {
   const [email, setEmail] = useState({ email: "" });
   const [showswal, setshow] = useState(false);
   const [isValidEmail, setIsValidEmail] = useState(true);
-  
-  const onChangeEmail = (e) => {
-    if (!isValidEmail) setIsValidEmail(true)
-    setEmail({ email: e.target.value })
-  }
 
-  const handleSend = (event) => {
+  const onChangeEmail = (e: any) => {
+    if (!isValidEmail) setIsValidEmail(true);
+    setEmail({ email: e.target.value });
+  };
+
+  const handleSend = (event: any) => {
     event.preventDefault();
     console.log(email);
-    const isValid = validateEmail(email.email)
+    const isValid = validateEmail(email.email);
     if (!isValid) {
-      setIsValidEmail(false)
+      setIsValidEmail(false);
       return;
     }
     axios
@@ -62,11 +64,11 @@ export default function Footer () {
       </div>
       <div className="text-xl text-black text-center pt-10 pb-20 flex justify-center">
         <div className="w-11/12 lg:w-1/2 ">
-          <Icon icon="quote-left" size="xs"/>
-          <span className="px-2">            
+          <Icon icon="quote-left" size="xs" />
+          <span className="px-2">
             <Text id="footer.build_any_type_websites_" />
           </span>
-          <Icon icon="quote-right" size="xs"/>
+          <Icon icon="quote-right" size="xs" />
         </div>
       </div>
       <div className="flex justify-center">
@@ -82,7 +84,10 @@ export default function Footer () {
                   <input
                     type="text"
                     name="customer_email"
-                    className={classNames("h-10 w-64 text-sm bg-gray-200 border-2 rounded-lg px-2 focus:outline-none", isValidEmail? "border-black": "border-red-500")}
+                    className={classNames(
+                      "h-10 w-64 text-sm bg-gray-200 border-2 rounded-lg px-2 focus:outline-none",
+                      isValidEmail ? "border-black" : "border-red-500"
+                    )}
                     placeholder="Email address"
                     onChange={onChangeEmail}
                   />
@@ -119,7 +124,7 @@ export default function Footer () {
                 <div className="w-8 h-8">
                   <a
                     href="https://github.com/nexious-team"
-                    alt="GitHub"
+                    aria-label="GitHub"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -131,7 +136,7 @@ export default function Footer () {
                 <div className="w-8 h-8">
                   <a
                     href="https://www.facebook.com/Nexious-116686833048782/"
-                    alt="Facebook"
+                    aria-label="Facebook"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -143,7 +148,7 @@ export default function Footer () {
                 <div className="w-8 h-8">
                   <a
                     href="https://twitter.com/Nexious6"
-                    alt="Twitter"
+                    aria-label="Twitter"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -155,7 +160,7 @@ export default function Footer () {
                 <div className="w-8 h-8">
                   <a
                     href="https://www.linkedin.com/in/nexious-team-07674319a/"
-                    alt="LinkedIn"
+                    aria-label="LinkedIn"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -167,7 +172,7 @@ export default function Footer () {
                 <div className="w-8 h-8">
                   <a
                     href="https://www.pinterest.com/nexiousteam3410/"
-                    alt="Pinterest"
+                    aria-label="Pinterest"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -180,8 +185,10 @@ export default function Footer () {
         </div>
       </div>
       <div className="py-2 text-center text-gray-300 text-sm bg-gray-900">
-        © 2019 - {new Date().getFullYear()} Nexious. <Text id="footer.copyright" /> {" | "} <Text id="footer.powered_by_nexious" />
+        © {new Date().getFullYear()} Nexious.{" "}
+        <Text id="footer.copyright" /> {" | "}{" "}
+        <Text id="footer.powered_by_nexious" />
       </div>
     </div>
   );
-};
+}

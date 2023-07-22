@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FormattedMessage as Text } from "react-intl";
 
-import { Button } from "elements";
-import Service from "./Service";
+import { Button } from "../elements";
+import Service, { IService } from "./Service";
 
-const services = [
+const services: IService[] = [
   {
     icon: "window-maximize",
     title: "home.web_application_development",
@@ -57,7 +57,7 @@ export default function Services() {
           </Button>
         </div>
         <div className="mx-2">
-          <Button _style="normal" className="w-32">
+          <Button variant="normal" className="w-32">
             <Link to="/service">
               <Text id="app.see_more" defaultMessage="See More" />
             </Link>

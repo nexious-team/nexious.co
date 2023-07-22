@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import HomeMainSection from "../components/HomeMainSection";
 import HomeMoreSection from "../components/HomeMoreSection";
 import HomeDarkSection from "../components/HomeDarkSection";
-import HomeHero from "components/HomeHero";
-import Services from "components/Services";
+import HomeHero from "../components/HomeHero";
+import Services from "../components/Services";
 
 import cloud_store_image from "../assets/images/projects/cloud_store.png";
 import cloud_store_dashboard from "../assets/images/projects/cloud_store_dashboard.png";
@@ -47,7 +47,6 @@ const Home = () => {
         <HomeMainSection
           title={section[0].title}
           body={section[0].body}
-          color={section[0].color}
           image={section[0].image}
         ></HomeMainSection>
       </div>
@@ -56,7 +55,6 @@ const Home = () => {
           <HomeMoreSection
             title={section[1].title}
             body={section[1].body}
-            color={section[1].color}
             image={section[1].image}
           ></HomeMoreSection>
         </div>
@@ -66,7 +64,6 @@ const Home = () => {
         <HomeMoreSection
           title={section[2].title}
           body={section[2].body}
-          color={section[2].color}
           image={section[2].image}
         ></HomeMoreSection>
       </div>
@@ -75,7 +72,6 @@ const Home = () => {
           title={section[3].title}
           body={section[3].body}
           image={section[3].image}
-          color={section[3].color}
         ></HomeDarkSection>
       </div>
       <div className="py-12">

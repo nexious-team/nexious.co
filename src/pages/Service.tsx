@@ -6,7 +6,7 @@ import {
   imgServiceWebDevelopment,
   imgServiceMobileAppDevelopment
 } from "../assets/images/service-page/index";
-import Button from "elements/Button";
+import Button from "../elements/Button";
 
 const middleSectionDatas = [
   {
@@ -71,7 +71,7 @@ const Service = () => {
                   <Text id={item.text} />
                 </p>
 
-                <Button _style="normal" className="mt-4 w-40">
+                <Button variant="normal" className="mt-4 w-40">
                   <Link to="/client">
                     <Text id="service.learn_more" />
                   </Link>
@@ -109,7 +109,7 @@ const Service = () => {
                   <Text id={item.text} />
                 </p>
 
-                <Button _style="normal" className="mt-4 w-40">
+                <Button variant="normal" className="mt-4 w-40">
                   <Link to="/client">
                     <Text id="service.learn_more" />
                   </Link>

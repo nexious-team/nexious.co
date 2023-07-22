@@ -7,9 +7,14 @@ import RegisterButton from "../elements/NavBarRegButton";
 import Sidebar from "./Sidebar";
 import "../assets/navbar.css";
 import FlagButton from '../elements/FlagButton';
-import { classNames } from 'utils'
+import { classNames } from '../utils'
 
-export default function Navbar ({ lang, onLangChange }) {
+interface NavbarProps {
+  lang: string;
+  onLangChange: () => void;
+}
+export default function Navbar (props: NavbarProps) {
+  const { lang, onLangChange } = props;
   const [sidebar, setSidebar] = useState(false);
   const [isTop, setTop] = useState(true);
   const fade_animation = useSpring({
@@ -23,7 +28,7 @@ export default function Navbar ({ lang, onLangChange }) {
     height: isTop ? "6rem" : "5rem",
     config: { tension: 200 }
   });
-  const handleNavbarSwitch = to_path => {
+  const handleNavbarSwitch = (to_path: string) => {
     if (to_path !== "home") {
       setTop(false);
     } else {
@@ -53,8 +58,8 @@ export default function Navbar ({ lang, onLangChange }) {
       {sidebar ? (
         <div className="">
           <Sidebar
-            sidebarClick={() => setSidebar(state => false)}
-            linkClick={() => setSidebar(state => false)}
+            onClick={() => setSidebar(() => false)}
+            onLinkClick={() => setSidebar(() => false)}
           ></Sidebar>
         </div>
       ) : (
@@ -135,7 +140,7 @@ export default function Navbar ({ lang, onLangChange }) {
                 onClick={() => handleNavbarSwitch("get-start")}
                 to="/get-start"
               >
-                <RegisterButton className="navnbar-reg-btn" isTop={isTop} />
+                <RegisterButton isTop={isTop} />
               </Link>
             </div>
             {/* <div className="lg:hidden md:hidden flex justify-end items-center">
@@ -148,4 +153,4 @@ export default function Navbar ({ lang, onLangChange }) {
       </a.nav>
     </div>
   );
-};
+}
