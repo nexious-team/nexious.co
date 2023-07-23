@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { FormattedMessage as Text } from "react-intl";
-import Button from "../elements/Button";
+// import Button from "../elements/Button";
 
 interface HomeMainSectionProps {
   title: string;
@@ -30,11 +30,11 @@ const HomeMainSection = (props: HomeMainSectionProps) => {
             </div>
             <div className="hidden lg:block mt-2 lg:mt-4 w-auto">
               <div className="flex justify-center md:justify-end">
-                <Button className="w-32">
+                {/* <Button className="w-32">
                   <Link to="/get-start">
                     <Text id="app.get_started" defaultMessage="Get Started" />
                   </Link>
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { FormattedMessage as Text } from "react-intl";
-import { Button } from "../elements";
+// import { Button } from "../elements";
 
 interface HomeMoreSectionProps {
   title: string;
@@ -24,7 +24,7 @@ export default function HomeMoreSection (props: HomeMoreSectionProps) {
           <Text id={body} />
         </p>
       </div>
-      <div className="flex justify-center py-5">
+      {/* <div className="flex justify-center py-5">
         <div className="mx-2">
           <Button className="w-32">
             <Link to="/get-start">
@@ -39,7 +39,7 @@ export default function HomeMoreSection (props: HomeMoreSectionProps) {
             </Link>
           </Button>
         </div>
-      </div>
+      </div> */}
       <div className="flex justify-center px-5">
         <div className="p-3 lg:p-0 w-10/12">
           <img className="rounded-xl shadow-lg" src={image} alt="" />

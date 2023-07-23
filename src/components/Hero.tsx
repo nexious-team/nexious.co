@@ -9,9 +9,10 @@ interface HeroProps {
   color: string;
   text: string;
   image: string;
+  url: string;
 }
 const Hero = (props: HeroProps) => {
-  const { color, text, image } = props;
+  const { color, text, image, url } = props;
   const animatedText = useSpring({
     to: {
       opacity: 1,
@@ -38,25 +39,27 @@ const Hero = (props: HeroProps) => {
       style={{ backgroundColor: color }}
       className="w-screen h-screen flex justify-center md:items-center pt-32 md:pt-0 z-20"
     >
-      <div className="flex flex-col items-stretch md:flex-row md:justify-center md:items-center h-64 w-10/12">
-        <div className="w-full md:w-6/12">
-          <a.h1
-            style={animatedText}
-            className="text-4xl lg:text-6xl font-weight-light text-white"
-          >
-            <Text id={text} defaultMessage={text} />
-          </a.h1>
+      <div className="flex flex-col items-stretch md:flex-row md:justify-center lg:justify-between md:items-center h-64 w-10/12">
+        <div className="w-full md:w-6/12 leading-loose">
+          <div className="mt-16">
+            <a.h1
+              style={animatedText}
+              className="text-3xl lg:text-4xl font-weight-light text-white"
+            >
+              <Text id={text} defaultMessage={text} />
+            </a.h1>
+          </div>
           <div className="hidden md:block z-20 mt-4">
-            <HeroButton>
+            <HeroButton url={url}>
               <Text id="app.get_started" defaultMessage="Get Started" />{" "}
             </HeroButton>
           </div>
         </div>
-        <div className="block md:hidden order-3 pt-10 z-20">
+        {/* <div className="block md:hidden order-3 pt-10 z-20">
           <HeroButton>
             <Text id="app.get_started" defaultMessage="Get Started" />
           </HeroButton>
-        </div>
+        </div> */}
         <div className="md:py-10 w-full md:w-6/12">
           <div className="overflow-hidden min-height-img">
             <a.div style={animatedImage}>

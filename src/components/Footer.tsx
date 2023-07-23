@@ -6,8 +6,8 @@ import { ReactComponent as GitHubIcon } from "../assets/icons/github.svg";
 import { ReactComponent as FacebookIcon } from "../assets/icons/facebook-brands.svg";
 import { ReactComponent as TwitterIcon } from "../assets/icons/twitter.svg";
 import { ReactComponent as LinkedInIcon } from "../assets/icons/linkedin.svg";
-import { ReactComponent as PinterestIcon } from "../assets/icons/pinterest.svg";
-import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+// import { ReactComponent as PinterestIcon } from "../assets/icons/pinterest.svg";
+// import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { classNames } from "../utils";
 
 const validateEmail = (v: string) => {
@@ -62,7 +62,7 @@ export default function Footer() {
           className="absolute mx-auto rounded sm:w-10/12 lg:w-4/12"
         ></div>
       </div>
-      <div className="text-xl text-black text-center pt-10 pb-20 flex justify-center">
+      {/* <div className="text-xl text-black text-center pt-10 pb-20 flex justify-center">
         <div className="w-11/12 lg:w-1/2 ">
           <Icon icon="quote-left" size="xs" />
           <span className="px-2">
@@ -70,7 +70,7 @@ export default function Footer() {
           </span>
           <Icon icon="quote-right" size="xs" />
         </div>
-      </div>
+      </div> */}
       <div className="flex justify-center">
         <div className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-1/2 bg-whie py-10 md:flex justify-between">
           <div className="md:w-2/3">
@@ -168,7 +168,7 @@ export default function Footer() {
                   </a>
                 </div>
               </div>
-              <div className="px-2">
+              {/* <div className="px-2">
                 <div className="w-8 h-8">
                   <a
                     href="https://www.pinterest.com/nexiousteam3410/"
@@ -179,7 +179,7 @@ export default function Footer() {
                     <PinterestIcon />
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
