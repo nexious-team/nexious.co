@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useSpring, animated as a } from "react-spring";
 import { Link } from "react-router-dom";
-import { FormattedMessage } from 'react-intl';
+// import { FormattedMessage } from 'react-intl';
 import NavButton from "../elements/NavButton";
-import RegisterButton from "../elements/NavBarRegButton";
+// import RegisterButton from "../elements/NavBarRegButton";
 import Sidebar from "./Sidebar";
 import "../assets/navbar.css";
 import FlagButton from '../elements/FlagButton';
@@ -36,8 +36,8 @@ export default function Navbar (props: NavbarProps) {
     }
   };
 
-  const navTextSize = lang === 'En' ? 'text-sm md:text-md lg:text-xl' : 'text-sm md:text-md lg:text-base mx-2'
-  const navLinkClassNames = `font-semibold  ${navTextSize} ${isTop ? " text-white" : " text-black"}`
+  // const navTextSize = lang === 'En' ? 'text-sm md:text-md lg:text-xl' : 'text-sm md:text-md lg:text-base mx-2'
+  // const navLinkClassNames = `font-semibold  ${navTextSize} ${isTop ? " text-white" : " text-black"}`
 
   useEffect(() => {
     if (window.location.pathname === "/") {
@@ -75,7 +75,7 @@ export default function Navbar (props: NavbarProps) {
         >
           <div className="flex-1 h-auto">
             {/* Left Element */}
-            <div className="hidden lg:flex md:flex ml-5 justify-start ">
+            {/* <div className="hidden lg:flex md:flex ml-5 justify-start ">
               <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
                 <span
                   onClick={() => handleNavbarSwitch("client")}
@@ -108,7 +108,7 @@ export default function Navbar (props: NavbarProps) {
                   <Link to="/contact"><FormattedMessage id="app.contact" defaultMessage="Contact" /></Link>
                 </span>
               </div>
-            </div>
+            </div> */}
             <div className="lg:hidden md:hidden flex justify-start items-center ml-3">
               <div className="justify-center items-center align-center h-auto pt-3">
                 <NavButton isTop={isTop} navClick={() => setSidebar(true)} />
@@ -136,12 +136,12 @@ export default function Navbar (props: NavbarProps) {
               <div className="my-auto mr-6">
                 <FlagButton lang={lang} onClickFlag={onLangChange} />
               </div>
-              <Link
+              {/* <Link
                 onClick={() => handleNavbarSwitch("get-start")}
                 to="/get-start"
               >
                 <RegisterButton isTop={isTop} />
-              </Link>
+              </Link> */}
             </div>
             {/* <div className="lg:hidden md:hidden flex justify-end items-center">
           <div className="justify-center items-center align-center h-auto pt-3">

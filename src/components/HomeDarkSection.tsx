@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { FormattedMessage as Text } from 'react-intl';
-import Button from "../elements/Button";
+// import Button from "../elements/Button";
 
 interface HomeDarkSectionProps {
   title: string;
@@ -24,7 +24,7 @@ const HomeDarkSection = (props: HomeDarkSectionProps) => {
             <Text id={body} />
           </p>
         </div>
-        <div className="flex justify-center py-5">
+        {/* <div className="flex justify-center py-5">
           <div className="mx-2">
             <Link to="/get-start">
               <Button variant="action:dark" className="w-32">
@@ -39,7 +39,7 @@ const HomeDarkSection = (props: HomeDarkSectionProps) => {
               </Button>
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="flex justify-center w-full md:w-1/2 px-3">
         <div className="px-3 lg:p-0 overflow-hidden rounded-lg">

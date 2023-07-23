@@ -30,8 +30,7 @@
     "start": "craco start",
     "build": "yarn run build:css && craco build",
     "test": "craco test",
-    "build:css": "npx tailwind build -i ./src/index.css -o ./src/styles.css",
-    "eject": "react-scripts eject"
+    "build:css": "npx tailwind build -i ./src/index.css -o ./src/styles.css"
   },
   "eslintConfig": {
     "extends": "react-app"

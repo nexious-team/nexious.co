@@ -1,12 +1,12 @@
 import React, { ReactNode } from "react";
-import { Link } from "react-router-dom";
 import { useSpring, animated as a } from "react-spring";
 
 interface HeroButtonProps {
+  url: string;
   children: ReactNode;
 }
-export default function HeroButton (props: HeroButtonProps) {
-  const { children } = props;
+export default function HeroButton(props: HeroButtonProps) {
+  const { url, children } = props;
 
   const animatedButtonUnderline = useSpring({
     from: {
@@ -15,29 +15,34 @@ export default function HeroButton (props: HeroButtonProps) {
     to: {
       width: "100%",
     },
-    delay: 2000
+    delay: 2000,
   });
   const animatedButtonText = useSpring({
     from: {
-      opacity: 0
+      opacity: 0,
     },
     to: {
-      opacity: 1
+      opacity: 1,
     },
-    delay: 1800
+    delay: 1800,
   });
   return (
     <a.div style={animatedButtonText} className="order-3 md:order-first">
       <div className="w-64">
         <a.button
           style={animatedButtonUnderline}
-          className="h-20 py-3 text-2xl text-white font-bold truncate tracking-wider border-2 border-white rounded-lg"
+          className="h-16 py-2 text-xl text-white font-bold truncate tracking-wider border-2 border-white rounded-lg"
         >
-          <Link to="/get-start">
+          <a
+            href={url}
+            aria-label="Project"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span>{children}</span>
-          </Link>
+          </a>{" "}
         </a.button>
-        </div>
+      </div>
     </a.div>
   );
 }
