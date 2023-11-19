@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useSpring, animated as a } from "react-spring";
 import { Link } from "react-router-dom";
 // import { FormattedMessage } from 'react-intl';
-import NavButton from "../elements/NavButton";
+// import NavButton from "../elements/NavButton";
 // import RegisterButton from "../elements/NavBarRegButton";
-import Sidebar from "./Sidebar";
+// import Sidebar from "./Sidebar";
 import "../assets/navbar.css";
 import FlagButton from '../elements/FlagButton';
 import { classNames } from '../utils'
@@ -15,7 +15,7 @@ interface NavbarProps {
 }
 export default function Navbar (props: NavbarProps) {
   const { lang, onLangChange } = props;
-  const [sidebar, setSidebar] = useState(false);
+  // const [sidebar, setSidebar] = useState(false);
   const [isTop, setTop] = useState(true);
   const fade_animation = useSpring({
     background: isTop
@@ -55,7 +55,7 @@ export default function Navbar (props: NavbarProps) {
 
   return (
     <div className="mb-20">
-      {sidebar ? (
+      {/* {sidebar ? (
         <div className="">
           <Sidebar
             onClick={() => setSidebar(() => false)}
@@ -64,7 +64,7 @@ export default function Navbar (props: NavbarProps) {
         </div>
       ) : (
           ""
-        )}
+        )} */}
       <a.nav
         className={classNames("fixed top-0 w-full spring-nav z-50", isTop ? "bg-black" : " shadow")}
         style={fade_animation}
@@ -109,11 +109,11 @@ export default function Navbar (props: NavbarProps) {
                 </span>
               </div>
             </div> */}
-            <div className="lg:hidden md:hidden flex justify-start items-center ml-3">
+            {/* <div className="lg:hidden md:hidden flex justify-start items-center ml-3">
               <div className="justify-center items-center align-center h-auto pt-3">
                 <NavButton isTop={isTop} navClick={() => setSidebar(true)} />
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Middle Elements */}
