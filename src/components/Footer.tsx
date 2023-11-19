@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import SweetAlert from "sweetalert2-react";
 import { FormattedMessage as Text } from "react-intl";
-import { ReactComponent as GitHubIcon } from "../assets/icons/github.svg";
 import { ReactComponent as FacebookIcon } from "../assets/icons/facebook-brands.svg";
-import { ReactComponent as TwitterIcon } from "../assets/icons/twitter.svg";
-import { ReactComponent as LinkedInIcon } from "../assets/icons/linkedin.svg";
+// import { ReactComponent as GitHubIcon } from "../assets/icons/github.svg";
+// import { ReactComponent as TwitterIcon } from "../assets/icons/twitter.svg";
+// import { ReactComponent as LinkedInIcon } from "../assets/icons/linkedin.svg";
 // import { ReactComponent as PinterestIcon } from "../assets/icons/pinterest.svg";
 // import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { classNames } from "../utils";
@@ -49,7 +49,7 @@ export default function Footer() {
   };
   return (
     <div className="w-full bg-gray-100 pt-16">
-      <div className="font-semibold text-4xl text-center text-black tracking-widest">
+      <div className="font-semibold text-2xl lg:text-4xl text-center text-black tracking-widest">
         <Text id="footer.what_you_envision_come_to_existence" />
         <div
           style={{
@@ -72,14 +72,14 @@ export default function Footer() {
         </div>
       </div> */}
       <div className="flex justify-center">
-        <div className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-1/2 bg-whie py-10 md:flex justify-between">
+        <div className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-1/2 bg-white py-10 md:flex justify-between">
           <div className="md:w-2/3">
-            <div className="text-center md:text-left pb-1 tracking-wide">
-              <Text id="footer.email_us_so_we_" />:
-            </div>
             <div className="flex justify-center md:justify-start">
               <div>
                 <form>
+                  <div className="pb-1 tracking-wide">
+                    <Text id="footer.email_us_so_we_" />:
+                  </div>
                   <input type="hidden" value="Footer" />
                   <input
                     type="text"
@@ -120,7 +120,7 @@ export default function Footer() {
               <Text id="footer.or_follow_us_on_" />:
             </div>
             <div className="flex justify-center md:justify-start -mx-2">
-              <div className="px-2">
+              {/* <div className="px-2">
                 <div className="w-8 h-8">
                   <a
                     href="https://github.com/nexious-team"
@@ -131,11 +131,11 @@ export default function Footer() {
                     <GitHubIcon />
                   </a>
                 </div>
-              </div>
+              </div> */}
               <div className="px-2">
                 <div className="w-8 h-8">
                   <a
-                    href="https://www.facebook.com/Nexious-116686833048782/"
+                    href="https://www.facebook.com/NexiousDigitalSolutions"
                     aria-label="Facebook"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -144,7 +144,7 @@ export default function Footer() {
                   </a>
                 </div>
               </div>
-              <div className="px-2">
+              {/* <div className="px-2">
                 <div className="w-8 h-8">
                   <a
                     href="https://twitter.com/Nexious6"
@@ -167,7 +167,7 @@ export default function Footer() {
                     <LinkedInIcon />
                   </a>
                 </div>
-              </div>
+              </div> */}
               {/* <div className="px-2">
                 <div className="w-8 h-8">
                   <a
@@ -185,9 +185,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="py-2 text-center text-gray-300 text-sm bg-gray-900">
-        © {new Date().getFullYear()} Nexious.{" "}
-        <Text id="footer.copyright" /> {" | "}{" "}
-        <Text id="footer.powered_by_nexious" />
+        © {new Date().getFullYear()} Nexious. <Text id="footer.copyright" />{" "}
+        {" | "} <Text id="footer.powered_by_nexious" />
       </div>
     </div>
   );
