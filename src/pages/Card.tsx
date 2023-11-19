@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
-import ContactModal from "components/Modals/ContactModal";
+import ContactModal from "../components/Modals/ContactModal";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export default function CardPage() {
   const [open, setOpen] = useState(false)
@@ -56,17 +57,25 @@ export default function CardPage() {
           />
         </div>
       </div>
-      <ContactModal open={open} setOpen={setOpen} />
+      <ContactModal open={open} onClose={() => setOpen(false)} />
     </div>
   );
 }
 
-function Contact({ 
-  icon, 
-  iconColor, 
-  text,
-  onClick = () => {}, 
-}) {
+interface ContactProps {
+    icon: IconProp;
+    iconColor: string; 
+    text: string;
+    onClick: () => void; 
+}
+function Contact(props: ContactProps) {
+  const {
+    icon, 
+    iconColor, 
+    text,
+    onClick, 
+} = props;
+
   return (
     <div className="text-center cursor-pointer" onClick={onClick}>
       <Icon icon={icon} color={iconColor} size="6x" />

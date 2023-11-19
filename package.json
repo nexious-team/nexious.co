@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^7.0.0",
+    "@craco/craco": "^7.1.0",
     "@fortawesome/fontawesome-free": "^5.10.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-brands-svg-icons": "^5.10.2",
@@ -16,7 +16,7 @@
     "postcss": "^8.4.31",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-intl": "^3.11.0",
+    "react-intl": "^6.4.4",
     "react-pure-lifecycle": "^3.0.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^5.0.1",
@@ -30,8 +30,7 @@
     "start": "craco start",
     "build": "yarn run build:css && craco build",
     "test": "craco test",
-    "build:css": "npx tailwind build -i ./src/index.css -o ./src/styles.css",
-    "eject": "react-scripts eject"
+    "build:css": "npx tailwind build -i ./src/index.css -o ./src/styles.css"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -48,5 +47,14 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/node": "^20.4.2",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "typescript": "^5.1.6"
+  }
 }

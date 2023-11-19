@@ -1,7 +1,11 @@
 import React from 'react'
 
-export default function FlagButton ({ lang, onClickFlag }) {
-  
+interface FlagButtonProps {
+  lang: string;
+  onClickFlag: () => void;
+}
+export default function FlagButton (props: FlagButtonProps) {
+  const { lang, onClickFlag } = props;  
   const flagName = lang === 'Km' ? 'united-states-of-america-flag-icon-32' : 'cambodia-flag-icon-32';
 
   return (

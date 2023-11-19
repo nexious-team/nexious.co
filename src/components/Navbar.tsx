@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { useSpring, animated as a } from "react-spring";
 import { Link } from "react-router-dom";
-import { FormattedMessage } from 'react-intl';
-import NavButton from "../elements/NavButton";
-import RegisterButton from "../elements/NavBarRegButton";
-import Sidebar from "./Sidebar";
+// import { FormattedMessage } from 'react-intl';
+// import NavButton from "../elements/NavButton";
+// import RegisterButton from "../elements/NavBarRegButton";
+// import Sidebar from "./Sidebar";
 import "../assets/navbar.css";
 import FlagButton from '../elements/FlagButton';
-import { classNames } from 'utils'
+import { classNames } from '../utils'
 
-export default function Navbar ({ lang, onLangChange }) {
-  const [sidebar, setSidebar] = useState(false);
+interface NavbarProps {
+  lang: string;
+  onLangChange: () => void;
+}
+export default function Navbar (props: NavbarProps) {
+  const { lang, onLangChange } = props;
+  // const [sidebar, setSidebar] = useState(false);
   const [isTop, setTop] = useState(true);
   const fade_animation = useSpring({
     background: isTop
@@ -23,7 +28,7 @@ export default function Navbar ({ lang, onLangChange }) {
     height: isTop ? "6rem" : "5rem",
     config: { tension: 200 }
   });
-  const handleNavbarSwitch = to_path => {
+  const handleNavbarSwitch = (to_path: string) => {
     if (to_path !== "home") {
       setTop(false);
     } else {
@@ -31,8 +36,8 @@ export default function Navbar ({ lang, onLangChange }) {
     }
   };
 
-  const navTextSize = lang === 'En' ? 'text-sm md:text-md lg:text-xl' : 'text-sm md:text-md lg:text-base mx-2'
-  const navLinkClassNames = `font-semibold  ${navTextSize} ${isTop ? " text-white" : " text-black"}`
+  // const navTextSize = lang === 'En' ? 'text-sm md:text-md lg:text-xl' : 'text-sm md:text-md lg:text-base mx-2'
+  // const navLinkClassNames = `font-semibold  ${navTextSize} ${isTop ? " text-white" : " text-black"}`
 
   useEffect(() => {
     if (window.location.pathname === "/") {
@@ -50,16 +55,16 @@ export default function Navbar ({ lang, onLangChange }) {
 
   return (
     <div className="mb-20">
-      {sidebar ? (
+      {/* {sidebar ? (
         <div className="">
           <Sidebar
-            sidebarClick={() => setSidebar(state => false)}
-            linkClick={() => setSidebar(state => false)}
+            onClick={() => setSidebar(() => false)}
+            onLinkClick={() => setSidebar(() => false)}
           ></Sidebar>
         </div>
       ) : (
           ""
-        )}
+        )} */}
       <a.nav
         className={classNames("fixed top-0 w-full spring-nav z-50", isTop ? "bg-black" : " shadow")}
         style={fade_animation}
@@ -70,7 +75,7 @@ export default function Navbar ({ lang, onLangChange }) {
         >
           <div className="flex-1 h-auto">
             {/* Left Element */}
-            <div className="hidden lg:flex md:flex ml-5 justify-start ">
+            {/* <div className="hidden lg:flex md:flex ml-5 justify-start ">
               <div className="w-auto px-1 lg:px-1 mx-0 md:mx-1 lg:mx-1">
                 <span
                   onClick={() => handleNavbarSwitch("client")}
@@ -103,12 +108,12 @@ export default function Navbar ({ lang, onLangChange }) {
                   <Link to="/contact"><FormattedMessage id="app.contact" defaultMessage="Contact" /></Link>
                 </span>
               </div>
-            </div>
-            <div className="lg:hidden md:hidden flex justify-start items-center ml-3">
+            </div> */}
+            {/* <div className="lg:hidden md:hidden flex justify-start items-center ml-3">
               <div className="justify-center items-center align-center h-auto pt-3">
                 <NavButton isTop={isTop} navClick={() => setSidebar(true)} />
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Middle Elements */}
@@ -131,12 +136,12 @@ export default function Navbar ({ lang, onLangChange }) {
               <div className="my-auto mr-6">
                 <FlagButton lang={lang} onClickFlag={onLangChange} />
               </div>
-              <Link
+              {/* <Link
                 onClick={() => handleNavbarSwitch("get-start")}
                 to="/get-start"
               >
-                <RegisterButton className="navnbar-reg-btn" isTop={isTop} />
-              </Link>
+                <RegisterButton isTop={isTop} />
+              </Link> */}
             </div>
             {/* <div className="lg:hidden md:hidden flex justify-end items-center">
           <div className="justify-center items-center align-center h-auto pt-3">
@@ -148,4 +153,4 @@ export default function Navbar ({ lang, onLangChange }) {
       </a.nav>
     </div>
   );
-};
+}

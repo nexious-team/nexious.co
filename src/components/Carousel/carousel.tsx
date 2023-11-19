@@ -4,7 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useSpring, animated } from "react-spring";
 import { useDrag } from "react-use-gesture";
 
-const Carousel = ({ items }) => {
+interface CarouselProps {
+  items: any;
+}
+const Carousel = (props: CarouselProps) => {
+  const { items } = props;
   const [item, set_item] = useState([]);
   const [index, set_index] = useState({ pre: 0, next: 4 });
 
@@ -18,8 +22,8 @@ const Carousel = ({ items }) => {
 
   // Function change slide
   const change_side_next = () => {
-    let a = items.length;
-    let e = index.next;
+    const a = items.length;
+    const e = index.next;
     if (a > 4) {
       if (e < a) {
         set_index({
@@ -39,8 +43,8 @@ const Carousel = ({ items }) => {
 
   // button change pre and next function
   const change_side_pre = () => {
-    let a = items.length;
-    let e = index.pre;
+    const a = items.length;
+    const e = index.pre;
     if (a > 4) {
       if (e > 0) {
         set_index({
@@ -74,7 +78,7 @@ const Carousel = ({ items }) => {
   });
 
   // length height image to add aniamtion sroll image to botton
-  const sroll_image_to_bottom = (index) => {
+  // const sroll_image_to_bottom = (index) => {
     // setTimeout(() => {
     //     // let orginal_height_img = document.querySelector("#id" + index)
     //     // let length_height_img = orginal_height_img.naturalHeight;
@@ -88,7 +92,7 @@ const Carousel = ({ items }) => {
     //     }
     //     document.getElementById("style" + index).appendChild(style);
     // }, 1000);
-  };
+  // };
   return (
     <div className="relative">
       <animated.div
@@ -107,7 +111,6 @@ const Carousel = ({ items }) => {
                   src={data}
                   alt={data}
                   id={"id" + index}
-                  onLoad={sroll_image_to_bottom(index)}
                 />
               </div>
             </div>
