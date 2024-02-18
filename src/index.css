@@ -4,9 +4,9 @@
 
 @tailwind base;
 
-.bg-primary {
+/* .bg-primary {
   background: var(--color-primary);
-}
+} */
 
 @font-face {
   font-family: 'josefin sans';

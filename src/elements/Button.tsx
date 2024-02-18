@@ -1,11 +1,11 @@
-import { TSize, TVariant } from "@/types";
+import { TSize, TVariant } from "../types";
 import React, { ReactNode } from "react";
 import { classNames } from "../utils";
 
 const base = "focus:outline-none border-2 rounded-lg disabled:opacity-50";
 
-const styles = {
-  normal: "text-black border-black",
+const variants = {
+  normal: "text-gold border-gold",
   "normal:dark": "text-white border-white",
   action: "bg-gray-900 hover:bg-black text-white border-gray-900",
   hook: "bg-gray-200 text-gray-600 border-gray-200",
@@ -17,7 +17,6 @@ const sizes = {
   md: "py-2 px-4",
   lg: "py-3 px-6",
 };
-
 
 interface ButtonProps {
   variant?: TVariant;
@@ -38,7 +37,7 @@ export default function Button(props: ButtonProps) {
   return (
     <button
       onClick={onClick}
-      className={classNames(base, styles[variant], sizes[size], className)}
+      className={classNames(base, variants[variant], sizes[size], className)}
     >
       {children}
     </button>

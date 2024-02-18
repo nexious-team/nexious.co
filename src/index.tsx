@@ -1,5 +1,5 @@
-import React from "react";
 import "./styles.css";
+import React from "react";
 import App from "./App";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { createRoot } from 'react-dom/client';

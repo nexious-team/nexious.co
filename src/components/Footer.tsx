@@ -71,8 +71,8 @@ export default function Footer() {
           <Icon icon="quote-right" size="xs" />
         </div>
       </div> */}
-      <div className="flex justify-center">
-        <div className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-1/2 bg-white py-10 md:flex justify-between">
+      <div className="flex justify-center mt-8">
+        <div className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-1/2 bg-white px-16 py-8 md:flex justify-between rounded-lg">
           <div className="md:w-2/3">
             <div className="flex justify-center md:justify-start">
               <div>
@@ -135,12 +135,12 @@ export default function Footer() {
               <div className="px-2">
                 <div className="w-8 h-8">
                   <a
-                    href="https://www.facebook.com/NexiousDigitalSolutions"
+                    href="https://www.facebook.com/wwwnexiousco"
                     aria-label="Facebook"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FacebookIcon />
+                    <FacebookIcon className="text-black" />
                   </a>
                 </div>
               </div>

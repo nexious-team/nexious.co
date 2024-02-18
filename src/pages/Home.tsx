@@ -1,8 +1,10 @@
 import React from "react";
+import HomeWelcome from "../components/organisms/HomeWelcome";
+import HomeMissionVision from "../components/organisms/HomeMissionVision";
 // import HomeMainSection from "../components/HomeMainSection";
 // import HomeMoreSection from "../components/HomeMoreSection";
 // import HomeDarkSection from "../components/HomeDarkSection";
-import HomeHero from "../components/HomeHero";
+// import HomeHero from "../components/HomeHero";
 // import Services from "../components/Services";
 
 // import cloud_store_image from "../assets/images/projects/cloud_store.png";
@@ -41,7 +43,11 @@ const Home = () => {
   return (
     <div className="">
       <div style={{ marginTop: "-5rem" }} className="overflow-hidden">
-        <HomeHero />
+        {/* <HomeHero /> */}
+        <HomeWelcome />
+      </div>
+      <div>
+        <HomeMissionVision />
       </div>
       {/* <div>
         <HomeMainSection
