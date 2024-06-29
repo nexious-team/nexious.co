@@ -6,14 +6,14 @@ import { Link } from "react-router-dom";
 // import RegisterButton from "../elements/NavBarRegButton";
 // import Sidebar from "./Sidebar";
 import "../assets/navbar.css";
-import FlagButton from '../elements/FlagButton';
-import { classNames } from '../utils'
+import FlagButton from "../elements/FlagButton";
+import { classNames } from "../utils";
 
 interface NavbarProps {
   lang: string;
   onLangChange: () => void;
 }
-export default function Navbar (props: NavbarProps) {
+export default function Navbar(props: NavbarProps) {
   const { lang, onLangChange } = props;
   // const [sidebar, setSidebar] = useState(false);
   const [isTop, setTop] = useState(true);
@@ -21,12 +21,10 @@ export default function Navbar (props: NavbarProps) {
     background: isTop
       ? "radial-gradient(circle, rgba(1,0,0,0),  rgba(0,0,0,0))"
       : "radial-gradient(circle, #FFFFF3, #FFFFF)",
-    height: isTop ? "6rem" : "5rem",
-    config: { mass: 1 }
+    config: { mass: 1 },
   });
   const fade_animation_height = useSpring({
-    height: isTop ? "6rem" : "5rem",
-    config: { tension: 200 }
+    config: { tension: 200 },
   });
   const handleNavbarSwitch = (to_path: string) => {
     if (to_path !== "home") {
@@ -66,12 +64,15 @@ export default function Navbar (props: NavbarProps) {
           ""
         )} */}
       <a.nav
-        className={classNames("fixed top-0 w-full spring-nav z-50", isTop ? "bg-black" : " shadow")}
+        className={classNames(
+          "fixed top-0 w-full spring-nav z-50",
+          isTop ? "bg-black" : " shadow"
+        )}
         style={fade_animation}
       >
         <a.div
           style={fade_animation_height}
-          className="container mx-auto md:px-0 lg:px-0 flex items-center justify-between"
+          className="container mx-auto md:px-0 lg:px-0 flex items-center justify-between h-16 lg:h-20"
         >
           <div className="flex-1 h-auto">
             {/* Left Element */}
@@ -117,13 +118,13 @@ export default function Navbar (props: NavbarProps) {
           </div>
 
           {/* Middle Elements */}
-          <div className="font-josefin flex-1 h-auto text-center md:text-center lg:text-center px-5 ">
+          <div className="font-josefin flex-1 h-auto text-center md:text-center px-5 ">
             <span
               onClick={() => handleNavbarSwitch("home")}
               className={
                 isTop
-                  ? "text-3xl text-white "
-                  : "text-3xl text-black "
+                  ? "text-xl lg:text-3xl text-white "
+                  : "text-xl lg:text-3xl text-black "
               }
             >
               <Link to="/">Nexious</Link>
