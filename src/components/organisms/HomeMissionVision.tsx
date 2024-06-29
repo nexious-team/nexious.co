@@ -8,15 +8,15 @@ import homeVision from "../../assets/images/vision.png";
 export default function HomeMissionVision() {
   return (
     <div>
-      <div>
-        <div data-aos="fade-left" className="relative">
-          <div className="flex items-center">
-            <div className="w-4/6 md:w-3/6 lg:w-3/6">
+      <div className="mt-8 lg:mt-0">
+        <div className="lg:relative">
+          <div className="hidden lg:flex items-center ">
+            <div className="w-full md:w-3/6 lg:w-3/6">
               <img className="object-cover" src={homeMission} alt="" />
             </div>
-            <div className="text-center w-1/5 md:w-2/5 lg:w-2/5"></div>
+            <div className="text-center w-0 md:w-2/5 lg:w-2/5"></div>
           </div>
-          <div className="flex items-center absolute inset-0">
+          <div className="flex items-center lg:absolute inset-0">
             <div className="md:w-3/6 lg:w-3/6"></div>
             <div className="text-center md:w-3/6 lg:w-3/6 px-6">
               <h1 className="text-3xl lg:text-4xl xl:text-5xl">
@@ -41,9 +41,9 @@ export default function HomeMissionVision() {
           </div>
         </div>
       </div>
-      <div>
-        <div data-aos="fade-left" className="relative">
-          <div className="flex items-center">
+      <div className="mt-8 lg:mt-0">
+        <div className="relative">
+          <div className="hidden lg:flex items-center">
             <div className="w-1/5 md:w-2/5 lg:w-3/6 text-center"></div>
             <div className="w-4/5 md:w-3/5 lg:w-3/6">
               <img
@@ -53,7 +53,7 @@ export default function HomeMissionVision() {
               />
             </div>
           </div>
-          <div className="flex items-center absolute inset-0">
+          <div className="flex items-center lg:absolute inset-0">
             <div className="text-center px-6 md:w-3/6 lg:w-3/6">
               <h1 className="text-3xl lg:text-4xl xl:text-5xl">
                 <Text id="home.our_vision" />

@@ -48,8 +48,8 @@ export default function Footer() {
       });
   };
   return (
-    <div className="w-full bg-gray-100 pt-16">
-      <div className="font-semibold text-2xl lg:text-4xl text-center text-black tracking-widest">
+    <div className="w-full bg-gray-100 pt-8 lg:pt-16 mt-8">
+      <div className="font-semibold text-xl lg:text-4xl text-center text-black tracking-widest">
         <Text id="footer.what_you_envision_come_to_existence" />
         <div
           style={{
@@ -60,7 +60,7 @@ export default function Footer() {
               "linear-gradient(80deg, rgba(209, 213, 219,1), rgba(31, 41, 55,1))",
           }}
           className="absolute mx-auto rounded sm:w-10/12 lg:w-4/12"
-        ></div>
+        />
       </div>
       {/* <div className="text-xl text-black text-center pt-10 pb-20 flex justify-center">
         <div className="w-11/12 lg:w-1/2 ">
@@ -72,7 +72,7 @@ export default function Footer() {
         </div>
       </div> */}
       <div className="flex justify-center mt-8">
-        <div className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-1/2 bg-white px-16 py-8 md:flex justify-between rounded-lg">
+        <div className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-1/2 bg-white px-8 lg:px-16 py-8 md:flex justify-between rounded-lg">
           <div className="md:w-2/3">
             <div className="flex justify-center md:justify-start">
               <div>
@@ -93,7 +93,7 @@ export default function Footer() {
                   />
                   <button
                     style={{ backgroundColor: "#FFF" }}
-                    className="h-10 px-6 text-sm rounded-lg ml-2 text-black font-semibold border-2 border-black"
+                    className="h-10 px-6 text-sm rounded-lg mt-2 lg:mt-0 lg:ml-2 text-black font-semibold border-2 border-black"
                     onClick={handleSend}
                   >
                     <Text id="app.send" />
@@ -116,10 +116,10 @@ export default function Footer() {
             </div>
           </div>
           <div className="md:w-1/3">
-            <div className="pb-2 tracking-wide text-center md:text-left pt-5 md:pt-0 lg:pt-0">
+            <div className="pb-2 tracking-wide text-right lg:text-center md:text-left pt-5 md:pt-0 lg:pt-0">
               <Text id="footer.or_follow_us_on_" />:
             </div>
-            <div className="flex justify-center md:justify-start -mx-2">
+            <div className="flex justify-end lg:justify-center md:justify-start -mx-2">
               {/* <div className="px-2">
                 <div className="w-8 h-8">
                   <a
