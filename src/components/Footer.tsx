@@ -75,44 +75,42 @@ export default function Footer() {
         <div className="w-11/12 md:w-10/12 lg:w-8/12 xl:w-1/2 bg-white px-8 lg:px-16 py-8 md:flex justify-between rounded-lg">
           <div className="md:w-2/3">
             <div className="flex justify-center md:justify-start">
-              <div>
-                <form>
-                  <div className="pb-1 tracking-wide">
-                    <Text id="footer.email_us_so_we_" />:
-                  </div>
-                  <input type="hidden" value="Footer" />
-                  <input
-                    type="text"
-                    name="customer_email"
-                    className={classNames(
-                      "h-10 w-64 text-sm bg-gray-200 border-2 rounded-lg px-2 focus:outline-none",
-                      isValidEmail ? "border-black" : "border-red-500"
-                    )}
-                    placeholder="Email address"
-                    onChange={onChangeEmail}
-                  />
-                  <button
-                    style={{ backgroundColor: "#FFF" }}
-                    className="h-10 px-6 text-sm rounded-lg mt-2 lg:mt-0 lg:ml-2 text-black font-semibold border-2 border-black"
-                    onClick={handleSend}
-                  >
-                    <Text id="app.send" />
-                  </button>
-                  {!isValidEmail && (
-                    <p className="mt-1 text-xs text-red-500">
-                      <Text id="app.please_input_a_valid_email" />!
-                    </p>
+              <form>
+                <div className="pb-1 tracking-wide">
+                  <Text id="footer.email_us_so_we_" />:
+                </div>
+                <input type="hidden" value="Footer" />
+                <input
+                  type="text"
+                  name="customer_email"
+                  className={classNames(
+                    "h-10 w-64 text-sm bg-gray-200 border-2 rounded-lg px-2 focus:outline-none",
+                    isValidEmail ? "border-black" : "border-red-500"
                   )}
-                  <SweetAlert
-                    show={showswal}
-                    type="success"
-                    title="Sent"
-                    confirmButtonColor="black"
-                    text="We will contact you shortly!!"
-                    onConfirm={() => setshow(false)}
-                  />
-                </form>
-              </div>
+                  placeholder="Email address"
+                  onChange={onChangeEmail}
+                />
+                <button
+                  style={{ backgroundColor: "#FFF" }}
+                  className="h-10 px-6 text-sm rounded-lg mt-2 lg:mt-0 ml-0 sm:ml-2 text-black font-semibold border-2 border-black"
+                  onClick={handleSend}
+                >
+                  <Text id="app.send" />
+                </button>
+                {!isValidEmail && (
+                  <p className="mt-1 text-xs text-red-500">
+                    <Text id="app.please_input_a_valid_email" />!
+                  </p>
+                )}
+                <SweetAlert
+                  show={showswal}
+                  type="success"
+                  title="Sent"
+                  confirmButtonColor="black"
+                  text="We will contact you shortly!!"
+                  onConfirm={() => setshow(false)}
+                />
+              </form>
             </div>
           </div>
           <div className="md:w-1/3">
