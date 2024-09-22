@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { TextDescription } from "./typography/TextDescription";
 import TextTitle from "./typography/TextTitle";
 

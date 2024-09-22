@@ -9,7 +9,7 @@ export function MissionSection() {
         <TextHeading>Our Mission</TextHeading>
         <div className="h-4" />
         <TextParagraph>
-          We're dedicated to empowering freelancers to thrive by providing a
+          We are dedicated to empowering freelancers to thrive by providing a
           comprehensive ecosystem that streamlines administrative tasks, fosters
           professional growth, and supports their transition from freelancing to
           business ownership.
