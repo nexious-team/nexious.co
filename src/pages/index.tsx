@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <main>
-        <div className="h-24" />
+        <div className="h-12 lg:h-24" />
         <HeroSection />
         <div className="h-24" />
         <ProductsSection />

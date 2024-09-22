@@ -20,8 +20,8 @@ const products: IProduct[] = [
 
 export function ProductsSection() {
   return (
-    <div className="flex">
-      <div className="w-1/2">
+    <div className="lg:flex">
+      <div className="lg:w-1/2">
         <TextHeading>
           Promote Your Services and Connect with Clients
         </TextHeading>
@@ -42,7 +42,7 @@ export function ProductsSection() {
         </ul>
       </div>
       <div className="h-4" />
-      <div className="pl-12">
+      <div className="lg:pl-12">
         <div className="flex space-x-4 overflow-x-auto">
           {products.map((product) => (
             <Product key={product.id} product={product} />

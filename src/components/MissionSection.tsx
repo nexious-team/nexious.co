@@ -16,7 +16,7 @@ export function MissionSection() {
         </TextParagraph>
       </div>
       <div className="lg:w-1/2 lg:pl-12">
-        <div className="w-[400px] h-auto">
+        <div className="lg:w-[400px] h-auto">
           <Image
             className="max-w-none"
             src="/assets/images/mission.png"

@@ -16,7 +16,7 @@ export default function Footer() {
           </TextDescription>
         </div>
         <div className="lg:w-3/5 flex">
-          <div className="lg:w-1/2 space-y-2">
+          <div className="w-1/2 space-y-2">
             <div className="h-4" />
             <TextDescription className="text-gray-600">
               Our Product
@@ -32,7 +32,7 @@ export default function Footer() {
               </a>
             </TextDescription>
           </div>
-          <div className="lg:w-3/5 space-y-2">
+          <div className="w-1/2 space-y-2">
             <div className="h-4" />
             <TextDescription className="text-gray-600">
               Follow Us
@@ -52,9 +52,12 @@ export default function Footer() {
       </div>
       <div className="h-16" />
       <hr />
-      <div className="py-2 lg:py-4 w-full space-y-2">
+      <div className="py-2 lg:py-4 w-full lg:space-x-2 lg:flex">
         <TextDescription className="text-gray-600 text-center lg:text-left">
-          @2024 Nexious. All Right Reserved. Powered by{" "}
+          @2024 Nexious. All Right Reserved.
+        </TextDescription>
+        <TextDescription className="text-gray-600 text-center lg:text-left">
+          Powered by{" "}
           <a
             className="hover:underline hover:text-primary"
             href="https://www.nexious.co"
