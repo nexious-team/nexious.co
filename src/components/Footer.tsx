@@ -51,7 +51,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="h-16" />
-      <hr />
+      <hr className="border border-gray-300" />
       <div className="py-2 lg:py-4 w-full lg:space-x-2 lg:flex">
         <TextDescription className="text-gray-600 text-center lg:text-left">
           @2024 Nexious. All Right Reserved.

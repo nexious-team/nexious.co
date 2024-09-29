@@ -15,13 +15,15 @@ export function VisionSection() {
         </TextParagraph>
       </div>
       <div className="lg:w-1/2 lg:pl-12">
-        <Image
-          className=""
-          src="/assets/images/vision.png"
-          width={400}
-          height={250}
-          alt="Our Vision"
-        />
+        <div className="lg:w-[500px] h-auto">
+          <Image
+            className=""
+            src="/assets/images/vision.png"
+            width={500}
+            height={250}
+            alt="Our Vision"
+          />
+        </div>
       </div>
     </div>
   );

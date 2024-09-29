@@ -4,7 +4,7 @@ import TextParagraph from "./typography/TextParagraph";
 
 export function HeroSection() {
   return (
-    <section className="lg:flex lg:space-x-4 space-y-8 lg:space-y-0">
+    <section className="lg:flex lg:space-x-4 space-y-8 lg:space-y-0 items-center">
       <div className="lg:w-1/2">
         <TextHeadline>Launch Your Freelance Career Today</TextHeadline>
         <div className="h-4" />
@@ -15,12 +15,12 @@ export function HeroSection() {
         <div className="h-4" />
         <div className="flex space-x-4"></div>
       </div>
-      <div className="lg:w-1/2 lg:pl-12">
-        <div className="lg:w-[500px] h-auto">
+      <div className="lg:w-1/2">
+        <div className="lg:w-[700px] h-auto">
           <Image
             width={500}
-            height={350}
-            src="/assets/images/hero.png"
+            height={500}
+            src="/assets/images/nexious_hero.png"
             alt="Knowat Hero"
             priority={true}
             style={{

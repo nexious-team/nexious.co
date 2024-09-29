@@ -12,11 +12,30 @@ export default function Home() {
   return (
     <Layout>
       <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Nexious - Talent Powerhouse</title>
+        <meta
+          property="og:title"
+          content="Launch Your Freelance Career Today"
+          key="title"
+        />
+        <meta
+          name="description"
+          content="Discover the tools and resources to build a successful freelance business."
+          key="description"
+        />
       </Head>
       <Navbar />
+      <header className="hidden">
+        <h1>Nexious - Talent Powerhouse</h1>
+        <p>
+          Discover the tools and resources to build a successful freelance
+          business.
+        </p>
+      </header>
       <main>
-        <div className="h-12 lg:h-24" />
+        <div className="h-12 lg:h-8" />
         <HeroSection />
         <div className="h-24" />
         <ProductsSection />
