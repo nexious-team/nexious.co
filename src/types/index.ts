@@ -1,2 +1,6 @@
-export type TSize = 'sm' | 'md' | 'lg';
-export type TVariant = 'action' | 'action:dark' | 'normal' | 'normal:dark' | 'hook';
+export interface IProduct {
+  id: string;
+  name: string;
+  imageSrc: string;
+  description: string
+}
