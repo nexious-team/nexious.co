@@ -7,8 +7,21 @@ import { MissionSection } from "@/components/MissionSection";
 import { VisionSection } from "@/components/VisionSection";
 import { ContactSection } from "@/components/ContactSection";
 import Head from "next/head";
+import { useRef } from "react";
 
 export default function Home() {
+  const ref = useRef<HTMLDivElement>(null);
+
+  const onConnectNow = () => {
+    if (ref.current) {
+      ref.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "start",
+      });
+    }
+  };
+
   return (
     <Layout>
       <Head>
@@ -36,15 +49,17 @@ export default function Home() {
       </header>
       <main>
         <div className="h-12 lg:h-8" />
-        <HeroSection />
-        <div className="h-24" />
+        <HeroSection onCallToAction={onConnectNow} />
+        <div className="h-24 lg:h-40" />
         <ProductsSection />
         <div className="h-24" />
         <MissionSection />
         <div className="h-24" />
         <VisionSection />
         <div className="h-24" />
-        <ContactSection />
+        <div ref={ref}>
+          <ContactSection />
+        </div>
         <div className="h-24" />
       </main>
       <Footer />
