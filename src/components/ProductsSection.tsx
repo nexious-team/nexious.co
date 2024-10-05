@@ -3,6 +3,8 @@ import { Product } from "./Product";
 import TextHeading from "./typography/TextHeading";
 import TextParagraph from "./typography/TextParagraph";
 import TextHeadline from "./typography/TextHeadline";
+import { Button } from "./Button";
+import Link from "next/link";
 
 const products: IProduct[] = [
   {
@@ -49,6 +51,14 @@ export function ProductsSection() {
               </TextParagraph>
             </li>
           </ul>
+          <div className="h-4" />
+          <Link
+            href="https://knowat.nexious.co/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button name="Explore" size="medium"/>
+          </Link>
         </div>
         <div className="h-4" />
         <div className="lg:pl-12">

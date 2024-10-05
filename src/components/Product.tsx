@@ -8,17 +8,17 @@ export function Product(props: IProps) {
   const { product } = props;
 
   return (
-    <div className="lg:h-[250px] w-auto">
+    <div className="lg:w-[250px] h-auto">
       <Image
         className="rounded-3xl border shadow"
-        width={250}
-        height={250}
+        width={100}
+        height={100}
         src={product.imageSrc}
         alt="Service"
         priority={true}
         style={{
-          width: "auto",
-          height: "100%",
+          width: "100%",
+          height: "auto",
         }}
       />
     </div>

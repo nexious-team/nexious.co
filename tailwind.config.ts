@@ -13,7 +13,7 @@ const config: Config = {
         foreground: "var(--foreground)",
         surface: "var(--surface)",
         "grey-lighter": "#F3F4F6",
-        primary: "#00509D",
+        primary: "#38363C",
       },
     },
   },
